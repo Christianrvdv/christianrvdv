@@ -118,27 +118,48 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Formulario de contacto
+// Formulario de contacto para Netlify
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Simular envío del formulario
-    const formData = new FormData(contactForm);
+    // Mostrar estado de envío
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
 
-    // Aquí normalmente enviarías los datos a un servidor
-    // Por ahora solo mostramos un mensaje de éxito
-    formMessage.textContent = '¡Mensaje enviado correctamente! Te responderé pronto.';
-    formMessage.className = 'form-message success';
-    formMessage.style.display = 'block';
+    try {
+        // Enviar formulario a Netlify
+        const formData = new FormData(contactForm);
 
-    // Limpiar formulario
-    contactForm.reset();
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        });
 
-    // Ocultar mensaje después de 5 segundos
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 5000);
+        if (response.ok) {
+            formMessage.textContent = '¡Mensaje enviado correctamente! Te responderé pronto.';
+            formMessage.className = 'form-message success';
+            formMessage.style.display = 'block';
+            contactForm.reset();
+        } else {
+            throw new Error('Error en el servidor');
+        }
+    } catch (error) {
+        formMessage.textContent = 'Hubo un error al enviar el mensaje. Por favor, envíame un email directamente a christianrvdv.1999@gmail.com';
+        formMessage.className = 'form-message error';
+        formMessage.style.display = 'block';
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+
+        // Ocultar mensaje después de 8 segundos
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 8000);
+    }
 });

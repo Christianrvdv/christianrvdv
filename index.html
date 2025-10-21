@@ -139,7 +139,7 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">2028 - 2021</div>
+                        <div class="timeline-date">2018 - 2021</div>
                         <h3 class="timeline-title">Practicante de Desarrollo de Software</h3>
                         <p class="timeline-company">Universidad de las Ciencias Informáticas</p>
                         <p class="timeline-description">Desarrollo de proyectos académicos y de investigación aplicando
@@ -469,7 +469,15 @@
             <!-- Contact Section -->
             <section id="contact">
                 <h2>Contacto</h2>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Campo honeypot para spam -->
+                    <div style="display: none;">
+                        <label>No llenes este campo: <input name="bot-field"></label>
+                    </div>
+
+                    <!-- Campo hidden para el nombre del formulario -->
+                    <input type="hidden" name="form-name" value="contact">
+
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" id="name" name="name" required>
