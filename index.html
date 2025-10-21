@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional</title>
+    <title>Portafolio Profesional - Christián R. Vazquez</title>
+    <meta name="description" content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
@@ -12,17 +13,23 @@
     <div class="container">
         <nav>
             <div class="logo">Portafolio</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#study">Estudios</a></li>
                 <li><a href="#experience">Experiencia</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#skills_2">Habilidades Blandas</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </div>
 </header>
@@ -43,8 +50,9 @@
             </div>
 
             <div class="social-links">
-                <a href="https://github.com/Christianrvdv"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/christianrvdv"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Christianrvdv" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/christianrvdv" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
 
@@ -65,11 +73,12 @@
                         de front-end y back-end.</p>
                     <p>Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y
                         especializarme, demostrando mi firme compromiso con el crecimiento continuo en este campo.</p>
-                    <p>Cuando no estoy programando, disfruto de (Hobby), (Hobby) y aprender sobre nuevas
+                    <p>Cuando no estoy programando, disfruto de la lectura, el ajedrez y aprender sobre nuevas
                         tecnologías. Creo firmemente en el aprendizaje continuo y en mantenerme actualizado con las
                         últimas tendencias en desarrollo web.</p>
                 </div>
             </section>
+
             <!-- Experience Section -->
             <section id="study">
                 <h2>Estudios</h2>
@@ -95,7 +104,6 @@
                             de la computación, ingeniería de software, bases de datos y tecnologías de vanguardia,
                             preparándome para enfrentar desafíos complejos en el ámbito del desarrollo de software.</p>
                     </div>
-
                 </div>
             </section>
 
@@ -132,92 +140,92 @@
                 </div>
             </section>
 
-            <!-- Projects Section --><section id="projects">
-            <h2>Proyectos</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://images.pexels.com/photos/4974916/pexels-photo-4974916.jpeg"
-                         alt="Sistema de Gestión de Inventario" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Sistema de Gestión de Inventario y Ventas</h3>
-                        <p>Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y análisis de datos.
-                            Incluye control de stock, facturación PDF, dashboard con métricas y servicios especializados para lógica de negocio compleja.</p>
-                        <div class="project-tech">
-                            <!-- Backend -->
-                            <span class="tech-tag">Symfony 7</span>
-                            <span class="tech-tag">PHP 8</span>
-                            <span class="tech-tag">Doctrine ORM</span>
-                            <span class="tech-tag">MySQL</span>
-                            <!-- Frontend -->
-                            <span class="tech-tag">Twig</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS</span>
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Proyectos</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="https://images.pexels.com/photos/4974916/pexels-photo-4974916.jpeg"
+                             alt="Sistema de Gestión de Inventario" class="project-img">
+                        <div class="project-info">
+                            <h3 class="project-title">Sistema de Gestión de Inventario y Ventas</h3>
+                            <p>Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y análisis de datos.
+                                Incluye control de stock, facturación PDF, dashboard con métricas y servicios especializados para lógica de negocio compleja.</p>
+                            <div class="project-tech">
+                                <!-- Backend -->
+                                <span class="tech-tag">Symfony 7</span>
+                                <span class="tech-tag">PHP 8</span>
+                                <span class="tech-tag">Doctrine ORM</span>
+                                <span class="tech-tag">MySQL</span>
+                                <!-- Frontend -->
+                                <span class="tech-tag">Twig</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/Christianrvdv/app_almacen"><i class="fab fa-github"></i> Código</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="https://github.com/Christianrvdv/app_almacen"><i class="fab fa-github"></i> Código</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.pexels.com/photos/5904934/pexels-photo-5904934.jpeg"
+                             alt="Sistema de Biblioteca Microservicios" class="project-img">
+                        <div class="project-info">
+                            <h3 class="project-title">Sistema de Biblioteca con Arquitectura de Microservicios</h3>
+                            <p>Sistema distribuido escalable desarrollado con Spring Boot para gestión completa de biblioteca.
+                                Implementa microservicios especializados para libros, usuarios, préstamos y notificaciones,
+                                con API Gateway, service discovery y comunicación asíncrona mediante mensajería.</p>
+                            <div class="project-tech">
+                                <!-- Backend & Microservicios -->
+                                <span class="tech-tag">Java 17</span>
+                                <span class="tech-tag">Spring Boot 3</span>
+                                <span class="tech-tag">Spring Cloud</span>
+                                <span class="tech-tag">Spring Data JPA</span>
+                                <!-- Infraestructura -->
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <!-- Herramientas Cloud -->
+                                <span class="tech-tag">API Gateway</span>
+                                <span class="tech-tag">Maven</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/Christianrvdv/sistema-biblioteca-microservicios/tree/main"><i class="fab fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://images.pexels.com/photos/5054213/pexels-photo-5054213.jpeg"
+                             alt="Sistema de Gestión de Solicitudes Bancarias" class="project-img">
+                        <div class="project-info">
+                            <h3 class="project-title">Sistema Móvil para Gestión de Solicitudes de Tarjetas BANCEC</h3>
+                            <p>Aplicación Android completa desarrollada para optimizar el proceso de recepción de solicitudes de tarjetas magnéticas en entornos bancarios.
+                                Incluye captura de datos mediante QR, gestión de clientes, exportación/importación Excel, estadísticas en tiempo real y transferencia segura de datos entre dispositivos.</p>
+                            <div class="project-tech">
+                                <!-- Plataforma -->
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Demo APK</a>
+                                <a href="https://github.com/Christianrvdv/SolicitudtarjetaBANDEC"><i class="fab fa-github"></i> Código</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="project-card">
-                    <img src="https://images.pexels.com/photos/5904934/pexels-photo-5904934.jpeg"
-                         alt="Sistema de Biblioteca Microservicios" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Sistema de Biblioteca con Arquitectura de Microservicios</h3>
-                        <p>Sistema distribuido escalable desarrollado con Spring Boot para gestión completa de biblioteca.
-                            Implementa microservicios especializados para libros, usuarios, préstamos y notificaciones,
-                            con API Gateway, service discovery y comunicación asíncrona mediante mensajería.</p>
-                        <div class="project-tech">
-                            <!-- Backend & Microservicios -->
-                            <span class="tech-tag">Java 17</span>
-                            <span class="tech-tag">Spring Boot 3</span>
-                            <span class="tech-tag">Spring Cloud</span>
-                            <span class="tech-tag">Spring Data JPA</span>
-                            <!-- Infraestructura -->
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <!-- Herramientas Cloud -->
-                            <span class="tech-tag">API Gateway</span>
-                            <span class="tech-tag">Maven</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="https://github.com/Christianrvdv/sistema-biblioteca-microservicios/tree/main"><i class="fab fa-github"></i> Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="https://images.pexels.com/photos/5054213/pexels-photo-5054213.jpeg"
-                         alt="Sistema de Gestión de Solicitudes Bancarias" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Sistema Móvil para Gestión de Solicitudes de Tarjetas BANCEC</h3>
-                        <p>Aplicación Android completa desarrollada para optimizar el proceso de recepción de solicitudes de tarjetas magnéticas en entornos bancarios.
-                            Incluye captura de datos mediante QR, gestión de clientes, exportación/importación Excel, estadísticas en tiempo real y transferencia segura de datos entre dispositivos.</p>
-                        <div class="project-tech">
-                            <!-- Plataforma -->
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">SQLite</span>
-
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo APK</a>
-                            <a href="https://github.com/Christianrvdv/SolicitudtarjetaBANDEC"><i class="fab fa-github"></i> Código</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
             <!-- Skills Section -->
             <section id="skills">
                 <h2>Habilidades</h2>
                 <div class="skills-container">
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Java</span>
+                            <span><i class="fab fa-java"></i> Java</span>
                             <span>75%</span>
                         </div>
                         <div class="skill-bar">
@@ -227,7 +235,7 @@
 
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>PHP</span>
+                            <span><i class="fab fa-php"></i> PHP</span>
                             <span>60%</span>
                         </div>
                         <div class="skill-bar">
@@ -237,7 +245,7 @@
 
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>HTML</span>
+                            <span><i class="fab fa-html5"></i> HTML</span>
                             <span>80%</span>
                         </div>
                         <div class="skill-bar">
@@ -247,7 +255,7 @@
 
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Symfony</span>
+                            <span><i class="fab fa-symfony"></i> Symfony</span>
                             <span>60%</span>
                         </div>
                         <div class="skill-bar">
@@ -257,7 +265,7 @@
 
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>CSS</span>
+                            <span><i class="fab fa-css3-alt"></i> CSS</span>
                             <span>65%</span>
                         </div>
                         <div class="skill-bar">
@@ -267,53 +275,54 @@
 
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>MySQL</span>
+                            <span><i class="fas fa-database"></i> MySQL</span>
                             <span>60%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 60%"></div>
                         </div>
                     </div>
-
-                    
                 </div>
             </section>
 
-            <!-- En la sección de habilidades, después de las técnicas -->
-            <h3 style="margin-top: 2rem; color: var(--primary-color);">Habilidades Blandas</h3>
-            <div class="skills-container">
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Resolución de Problemas</span>
-                        <span>85%</span>
+            <!-- Skills_2 Section -->
+            <section id="skills_2">
+                <h2>Habilidades Blandas</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span><i class="fas fa-lightbulb"></i> Resolución de Problemas</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span><i class="fas fa-users"></i> Trabajo en Equipo</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span><i class="fas fa-book"></i> Aprendizaje Autónomo</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Trabajo en Equipo</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Aprendizaje Autónomo</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-            </div>
+            </section>
+
             <!-- Contact Section -->
             <section id="contact">
                 <h2>Contacto</h2>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" id="name" name="name" required>
@@ -335,6 +344,7 @@
                     </div>
 
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    <div id="formMessage" class="form-message"></div>
                 </form>
             </section>
         </div>

@@ -59,7 +59,7 @@ Modificar cada sección en index.html:
 
 **Habilidades**: Competencias técnicas y blandas
 
-## Estilos
+**Estilos**
 Personalizar en estilo.css:
 
 Colores en :root y [data-theme="dark"]
@@ -105,3 +105,12 @@ Integrar con servicios como Formspree, Netlify Forms, o un backend personalizado
 
 ### 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Puedes usarlo libremente para tu portafolio personal.
+
+
+### 🔄 Cambios principales realizados:
+- Actualicé las características para incluir las nuevas funcionalidades (menú móvil, navegación activa, etc.)
+- Mejoré la estructura con secciones más claras
+- Actualicé el stack tecnológico con las tecnologías realmente usadas
+- Detallé las funcionalidades JavaScript implementadas
+- Mantuve el tono profesional pero más conciso
+- Agregué un call-to-action final para reclutadores
