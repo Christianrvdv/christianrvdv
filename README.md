@@ -38,13 +38,13 @@ portafolio/
 Información Personal
 Editar en index.html:
 
-## Nombre y título en .profile-card
+Nombre y título en .profile-card
 
-## Información de contacto
+Información de contacto
 
-## Redes sociales
+Redes sociales
 
-## Imagen de perfil
+Imagen de perfil
 
 Secciones de Contenido
 Modificar cada sección en index.html:
