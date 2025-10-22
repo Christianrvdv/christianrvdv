@@ -147,7 +147,7 @@ const translations = {
         "contact.submit": "Enviar Mensaje",
 
         // Footer
-        "footer.copyright": "&copy; 2025 Christián R. Vazquez. Todos los derechos reservados."
+        "footer.copyright": "2025 Christián R. Vazquez. Todos los derechos reservados."
     },
     en: {
         // Navigation
@@ -250,7 +250,7 @@ const translations = {
         "contact.submit": "Send Message",
 
         // Footer
-        "footer.copyright": "&copy; 2025 Christián R. Vazquez. All rights reserved."
+        "footer.copyright": "2025 Christián R. Vazquez. All rights reserved."
     }
 };
 
