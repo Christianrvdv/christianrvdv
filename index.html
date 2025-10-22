@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Profesional - Christián R. Vazquez</title>
-    <meta name="description" content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony">
+    <meta name="description"
+          content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
@@ -12,16 +13,20 @@
 <header>
     <div class="container">
         <nav>
-            <div class="logo">Portafolio</div>
+            <div class="logo" data-i18n="logo">Portafolio</div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#study">Estudios</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+                <li><a href="#study" data-i18n="nav.study">Estudios</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
             </ul>
             <div class="nav-controls">
+                <button class="language-toggle" id="languageToggle" aria-label="Cambiar idioma">
+                    <i class="fas fa-globe"></i>
+                    <span class="language-text" data-i18n="language.es">ES</span>
+                </button>
                 <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/oscuro">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -40,12 +45,18 @@
             <img src="https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4"
                  alt="Christián R. Vazquez - Desarrollador Backend" class="profile-img">
             <h1 class="profile-name">Christián R. Vazquez</h1>
-            <p class="profile-title">Desarrollador Backend</p>
+            <p class="profile-title" data-i18n="profile.title">Desarrollador Backend</p>
 
             <div class="social-links">
                 <a href="https://github.com/Christianrvdv" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://t.me/christianrvdv" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                 <a href="mailto:christianrvdv.1999@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <div class="cv-download">
+                <a href="CV_Christian_Vazquez.pdf" download class="cv-btn">
+                    <i class="fas fa-download"></i> <span data-i18n="cv.download">Descargar CV</span>
+                </a>
             </div>
         </div>
 
@@ -53,26 +64,26 @@
         <div class="content">
             <!-- About Section -->
             <section id="about">
-                <h2>Sobre mí</h2>
+                <h2 data-i18n="about.title">Sobre mí</h2>
                 <div class="about-text">
-                    <p>Hola, soy Christian Vazquez, un Ingeniero en Ciencias Informáticas apasionado por el desarrollo
+                    <p data-i18n="about.paragraph1">Hola, soy Christian Vazquez, un Ingeniero en Ciencias Informáticas apasionado por el desarrollo
                         de software y la creación de soluciones web innovadoras. Mi formación en la UCI me proporcionó
                         una base sólida en ingeniería de software, la cual he consolidado a través de proyectos
                         personales donde aplico mi conocimiento en la práctica.</p>
-                    <p>Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores
+                    <p data-i18n="about.paragraph2">Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores
                         prácticas y estándares de la industria. Aunque mi trayectoria profesional inicial ha estado
                         fuera del ámbito del desarrollo, he dedicado los últimos dos años a mantener y potenciar mis
                         habilidades de forma autodidacta, construyendo aplicaciones y explorando tecnologías modernas
                         de front-end y back-end.</p>
-                    <p>Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he
+                    <p data-i18n="about.paragraph3">Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he
                         trabajado
                         con frameworks como Spring Boot y Symfony. También tengo capacidad para crear interfaces
                         frontend
                         básicas y me adapto bien a entornos full-stack cuando el proyecto lo requiere, siempre con la
                         humildad de reconocer que el aprendizaje en este campo es continuo.</p>
-                    <p>Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y
+                    <p data-i18n="about.paragraph4">Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y
                         especializarme, demostrando mi firme compromiso con el crecimiento continuo en este campo.</p>
-                    <p>Cuando no estoy programando, disfruto de la lectura, el tiempo en familia y aprender sobre nuevas
+                    <p data-i18n="about.paragraph5">Cuando no estoy programando, disfruto de la lectura, el tiempo en familia y aprender sobre nuevas
                         tecnologías. Creo firmemente en el aprendizaje continuo y en mantenerme actualizado con las
                         últimas tendencias en desarrollo web.</p>
                 </div>
@@ -80,13 +91,13 @@
 
             <!-- Study Section -->
             <section id="study">
-                <h2>Estudios</h2>
+                <h2 data-i18n="study.title">Estudios</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date">2025 - Presente</div>
-                        <h3 class="timeline-title">Maestria en Informatica Aplicada</h3>
-                        <p class="timeline-company">Universidad José Martí (UNISS)</p>
-                        <p class="timeline-description">Complementando mi formación de grado con una especialización que
+                        <div class="timeline-date" data-i18n="study.masters.date">2025 - Presente</div>
+                        <h3 class="timeline-title" data-i18n="study.masters.title">Maestria en Informatica Aplicada</h3>
+                        <p class="timeline-company" data-i18n="study.masters.university">Universidad José Martí (UNISS)</p>
+                        <p class="timeline-description" data-i18n="study.masters.description">Complementando mi formación de grado con una especialización que
                             busca cerrar la brecha entre la teoría avanzada en informática y su aplicación práctica en
                             entornos empresariales y de investigación. Me estoy enfocando en adquirir competencias de
                             alto nivel para el diseño e implementación de sistemas complejos que respondan a desafíos
@@ -94,10 +105,10 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">2017 - 2022</div>
-                        <h3 class="timeline-title">Ingenieria en Ciencias Informaticas</h3>
-                        <p class="timeline-company">Universidad de las Ciencias Informaticas (UCI)</p>
-                        <p class="timeline-description">Graduado de un programa de ingeniería con un enfoque práctico
+                        <div class="timeline-date" data-i18n="study.degree.date">2017 - 2022</div>
+                        <h3 class="timeline-title" data-i18n="study.degree.title">Ingenieria en Ciencias Informaticas</h3>
+                        <p class="timeline-company" data-i18n="study.degree.university">Universidad de las Ciencias Informaticas (UCI)</p>
+                        <p class="timeline-description" data-i18n="study.degree.description">Graduado de un programa de ingeniería con un enfoque práctico
                             en el desarrollo de software. La formación en la UCI se caracterizó por un modelo de
                             aprendizaje basado en proyectos reales, donde consolidé mis conocimientos en fundamentos
                             de la computación, ingeniería de software, bases de datos y tecnologías de vanguardia,
@@ -108,13 +119,13 @@
 
             <!-- Experience Section -->
             <section id="experience">
-                <h2>Experiencia</h2>
+                <h2 data-i18n="experience.title">Experiencia</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date">2022 - Presente</div>
-                        <h3 class="timeline-title">Desarrollador Backend</h3>
-                        <p class="timeline-company">Freelance / Proyectos Independientes</p>
-                        <p class="timeline-description">Desarrollo de aplicaciones web robustas utilizando Symfony y
+                        <div class="timeline-date" data-i18n="experience.freelance.date">2022 - Presente</div>
+                        <h3 class="timeline-title" data-i18n="experience.freelance.title">Desarrollador Backend</h3>
+                        <p class="timeline-company" data-i18n="experience.freelance.company">Freelance / Proyectos Independientes</p>
+                        <p class="timeline-description" data-i18n="experience.freelance.description">Desarrollo de aplicaciones web robustas utilizando Symfony y
                             Spring Boot.
                             Implementación de APIs RESTful, diseño de bases de datos MySQL, y creación de arquitecturas
                             escalables.
@@ -122,10 +133,10 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">2021 - 2022</div>
-                        <h3 class="timeline-title">Desarrollador Backend Junior</h3>
-                        <p class="timeline-company">Centro de Desarrollo Local</p>
-                        <p class="timeline-description">Desarrollo y mantenimiento de aplicaciones web utilizando PHP,
+                        <div class="timeline-date" data-i18n="experience.junior.date">2021 - 2022</div>
+                        <h3 class="timeline-title" data-i18n="experience.junior.title">Desarrollador Backend Junior</h3>
+                        <p class="timeline-company" data-i18n="experience.junior.company">Centro de Desarrollo Local</p>
+                        <p class="timeline-description" data-i18n="experience.junior.description">Desarrollo y mantenimiento de aplicaciones web utilizando PHP,
                             Symfony y Java.
                             Creación de interfaces de usuario con HTML, CSS y JavaScript. Soporte técnico y resolución
                             de incidencias
@@ -134,10 +145,10 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">2018 - 2021</div>
-                        <h3 class="timeline-title">Practicante de Desarrollo de Software</h3>
-                        <p class="timeline-company">Universidad de las Ciencias Informáticas</p>
-                        <p class="timeline-description">Desarrollo de proyectos académicos y de investigación aplicando
+                        <div class="timeline-date" data-i18n="experience.intern.date">2018 - 2021</div>
+                        <h3 class="timeline-title" data-i18n="experience.intern.title">Practicante de Desarrollo de Software</h3>
+                        <p class="timeline-company" data-i18n="experience.intern.company">Universidad de las Ciencias Informáticas</p>
+                        <p class="timeline-description" data-i18n="experience.intern.description">Desarrollo de proyectos académicos y de investigación aplicando
                             metodologías
                             de ingeniería de software. Implementación de soluciones con Java y PHP. Aprendizaje y
                             aplicación de
@@ -149,7 +160,7 @@
 
             <!-- Projects Section -->
             <section id="projects">
-                <h2>Proyectos</h2>
+                <h2 data-i18n="projects.title">Proyectos</h2>
                 <div class="projects-grid">
                     <!-- Proyecto 1: Sistema de Inventario -->
                     <div class="project-card">
@@ -159,11 +170,11 @@
                                 <i class="fab fa-php project-tech-icon"></i>
                                 <i class="fas fa-database project-tech-icon"></i>
                             </div>
-                            <p>Sistema Backend</p>
+                            <p data-i18n="projects.inventory.type">Sistema Backend</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Sistema de Gestión de Inventario y Ventas</h3>
-                            <p>Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y
+                            <h3 class="project-title" data-i18n="projects.inventory.title">Sistema de Gestión de Inventario y Ventas</h3>
+                            <p data-i18n="projects.inventory.description">Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y
                                 análisis de datos.
                                 Incluye control de stock, facturación PDF, dashboard con métricas y servicios
                                 especializados para lógica de negocio compleja.</p>
@@ -179,9 +190,9 @@
                                 <span class="tech-tag">CSS</span>
                             </div>
                             <div class="project-links">
-                                <a href="#"><i class="fas fa-tools"></i>Demo en desarrollo</a>
+                                <a href="#"><i class="fas fa-tools"></i><span data-i18n="projects.demo">Demo en desarrollo</span></a>
                                 <a href="https://github.com/Christianrvdv/app_almacen"><i class="fab fa-github"></i>
-                                    Código</a>
+                                    <span data-i18n="projects.code">Código</span></a>
                             </div>
                         </div>
                     </div>
@@ -194,11 +205,11 @@
                                 <i class="fas fa-cloud project-tech-icon"></i>
                                 <i class="fab fa-docker project-tech-icon"></i>
                             </div>
-                            <p>Arquitectura Microservicios</p>
+                            <p data-i18n="projects.microservices.type">Arquitectura Microservicios</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Sistema de Biblioteca con Arquitectura de Microservicios</h3>
-                            <p>Sistema distribuido escalable desarrollado con Spring Boot para gestión completa de
+                            <h3 class="project-title" data-i18n="projects.microservices.title">Sistema de Biblioteca con Arquitectura de Microservicios</h3>
+                            <p data-i18n="projects.microservices.description">Sistema distribuido escalable desarrollado con Spring Boot para gestión completa de
                                 biblioteca.
                                 Implementa microservicios especializados para libros, usuarios, préstamos y
                                 notificaciones,
@@ -217,9 +228,9 @@
                                 <span class="tech-tag">Maven</span>
                             </div>
                             <div class="project-links">
-                                <a href="#"><i class="fas fa-tools"></i>Demo en desarrollo</a>
+                                <a href="#"><i class="fas fa-tools"></i><span data-i18n="projects.demo">Demo en desarrollo</span></a>
                                 <a href="https://github.com/Christianrvdv/sistema-biblioteca-microservicios"><i
-                                        class="fab fa-github"></i> Código</a>
+                                        class="fab fa-github"></i> <span data-i18n="projects.code">Código</span></a>
                             </div>
                         </div>
                     </div>
@@ -232,11 +243,11 @@
                                 <i class="fab fa-java project-tech-icon"></i>
                                 <i class="fas fa-mobile-alt project-tech-icon"></i>
                             </div>
-                            <p>Aplicación Móvil</p>
+                            <p data-i18n="projects.android.type">Aplicación Móvil</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Sistema Móvil para Gestión de Solicitudes de Tarjetas BANCEC</h3>
-                            <p>Aplicación Android completa desarrollada para optimizar el proceso de recepción de
+                            <h3 class="project-title" data-i18n="projects.android.title">Sistema Móvil para Gestión de Solicitudes de Tarjetas BANCEC</h3>
+                            <p data-i18n="projects.android.description">Aplicación Android completa desarrollada para optimizar el proceso de recepción de
                                 solicitudes de tarjetas magnéticas en entornos bancarios.
                                 Incluye captura de datos mediante QR, gestión de clientes, exportación/importación
                                 Excel, estadísticas en tiempo real y transferencia segura de datos entre
@@ -248,9 +259,9 @@
                                 <span class="tech-tag">SQLite</span>
                             </div>
                             <div class="project-links">
-                                <a href="#"><i class="fas fa-tools"></i>Demo en desarrollo</a>
+                                <a href="#"><i class="fas fa-tools"></i><span data-i18n="projects.demo">Demo en desarrollo</span></a>
                                 <a href="https://github.com/Christianrvdv/SolicitudtarjetaBANDEC"><i
-                                        class="fab fa-github"></i> Código</a>
+                                        class="fab fa-github"></i> <span data-i18n="projects.code">Código</span></a>
                             </div>
                         </div>
                     </div>
@@ -263,11 +274,11 @@
                                 <i class="fab fa-css3-alt project-tech-icon"></i>
                                 <i class="fab fa-js project-tech-icon"></i>
                             </div>
-                            <p>Portafolio Profesional - Sitio Actual</p>
+                            <p data-i18n="projects.portfolio.type">Portafolio Profesional - Sitio Actual</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title">Portafolio Profesional Responsive</h3>
-                            <p>Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla.
+                            <h3 class="project-title" data-i18n="projects.portfolio.title">Portafolio Profesional Responsive</h3>
+                            <p data-i18n="projects.portfolio.description">Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla.
                                 Incluye diseño responsive, tema claro/oscuro persistente, navegación suave,
                                 animaciones al scroll y formulario de contacto interactivo.</p>
                             <div class="project-tech">
@@ -279,9 +290,9 @@
                                 <span class="tech-tag">LocalStorage API</span>
                             </div>
                             <div class="project-links">
-                                <a href="#about"><i class="fas fa-eye"></i>Demo</a>
+                                <a href="#about"><i class="fas fa-eye"></i><span data-i18n="projects.demo">Demo</span></a>
                                 <a href="https://github.com/Christianrvdv/christianrvdv"><i class="fab fa-github"></i>
-                                    Código</a>
+                                    <span data-i18n="projects.code">Código</span></a>
                             </div>
                         </div>
                     </div>
@@ -290,10 +301,10 @@
 
             <!-- Skills Section -->
             <section id="skills">
-                <h2>Habilidades Técnicas</h2>
+                <h2 data-i18n="skills.title">Habilidades Técnicas</h2>
 
                 <!-- Lenguajes de Programación -->
-                <h3 class="skills-subtitle">Lenguajes de Programación</h3>
+                <h3 class="skills-subtitle" data-i18n="skills.languages">Lenguajes de Programación</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -308,15 +319,16 @@
                         </div>
                     </div>
                     <div class="skill-item">
-                    <div class="skill-content">
-                        <i class="fab fa-js skill-icon"></i>
-                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-content">
+                            <i class="fab fa-js skill-icon"></i>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
                     </div>
-                </div>
+                    <div style="width: 130px;"></div>
                 </div>
 
                 <!-- Tecnologías Web -->
-                <h3 class="skills-subtitle">Tecnologías Web</h3>
+                <h3 class="skills-subtitle" data-i18n="skills.web">Tecnologías Web</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -330,10 +342,12 @@
                             <span class="skill-name">CSS</span>
                         </div>
                     </div>
+                    <div style="width: 130px;"></div>
+                    <div style="width: 130px;"></div>
                 </div>
 
                 <!-- Frameworks y Tecnologías -->
-                <h3 class="skills-subtitle">Frameworks y Tecnologías</h3>
+                <h3 class="skills-subtitle" data-i18n="skills.frameworks">Frameworks y Tecnologías</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -361,7 +375,7 @@
                     </div>
                 </div>
                 <!-- Bases de Datos -->
-                <h3 class="skills-subtitle">Bases de Datos</h3>
+                <h3 class="skills-subtitle" data-i18n="skills.databases">Bases de Datos</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -381,10 +395,11 @@
                             <span class="skill-name">SQLite</span>
                         </div>
                     </div>
+                    <div style="width: 130px;"></div>
                 </div>
 
                 <!-- Herramientas de Desarrollo -->
-                <h3 class="skills-subtitle">Herramientas de Desarrollo</h3>
+                <h3 class="skills-subtitle" data-i18n="skills.tools">Herramientas de Desarrollo</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -413,7 +428,7 @@
                 </div>
 
                 <!-- Arquitectura y Conceptos -->
-                <h3 class="skills-subtitle">Arquitectura y Conceptos</h3>
+                <h3 class="skills-subtitle" data-i18n="skills.architecture">Arquitectura y Conceptos</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -433,66 +448,68 @@
                             <span class="skill-name">API Gateway</span>
                         </div>
                     </div>
+                    <div style="width: 130px;"></div>
                 </div>
 
                 <!-- Habilidades Blandas -->
-                <h3 class="skills-subtitle">Habilidades Blandas</h3>
+                <h3 class="skills-subtitle" data-i18n="skills.soft">Habilidades Blandas</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-lightbulb skill-icon"></i>
-                            <span class="skill-name">Resolución de Problemas</span>
+                            <span class="skill-name" data-i18n="skills.problem_solving">Resolución de Problemas</span>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-users skill-icon"></i>
-                            <span class="skill-name">Trabajo en Equipo</span>
+                            <span class="skill-name" data-i18n="skills.teamwork">Trabajo en Equipo</span>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-book skill-icon"></i>
-                            <span class="skill-name">Aprendizaje Autónomo</span>
+                            <span class="skill-name" data-i18n="skills.learning">Aprendizaje Autónomo</span>
                         </div>
                     </div>
+                    <div style="width: 130px;"></div>
                 </div>
             </section>
 
             <!-- Sección Contacto -->
             <section id="contact">
-                <h2>Contacto</h2>
+                <h2 data-i18n="contact.title">Contacto</h2>
                 <form class="contact-form" id="contactForm" name="contact" method="POST" netlify>
                     <!-- CAMPO OBLIGATORIO para Netlify -->
                     <input type="hidden" name="form-name" value="contact">
 
                     <!-- SOLO UN honeypot invisible -->
                     <div class="hidden">
-                        <label for="bot_trap">No completar este campo</label>
+                        <label for="bot_trap" data-i18n="contact.bot_trap">No completar este campo</label>
                         <input type="text" id="bot_trap" name="bot_trap" tabindex="-1" autocomplete="off">
                     </div>
 
                     <div class="form-group">
-                        <label for="name">Nombre</label>
+                        <label for="name" data-i18n="contact.name">Nombre</label>
                         <input type="text" id="name" name="name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email" data-i18n="contact.email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="subject">Asunto</label>
+                        <label for="subject" data-i18n="contact.subject">Asunto</label>
                         <input type="text" id="subject" name="subject" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Mensaje</label>
+                        <label for="message" data-i18n="contact.message">Mensaje</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    <button type="submit" class="submit-btn" data-i18n="contact.submit">Enviar Mensaje</button>
                     <div id="formMessage" class="form-message"></div>
                 </form>
             </section>
@@ -502,7 +519,7 @@
 
 <footer>
     <div class="container">
-        <p>&copy; 2025 Christián R. Vazquez. Todos los derechos reservados.</p>
+        <p data-i18n="footer.copyright">&copy; 2025 Christián R. Vazquez. Todos los derechos reservados.</p>
     </div>
 </footer>
 

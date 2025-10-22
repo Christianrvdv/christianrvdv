@@ -97,7 +97,7 @@ nav {
     align-items: center;
 }
 
-.theme-toggle, .menu-toggle {
+.theme-toggle, .menu-toggle, .language-toggle {
     background: none;
     border: none;
     color: var(--text-color);
@@ -105,10 +105,18 @@ nav {
     cursor: pointer;
     transition: var(--transition);
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.theme-toggle:hover, .menu-toggle:hover {
+.theme-toggle:hover, .menu-toggle:hover, .language-toggle:hover {
     color: var(--primary-color);
+}
+
+.language-text {
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .menu-toggle {
@@ -612,6 +620,10 @@ footer {
     .project-image-placeholder p {
         font-size: 0.8rem;
     }
+
+    .language-text {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -661,4 +673,43 @@ footer {
 .social-links a:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cv-download {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+.cv-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .cv-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cv-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
 }
