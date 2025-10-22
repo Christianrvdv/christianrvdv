@@ -53,18 +53,6 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-
-            // Animar barras de habilidades cuando la sección de habilidades es visible
-            if (entry.target.id === 'skills') {
-                const skillBars = document.querySelectorAll('.skill-progress');
-                skillBars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 100);
-                });
-            }
         }
     });
 }, observerOptions);
@@ -73,7 +61,7 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-// Navegación suave y activa
+// Navegación suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -122,44 +110,46 @@ window.addEventListener('scroll', () => {
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    // Mostrar estado de envío
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Enviando...';
-    submitBtn.disabled = true;
+        // Mostrar estado de envío
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
 
-    try {
-        // Enviar formulario a Netlify
-        const formData = new FormData(contactForm);
+        try {
+            // Enviar formulario a Netlify
+            const formData = new FormData(contactForm);
 
-        const response = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        });
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
 
-        if (response.ok) {
-            formMessage.textContent = '¡Mensaje enviado correctamente! Te responderé pronto.';
-            formMessage.className = 'form-message success';
+            if (response.ok) {
+                formMessage.textContent = '¡Mensaje enviado correctamente! Te responderé pronto.';
+                formMessage.className = 'form-message success';
+                formMessage.style.display = 'block';
+                contactForm.reset();
+            } else {
+                throw new Error('Error en el servidor');
+            }
+        } catch (error) {
+            formMessage.textContent = 'Hubo un error al enviar el mensaje. Por favor, envíame un email directamente a christianrvdv.1999@gmail.com';
+            formMessage.className = 'form-message error';
             formMessage.style.display = 'block';
-            contactForm.reset();
-        } else {
-            throw new Error('Error en el servidor');
-        }
-    } catch (error) {
-        formMessage.textContent = 'Hubo un error al enviar el mensaje. Por favor, envíame un email directamente a christianrvdv.1999@gmail.com';
-        formMessage.className = 'form-message error';
-        formMessage.style.display = 'block';
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
 
-        // Ocultar mensaje después de 8 segundos
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 8000);
-    }
-});
+            // Ocultar mensaje después de 8 segundos
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 8000);
+        }
+    });
+}

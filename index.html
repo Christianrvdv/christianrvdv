@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Profesional - Christián R. Vazquez</title>
-    <meta name="description"
-          content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony">
+    <meta name="description" content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
@@ -23,10 +22,10 @@
                 <li><a href="#contact">Contacto</a></li>
             </ul>
             <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/oscuro">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir/cerrar menú">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -39,14 +38,13 @@
         <!-- Profile Card -->
         <div class="profile-card">
             <img src="https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4"
-                 alt="Profile Image" class="profile-img">
+                 alt="Christián R. Vazquez - Desarrollador Backend" class="profile-img">
             <h1 class="profile-name">Christián R. Vazquez</h1>
             <p class="profile-title">Desarrollador Backend</p>
 
             <div class="social-links">
                 <a href="https://github.com/Christianrvdv" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://t.me/christianrvdv" aria-label="Telegram"><i
-                        class="fab fa-telegram"></i></a>
+                <a href="https://t.me/christianrvdv" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
             </div>
         </div>
 
@@ -65,8 +63,10 @@
                         fuera del ámbito del desarrollo, he dedicado los últimos dos años a mantener y potenciar mis
                         habilidades de forma autodidacta, construyendo aplicaciones y explorando tecnologías modernas
                         de front-end y back-end.</p>
-                    <p>Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he trabajado
-                        con frameworks como Spring Boot y Symfony. También tengo capacidad para crear interfaces frontend
+                    <p>Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he
+                        trabajado
+                        con frameworks como Spring Boot y Symfony. También tengo capacidad para crear interfaces
+                        frontend
                         básicas y me adapto bien a entornos full-stack cuando el proyecto lo requiere, siempre con la
                         humildad de reconocer que el aprendizaje en este campo es continuo.</p>
                     <p>Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y
@@ -77,7 +77,7 @@
                 </div>
             </section>
 
-            <!-- Experience Section -->
+            <!-- Study Section -->
             <section id="study">
                 <h2>Estudios</h2>
                 <div class="timeline">
@@ -253,6 +253,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Proyecto 4: Portafolio -->
                     <div class="project-card">
                         <div class="project-image-placeholder portfolio">
                             <div class="tech-icons">
@@ -276,8 +278,9 @@
                                 <span class="tech-tag">LocalStorage API</span>
                             </div>
                             <div class="project-links">
-                                <a href="#"><i class="fas fa-tools"></i>Demo en desarrollo</a>
-                                <a href="https://github.com/Christianrvdv/christianrvdv"><i class="fab fa-github"></i> Código</a>
+                                <a href="#about"><i class="fas fa-eye"></i>Demo</a>
+                                <a href="https://github.com/Christianrvdv/christianrvdv"><i class="fab fa-github"></i>
+                                    Código</a>
                             </div>
                         </div>
                     </div>
@@ -287,6 +290,9 @@
             <!-- Skills Section -->
             <section id="skills">
                 <h2>Habilidades Técnicas</h2>
+
+                <!-- Lenguajes de Programación -->
+                <h3 class="skills-subtitle">Lenguajes de Programación</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -294,66 +300,109 @@
                             <span class="skill-name">Java</span>
                         </div>
                     </div>
-
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fab fa-php skill-icon"></i>
                             <span class="skill-name">PHP</span>
                         </div>
                     </div>
+                    <div class="skill-item">
+                    <div class="skill-content">
+                        <i class="fab fa-js skill-icon"></i>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                </div>
+                </div>
 
+                <!-- Tecnologías Web -->
+                <h3 class="skills-subtitle">Tecnologías Web</h3>
+                <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fab fa-html5 skill-icon"></i>
                             <span class="skill-name">HTML</span>
                         </div>
                     </div>
-
-                    <div class="skill-item">
-                        <div class="skill-content">
-                            <i class="fab fa-symfony skill-icon"></i>
-                            <span class="skill-name">Symfony</span>
-                        </div>
-                    </div>
-
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fab fa-css3-alt skill-icon"></i>
                             <span class="skill-name">CSS</span>
                         </div>
                     </div>
-
-                    <div class="skill-item">
-                        <div class="skill-content">
-                            <i class="fas fa-database skill-icon"></i>
-                            <span class="skill-name">MySQL</span>
-                        </div>
-                    </div>
                 </div>
 
-                <h3 style="margin-top: 2rem; color: var(--primary-color);">Tecnologías Adicionales</h3>
+                <!-- Frameworks y Tecnologías -->
+                <h3 class="skills-subtitle">Frameworks y Tecnologías</h3>
                 <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fab fa-symfony skill-icon"></i>
+                            <span class="skill-name">Symfony</span>
+                        </div>
+                    </div>
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-cloud skill-icon"></i>
                             <span class="skill-name">Spring Boot</span>
                         </div>
                     </div>
-
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-network-wired skill-icon"></i>
                             <span class="skill-name">Spring Cloud</span>
                         </div>
                     </div>
-
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">Doctrine ORM</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bases de Datos -->
+                <h3 class="skills-subtitle">Bases de Datos</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                    </div>
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-database skill-icon"></i>
                             <span class="skill-name">PostgreSQL</span>
                         </div>
                     </div>
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">SQLite</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Herramientas de Desarrollo -->
+                <h3 class="skills-subtitle">Herramientas de Desarrollo</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fab fa-git-alt skill-icon"></i>
+                            <span class="skill-name">Git</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-cube skill-icon"></i>
+                            <span class="skill-name">Maven</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-tools skill-icon"></i>
+                            <span class="skill-name">Gradle</span>
+                        </div>
+                    </div>
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fab fa-docker skill-icon"></i>
@@ -362,43 +411,31 @@
                     </div>
                 </div>
 
-                <h3 style="margin-top: 2rem; color: var(--primary-color);">Herramientas & Metodologías</h3>
-                <div class="tools-grid">
-                    <div class="tool-item">
-                        <i class="fas fa-database tool-icon"></i>
-                        <span class="tool-name">Spring Data JPA</span>
+                <!-- Arquitectura y Conceptos -->
+                <h3 class="skills-subtitle">Arquitectura y Conceptos</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-code skill-icon"></i>
+                            <span class="skill-name">APIs REST</span>
+                        </div>
                     </div>
-                    <div class="tool-item">
-                        <i class="fas fa-layer-group tool-icon"></i>
-                        <span class="tool-name">Doctrine ORM</span>
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-microchip skill-icon"></i>
+                            <span class="skill-name">Microservicios</span>
+                        </div>
                     </div>
-                    <div class="tool-item">
-                        <i class="fas fa-server tool-icon"></i>
-                        <span class="tool-name">API Gateway</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fas fa-microchip tool-icon"></i>
-                        <span class="tool-name">Microservicios</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fas fa-code tool-icon"></i>
-                        <span class="tool-name">APIs REST</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fas fa-cube tool-icon"></i>
-                        <span class="tool-name">Maven</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fab fa-git-alt tool-icon"></i>
-                        <span class="tool-name">Git</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fas fa-mobile-alt tool-icon"></i>
-                        <span class="tool-name">SQLite</span>
+                    <div class="skill-item">
+                        <div class="skill-content">
+                            <i class="fas fa-server skill-icon"></i>
+                            <span class="skill-name">API Gateway</span>
+                        </div>
                     </div>
                 </div>
 
-                <h3 style="margin-top: 2rem; color: var(--primary-color);">Habilidades Blandas</h3>
+                <!-- Habilidades Blandas -->
+                <h3 class="skills-subtitle">Habilidades Blandas</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-content">
@@ -406,14 +443,12 @@
                             <span class="skill-name">Resolución de Problemas</span>
                         </div>
                     </div>
-
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-users skill-icon"></i>
                             <span class="skill-name">Trabajo en Equipo</span>
                         </div>
                     </div>
-
                     <div class="skill-item">
                         <div class="skill-content">
                             <i class="fas fa-book skill-icon"></i>
@@ -426,12 +461,8 @@
             <!-- Contact Section -->
             <section id="contact">
                 <h2>Contacto</h2>
-                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <!-- Campo honeypot para spam -->
-                    <div style="display: none;">
-                        <label>No llenes este campo: <input name="bot-field"></label>
-                    </div>
-
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true"
+                      netlify-honeypot="bot-field">
                     <!-- Campo hidden para el nombre del formulario -->
                     <input type="hidden" name="form-name" value="contact">
 
