@@ -76,7 +76,7 @@ const translations = {
         "contact.title": "Contacto",
 
         // Sobre mí
-        "about.paragraph1": "Hola, soy Christian Vazquez, un Ingeniero en Ciencias Informáticas apasionado por el desarrollo de software y la creación de soluciones web innovadoras. Mi formación en la UCI me proporcionó una base sólida en ingeniería de software, la cual he consolidado a través de proyectos personales donde aplico mi conocimiento en la práctica.",
+        "about.paragraph1": "Hola, soy Christián Vazquez, un Ingeniero en Ciencias Informáticas apasionado por el desarrollo de software y la creación de soluciones web innovadoras. Mi formación en la UCI me proporcionó una base sólida en ingeniería de software, la cual he consolidado a través de proyectos personales donde aplico mi conocimiento en la práctica.",
         "about.paragraph2": "Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores prácticas y estándares de la industria. Aunque mi trayectoria profesional inicial ha estado fuera del ámbito del desarrollo, he dedicado los últimos dos años a mantener y potenciar mis habilidades de forma autodidacta, construyendo aplicaciones y explorando tecnologías modernas de front-end y back-end.",
         "about.paragraph3": "Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he trabajado con frameworks como Spring Boot y Symfony. También tengo capacidad para crear interfaces frontend básicas y me adapto bien a entornos full-stack cuando el proyecto lo requiere, siempre con la humildad de reconocer que el aprendizaje en este campo es continuo.",
         "about.paragraph4": "Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y especializarme, demostrando mi firme compromiso con el crecimiento continuo en este campo.",
@@ -94,15 +94,15 @@ const translations = {
         "study.degree.description": "Graduado de un programa de ingeniería con un enfoque práctico en el desarrollo de software. La formación en la UCI se caracterizó por un modelo de aprendizaje basado en proyectos reales, donde consolidé mis conocimientos en fundamentos de la computación, ingeniería de software, bases de datos y tecnologías de vanguardia, preparándome para enfrentar desafíos complejos en el ámbito del desarrollo de software.",
 
         // Experiencia
-        "experience.freelance.date": "2022 - Presente",
+        "experience.freelance.date": "2024 - Presente",
         "experience.freelance.title": "Desarrollador Backend",
         "experience.freelance.company": "Freelance / Proyectos Independientes",
         "experience.freelance.description": "Desarrollo de aplicaciones web robustas utilizando Symfony y Spring Boot. Implementación de APIs RESTful, diseño de bases de datos MySQL, y creación de arquitecturas escalables. Colaboración en el ciclo completo de desarrollo desde el análisis hasta el despliegue.",
 
-        "experience.junior.date": "2021 - 2022",
+        "experience.junior.date": "2021 - 2024",
         "experience.junior.title": "Desarrollador Backend Junior",
         "experience.junior.company": "Centro de Desarrollo Local",
-        "experience.junior.description": "Desarrollo y mantenimiento de aplicaciones web utilizando PHP, Symfony y Java. Creación de interfaces de usuario con HTML, CSS y JavaScript. Soporte técnico y resolución de incidencias en sistemas existentes. Participación en equipos ágiles para el desarrollo de soluciones empresariales.",
+        "experience.junior.description": "Desarrollo de aplicaciones móviles nativas para Android utilizando Java (Android Nativo). Desarrollo y mantenimiento de aplicaciones web utilizando Java y Spring Boot. Creación de interfaces de usuario con HTML, CSS y JavaScript. Soporte técnico y resolución de incidencias en sistemas existentes. Participación en equipos ágiles para el desarrollo de soluciones empresariales.",
 
         "experience.intern.date": "2018 - 2021",
         "experience.intern.title": "Practicante de Desarrollo de Software",
@@ -148,7 +148,6 @@ const translations = {
         "contact.subject": "Asunto",
         "contact.message": "Mensaje",
         "contact.submit": "Enviar Mensaje",
-
         // CTA
         "cta.text": "¿Interesado en colaborar?",
         "cta.button": "Contáctame ahora",
@@ -185,58 +184,58 @@ const translations = {
         "skills.title": "Technical Skills",
         "contact.title": "Contact",
 
-        // About me
-        "about.paragraph1": "Hello, I'm Christian Vazquez, a Computer Science Engineer passionate about software development and creating innovative web solutions. My education at UCI provided me with a solid foundation in software engineering, which I have strengthened through personal projects where I apply my knowledge in practice.",
-        "about.paragraph2": "My motivation is to transform ideas into functional, clean, and efficient code, following industry best practices and standards. Although my initial professional path started outside the development field, I have dedicated the last two years to maintaining and enhancing my skills through self-learning, building applications and exploring modern front-end and back-end technologies.",
-        "about.paragraph3": "My experience focuses primarily on backend development with Java and PHP, where I have worked with frameworks like Spring Boot and Symfony. I can also create basic frontend interfaces and adapt well to full-stack environments when required by the project, always with the humility to recognize that learning in this field is continuous.",
-        "about.paragraph4": "Currently, I'm pursuing a Master's in Applied Computer Science to deepen my knowledge and specialize, demonstrating my strong commitment to continuous growth in this field.",
-        "about.paragraph5": "When I'm not programming, I enjoy reading, spending time with family, and learning about new technologies. I firmly believe in continuous learning and staying updated with the latest trends in web development.",
+        // About Me
+        "about.paragraph1": "Hello, I am Christián Vazquez, a Computer Science Engineer passionate about software development and creating innovative web solutions. My education at UCI provided me with a solid foundation in software engineering, which I have consolidated through personal projects where I apply my knowledge in practice.",
+        "about.paragraph2": "My motivation is to transform ideas into functional, clean, and efficient code, following industry best practices and standards. Although my initial professional career has been outside the development field, I have dedicated the last two years to maintaining and enhancing my skills through self-learning, building applications, and exploring modern front-end and back-end technologies.",
+        "about.paragraph3": "My experience is mainly focused on backend development with Java and PHP, where I have worked with frameworks like Spring Boot and Symfony. I also have the capacity to create basic front-end interfaces and adapt well to full-stack environments when the project requires it, always with the humility to recognize that learning in this field is continuous.",
+        "about.paragraph4": "I am currently pursuing a Master's degree in Applied Informatics to deepen my knowledge and specialize, demonstrating my firm commitment to continuous growth in this field.",
+        "about.paragraph5": "When I'm not coding, I enjoy reading, family time, and learning about new technologies. I strongly believe in continuous learning and staying updated with the latest trends in web development.",
 
         // Education
         "study.masters.date": "2025 - Present",
-        "study.masters.title": "Master's in Applied Computer Science",
-        "study.masters.university": "José Martí University (UNISS)",
-        "study.masters.description": "Complementing my undergraduate education with a specialization that bridges the gap between advanced computer science theory and its practical application in business and research environments. I'm focusing on acquiring high-level competencies for designing and implementing complex systems that address current technological challenges.",
+        "study.masters.title": "Master's Degree in Applied Informatics",
+        "study.masters.university": "Universidad José Martí (UNISS)",
+        "study.masters.description": "Complementing my undergraduate education with a specialization that seeks to bridge the gap between advanced computer science theory and its practical application in business and research environments. I am focusing on acquiring high-level competencies for the design and implementation of complex systems that respond to current technological challenges.",
 
         "study.degree.date": "2017 - 2022",
         "study.degree.title": "Computer Science Engineering",
-        "study.degree.university": "University of Computer Sciences (UCI)",
-        "study.degree.description": "Graduated from an engineering program with a practical approach to software development. The education at UCI was characterized by a project-based learning model, where I consolidated my knowledge in computer fundamentals, software engineering, databases, and cutting-edge technologies, preparing me to tackle complex challenges in software development.",
+        "study.degree.university": "Universidad de las Ciencias Informáticas (UCI)",
+        "study.degree.description": "Graduate of an engineering program with a practical focus on software development. The education at UCI was characterized by a project-based learning model, where I consolidated my knowledge in computing fundamentals, software engineering, databases, and cutting-edge technologies, preparing me to face complex challenges in the field of software development.",
 
         // Experience
-        "experience.freelance.date": "2022 - Present",
+        "experience.freelance.date": "2024 - Present",
         "experience.freelance.title": "Backend Developer",
         "experience.freelance.company": "Freelance / Independent Projects",
-        "experience.freelance.description": "Development of robust web applications using Symfony and Spring Boot. Implementation of RESTful APIs, MySQL database design, and creation of scalable architectures. Collaboration in the complete development cycle from analysis to deployment.",
+        "experience.freelance.description": "Development of robust web applications using Symfony and Spring Boot. Implementation of RESTful APIs, MySQL database design, and creation of scalable architectures. Collaboration in the full development cycle from analysis to deployment.",
 
-        "experience.junior.date": "2021 - 2022",
+        "experience.junior.date": "2021 - 2024",
         "experience.junior.title": "Junior Backend Developer",
         "experience.junior.company": "Local Development Center",
-        "experience.junior.description": "Development and maintenance of web applications using PHP, Symfony, and Java. Creation of user interfaces with HTML, CSS, and JavaScript. Technical support and issue resolution in existing systems. Participation in agile teams for business solutions development.",
+        "experience.junior.description": "Development of native Android mobile applications using Java (Native Android). Development and maintenance of web applications using Java and Spring Boot. Creation of user interfaces with HTML, CSS, and JavaScript. Technical support and resolution of incidents in existing systems. Participation in agile teams for the development of business solutions.",
 
         "experience.intern.date": "2018 - 2021",
         "experience.intern.title": "Software Development Intern",
-        "experience.intern.company": "University of Computer Sciences",
+        "experience.intern.company": "Universidad de las Ciencias Informáticas",
         "experience.intern.description": "Development of academic and research projects applying software engineering methodologies. Implementation of solutions with Java and PHP. Learning and application of design patterns, databases, and development best practices under academic supervision.",
 
         // Projects
         "projects.inventory.type": "Backend System",
         "projects.inventory.title": "Inventory and Sales Management System",
-        "projects.inventory.description": "Complete system developed with Symfony for inventory management, sales, purchases, and data analysis. Includes stock control, PDF invoicing, metrics dashboard, and specialized services for complex business logic.",
+        "projects.inventory.description": "Complete system developed with Symfony for inventory, sales, purchasing, and data analysis management. Includes stock control, PDF invoicing, dashboard with metrics, and specialized services for complex business logic.",
 
         "projects.microservices.type": "Microservices Architecture",
         "projects.microservices.title": "Library System with Microservices Architecture",
-        "projects.microservices.description": "Scalable distributed system developed with Spring Boot for complete library management. Implements specialized microservices for books, users, loans, and notifications, with API Gateway, service discovery, and asynchronous communication through messaging.",
+        "projects.microservices.description": "Scalable distributed system developed with Spring Boot for complete library management. Implements specialized microservices for books, users, loans, and notifications, with API Gateway, service discovery, and asynchronous communication via messaging.",
 
         "projects.android.type": "Mobile Application",
         "projects.android.title": "Mobile System for BANCEC Card Request Management",
-        "projects.android.description": "Complete Android application developed to optimize the magnetic card request reception process in banking environments. Includes QR data capture, customer management, Excel export/import, real-time statistics, and secure data transfer between devices.",
+        "projects.android.description": "Complete Android application developed to optimize the process of receiving magnetic card requests in banking environments. Includes data capture via QR, client management, Excel export/import, real-time statistics, and secure data transfer between devices.",
 
         "projects.portfolio.type": "Professional Portfolio - Current Site",
         "projects.portfolio.title": "Responsive Professional Portfolio",
-        "projects.portfolio.description": "Modern Single Page Application developed with HTML5, CSS3, and vanilla JavaScript. Includes responsive design, persistent light/dark theme, smooth navigation, scroll animations, and interactive contact form.",
+        "projects.portfolio.description": "Modern Single Page Application developed with HTML5, CSS3, and vanilla JavaScript. Includes responsive design, persistent light/dark theme, smooth navigation, scroll animations, and an interactive contact form.",
 
-        "projects.demo": "Demo in Development",
+        "projects.demo": "Demo in development",
         "projects.code": "Code",
 
         // Skills
@@ -252,7 +251,7 @@ const translations = {
         "skills.learning": "Autonomous Learning",
 
         // Contact
-        "contact.bot_trap": "Do not fill this field",
+        "contact.bot_trap": "Do not complete this field",
         "contact.name": "Name",
         "contact.email": "Email",
         "contact.subject": "Subject",
