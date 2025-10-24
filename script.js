@@ -60,6 +60,9 @@ const translations = {
         "language.es": "ES",
         "language.en": "EN",
 
+        // Skip link
+        "skip.link": "Saltar al contenido principal",
+
         // Perfil
         "profile.title": "Desarrollador Backend",
         "cv.download": "Descargar CV",
@@ -146,6 +149,10 @@ const translations = {
         "contact.message": "Mensaje",
         "contact.submit": "Enviar Mensaje",
 
+        // CTA
+        "cta.text": "¿Interesado en colaborar?",
+        "cta.button": "Contáctame ahora",
+
         // Footer
         "footer.copyright": "2025 Christián R. Vazquez. Todos los derechos reservados."
     },
@@ -162,6 +169,9 @@ const translations = {
         // Language
         "language.es": "ES",
         "language.en": "EN",
+
+        // Skip link
+        "skip.link": "Skip to main content",
 
         // Profile
         "profile.title": "Backend Developer",
@@ -249,6 +259,10 @@ const translations = {
         "contact.message": "Message",
         "contact.submit": "Send Message",
 
+        // CTA
+        "cta.text": "Interested in collaborating?",
+        "cta.button": "Contact me now",
+
         // Footer
         "footer.copyright": "2025 Christián R. Vazquez. All rights reserved."
     }
@@ -293,12 +307,67 @@ const navLinks = document.getElementById('navLinks');
 
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
 });
 
 // Cerrar menú al hacer clic en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    });
+});
+
+// Cerrar menú al hacer clic fuera
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+});
+
+// Debounce para optimizar performance
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Barra de progreso de lectura
+const readingProgress = document.getElementById('readingProgress');
+
+function updateReadingProgress() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight - windowHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const progress = (scrollTop / documentHeight) * 100;
+
+    readingProgress.style.width = `${progress}%`;
+}
+
+const debouncedUpdateProgress = debounce(updateReadingProgress, 10);
+
+// Botón Volver Arriba
+const backToTop = document.getElementById('backToTop');
+
+function toggleBackToTop() {
+    if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+}
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 });
 
@@ -306,7 +375,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 const sections = document.querySelectorAll('section');
 
 const observerOptions = {
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -321,19 +391,27 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-// Navegación suave
+// Navegación suave con debounce
+function smoothScrollTo(targetElement) {
+    window.scrollTo({
+        top: targetElement.offsetTop - 80,
+        behavior: 'smooth'
+    });
+}
+
+const debouncedSmoothScroll = debounce(smoothScrollTo, 50);
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+            debouncedSmoothScroll(targetElement);
 
             // Actualizar enlace activo
             document.querySelectorAll('.nav-links a').forEach(link => {
@@ -344,8 +422,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Actualizar enlace activo al hacer scroll
-window.addEventListener('scroll', () => {
+// Actualizar enlace activo al hacer scroll con debounce
+function updateActiveNavLink() {
     let current = '';
     const scrollPosition = window.scrollY + 100;
 
@@ -364,7 +442,20 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+}
+
+const debouncedUpdateNav = debounce(updateActiveNavLink, 25);
+
+// Event listeners para scroll
+window.addEventListener('scroll', () => {
+    debouncedUpdateProgress();
+    debouncedUpdateNav();
+    toggleBackToTop();
 });
+
+// Inicializar elementos
+updateReadingProgress();
+toggleBackToTop();
 
 // Formulario de contacto
 const contactForm = document.getElementById('contactForm');
@@ -394,8 +485,11 @@ if (contactForm) {
 
         // Estado de envío
         const submitBtn = contactForm.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Enviando...';
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'flex';
         submitBtn.disabled = true;
 
         try {
@@ -434,7 +528,8 @@ if (contactForm) {
             errorMessage += 'Por favor, envíame un email directamente a christianrvdv.1999@gmail.com';
             showFormMessage(errorMessage, 'error');
         } finally {
-            submitBtn.textContent = originalText;
+            btnText.style.display = 'flex';
+            btnLoading.style.display = 'none';
             submitBtn.disabled = false;
         }
     });
@@ -460,3 +555,24 @@ if (contactForm) {
         }
     });
 }
+
+// Mejorar accesibilidad del teclado
+document.addEventListener('keydown', (e) => {
+    // Cerrar menú con Escape
+    if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.focus();
+    }
+});
+
+// Precargar imágenes críticas
+function preloadImage(url) {
+    const img = new Image();
+    img.src = url;
+}
+
+// Precargar imagen de perfil
+window.addEventListener('load', () => {
+    preloadImage('https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4');
+});

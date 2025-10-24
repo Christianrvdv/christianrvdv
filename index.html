@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional - Christián R. Vazquez</title>
+    <title>Christián R. Vazquez - Desarrollador Backend | Java, PHP, Symfony</title>
     <meta name="description"
-          content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony">
+          content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony con experiencia en Spring Boot y arquitecturas microservicios">
+    <meta name="keywords" content="desarrollador backend, Java, PHP, Symfony, Spring Boot, microservicios, portfolio">
+    <meta name="author" content="Christián R. Vazquez">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Christián R. Vazquez - Desarrollador Backend">
+    <meta property="og:description"
+          content="Portafolio profesional especializado en desarrollo backend con Java, PHP y Symfony">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://christianrvdv.netlify.app">
+
+    <!-- Preload crítico -->
+    <link rel="preload" href="estilo.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+<!-- Skip link para accesibilidad -->
+<a href="#main-content" class="skip-link" data-i18n="skip.link">Saltar al contenido principal</a>
+
 <header>
     <div class="container">
         <nav>
@@ -38,12 +55,15 @@
     </div>
 </header>
 
+<!-- Barra de progreso de lectura -->
+<div class="reading-progress" id="readingProgress"></div>
+
 <div class="container">
-    <div class="main-content">
+    <main id="main-content" class="main-content">
         <!-- Profile Card -->
         <div class="profile-card">
             <img src="https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4"
-                 alt="Christián R. Vazquez - Desarrollador Backend" class="profile-img">
+                 alt="Christián R. Vazquez - Desarrollador Backend" class="profile-img" loading="lazy">
             <h1 class="profile-name">Christián R. Vazquez</h1>
             <p class="profile-title" data-i18n="profile.title">Desarrollador Backend</p>
 
@@ -54,7 +74,7 @@
             </div>
 
             <div class="cv-download">
-                <a href="CV_Christian_Vazquez.pdf" download class="cv-btn">
+                <a href="cv_christian_vazquez.pdf" download class="cv-btn">
                     <i class="fas fa-download"></i> <span data-i18n="cv.download">Descargar CV</span>
                 </a>
             </div>
@@ -66,24 +86,29 @@
             <section id="about">
                 <h2 data-i18n="about.title">Sobre mí</h2>
                 <div class="about-text">
-                    <p data-i18n="about.paragraph1">Hola, soy Christian Vazquez, un Ingeniero en Ciencias Informáticas apasionado por el desarrollo
+                    <p data-i18n="about.paragraph1">Hola, soy Christian Vazquez, un Ingeniero en Ciencias Informáticas
+                        apasionado por el desarrollo
                         de software y la creación de soluciones web innovadoras. Mi formación en la UCI me proporcionó
                         una base sólida en ingeniería de software, la cual he consolidado a través de proyectos
                         personales donde aplico mi conocimiento en la práctica.</p>
-                    <p data-i18n="about.paragraph2">Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores
+                    <p data-i18n="about.paragraph2">Mi motivación es transformar ideas en código funcional, limpio y
+                        eficiente, siguiendo las mejores
                         prácticas y estándares de la industria. Aunque mi trayectoria profesional inicial ha estado
                         fuera del ámbito del desarrollo, he dedicado los últimos dos años a mantener y potenciar mis
                         habilidades de forma autodidacta, construyendo aplicaciones y explorando tecnologías modernas
                         de front-end y back-end.</p>
-                    <p data-i18n="about.paragraph3">Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he
+                    <p data-i18n="about.paragraph3">Mi experiencia se centra principalmente en el desarrollo backend con
+                        Java y PHP, donde he
                         trabajado
                         con frameworks como Spring Boot y Symfony. También tengo capacidad para crear interfaces
                         frontend
                         básicas y me adapto bien a entornos full-stack cuando el proyecto lo requiere, siempre con la
                         humildad de reconocer que el aprendizaje en este campo es continuo.</p>
-                    <p data-i18n="about.paragraph4">Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y
+                    <p data-i18n="about.paragraph4">Actualmente, curso una Maestría en Informática Aplicada para
+                        profundizar en mis conocimientos y
                         especializarme, demostrando mi firme compromiso con el crecimiento continuo en este campo.</p>
-                    <p data-i18n="about.paragraph5">Cuando no estoy programando, disfruto de la lectura, el tiempo en familia y aprender sobre nuevas
+                    <p data-i18n="about.paragraph5">Cuando no estoy programando, disfruto de la lectura, el tiempo en
+                        familia y aprender sobre nuevas
                         tecnologías. Creo firmemente en el aprendizaje continuo y en mantenerme actualizado con las
                         últimas tendencias en desarrollo web.</p>
                 </div>
@@ -96,8 +121,10 @@
                     <div class="timeline-item">
                         <div class="timeline-date" data-i18n="study.masters.date">2025 - Presente</div>
                         <h3 class="timeline-title" data-i18n="study.masters.title">Maestria en Informatica Aplicada</h3>
-                        <p class="timeline-company" data-i18n="study.masters.university">Universidad José Martí (UNISS)</p>
-                        <p class="timeline-description" data-i18n="study.masters.description">Complementando mi formación de grado con una especialización que
+                        <p class="timeline-company" data-i18n="study.masters.university">Universidad José Martí
+                            (UNISS)</p>
+                        <p class="timeline-description" data-i18n="study.masters.description">Complementando mi
+                            formación de grado con una especialización que
                             busca cerrar la brecha entre la teoría avanzada en informática y su aplicación práctica en
                             entornos empresariales y de investigación. Me estoy enfocando en adquirir competencias de
                             alto nivel para el diseño e implementación de sistemas complejos que respondan a desafíos
@@ -106,9 +133,12 @@
 
                     <div class="timeline-item">
                         <div class="timeline-date" data-i18n="study.degree.date">2017 - 2022</div>
-                        <h3 class="timeline-title" data-i18n="study.degree.title">Ingenieria en Ciencias Informaticas</h3>
-                        <p class="timeline-company" data-i18n="study.degree.university">Universidad de las Ciencias Informaticas (UCI)</p>
-                        <p class="timeline-description" data-i18n="study.degree.description">Graduado de un programa de ingeniería con un enfoque práctico
+                        <h3 class="timeline-title" data-i18n="study.degree.title">Ingenieria en Ciencias
+                            Informaticas</h3>
+                        <p class="timeline-company" data-i18n="study.degree.university">Universidad de las Ciencias
+                            Informaticas (UCI)</p>
+                        <p class="timeline-description" data-i18n="study.degree.description">Graduado de un programa de
+                            ingeniería con un enfoque práctico
                             en el desarrollo de software. La formación en la UCI se caracterizó por un modelo de
                             aprendizaje basado en proyectos reales, donde consolidé mis conocimientos en fundamentos
                             de la computación, ingeniería de software, bases de datos y tecnologías de vanguardia,
@@ -124,8 +154,10 @@
                     <div class="timeline-item">
                         <div class="timeline-date" data-i18n="experience.freelance.date">2022 - Presente</div>
                         <h3 class="timeline-title" data-i18n="experience.freelance.title">Desarrollador Backend</h3>
-                        <p class="timeline-company" data-i18n="experience.freelance.company">Freelance / Proyectos Independientes</p>
-                        <p class="timeline-description" data-i18n="experience.freelance.description">Desarrollo de aplicaciones web robustas utilizando Symfony y
+                        <p class="timeline-company" data-i18n="experience.freelance.company">Freelance / Proyectos
+                            Independientes</p>
+                        <p class="timeline-description" data-i18n="experience.freelance.description">Desarrollo de
+                            aplicaciones web robustas utilizando Symfony y
                             Spring Boot.
                             Implementación de APIs RESTful, diseño de bases de datos MySQL, y creación de arquitecturas
                             escalables.
@@ -136,7 +168,8 @@
                         <div class="timeline-date" data-i18n="experience.junior.date">2021 - 2022</div>
                         <h3 class="timeline-title" data-i18n="experience.junior.title">Desarrollador Backend Junior</h3>
                         <p class="timeline-company" data-i18n="experience.junior.company">Centro de Desarrollo Local</p>
-                        <p class="timeline-description" data-i18n="experience.junior.description">Desarrollo y mantenimiento de aplicaciones web utilizando PHP,
+                        <p class="timeline-description" data-i18n="experience.junior.description">Desarrollo y
+                            mantenimiento de aplicaciones web utilizando PHP,
                             Symfony y Java.
                             Creación de interfaces de usuario con HTML, CSS y JavaScript. Soporte técnico y resolución
                             de incidencias
@@ -146,9 +179,12 @@
 
                     <div class="timeline-item">
                         <div class="timeline-date" data-i18n="experience.intern.date">2018 - 2021</div>
-                        <h3 class="timeline-title" data-i18n="experience.intern.title">Practicante de Desarrollo de Software</h3>
-                        <p class="timeline-company" data-i18n="experience.intern.company">Universidad de las Ciencias Informáticas</p>
-                        <p class="timeline-description" data-i18n="experience.intern.description">Desarrollo de proyectos académicos y de investigación aplicando
+                        <h3 class="timeline-title" data-i18n="experience.intern.title">Practicante de Desarrollo de
+                            Software</h3>
+                        <p class="timeline-company" data-i18n="experience.intern.company">Universidad de las Ciencias
+                            Informáticas</p>
+                        <p class="timeline-description" data-i18n="experience.intern.description">Desarrollo de
+                            proyectos académicos y de investigación aplicando
                             metodologías
                             de ingeniería de software. Implementación de soluciones con Java y PHP. Aprendizaje y
                             aplicación de
@@ -173,8 +209,10 @@
                             <p data-i18n="projects.inventory.type">Sistema Backend</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title" data-i18n="projects.inventory.title">Sistema de Gestión de Inventario y Ventas</h3>
-                            <p data-i18n="projects.inventory.description">Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y
+                            <h3 class="project-title" data-i18n="projects.inventory.title">Sistema de Gestión de
+                                Inventario y Ventas</h3>
+                            <p data-i18n="projects.inventory.description">Sistema completo desarrollado con Symfony para
+                                gestión de inventario, ventas, compras y
                                 análisis de datos.
                                 Incluye control de stock, facturación PDF, dashboard con métricas y servicios
                                 especializados para lógica de negocio compleja.</p>
@@ -208,8 +246,10 @@
                             <p data-i18n="projects.microservices.type">Arquitectura Microservicios</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title" data-i18n="projects.microservices.title">Sistema de Biblioteca con Arquitectura de Microservicios</h3>
-                            <p data-i18n="projects.microservices.description">Sistema distribuido escalable desarrollado con Spring Boot para gestión completa de
+                            <h3 class="project-title" data-i18n="projects.microservices.title">Sistema de Biblioteca con
+                                Arquitectura de Microservicios</h3>
+                            <p data-i18n="projects.microservices.description">Sistema distribuido escalable desarrollado
+                                con Spring Boot para gestión completa de
                                 biblioteca.
                                 Implementa microservicios especializados para libros, usuarios, préstamos y
                                 notificaciones,
@@ -246,8 +286,10 @@
                             <p data-i18n="projects.android.type">Aplicación Móvil</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title" data-i18n="projects.android.title">Sistema Móvil para Gestión de Solicitudes de Tarjetas BANCEC</h3>
-                            <p data-i18n="projects.android.description">Aplicación Android completa desarrollada para optimizar el proceso de recepción de
+                            <h3 class="project-title" data-i18n="projects.android.title">Sistema Móvil para Gestión de
+                                Solicitudes de Tarjetas BANCEC</h3>
+                            <p data-i18n="projects.android.description">Aplicación Android completa desarrollada para
+                                optimizar el proceso de recepción de
                                 solicitudes de tarjetas magnéticas en entornos bancarios.
                                 Incluye captura de datos mediante QR, gestión de clientes, exportación/importación
                                 Excel, estadísticas en tiempo real y transferencia segura de datos entre
@@ -277,8 +319,10 @@
                             <p data-i18n="projects.portfolio.type">Portafolio Profesional - Sitio Actual</p>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-title" data-i18n="projects.portfolio.title">Portafolio Profesional Responsive</h3>
-                            <p data-i18n="projects.portfolio.description">Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla.
+                            <h3 class="project-title" data-i18n="projects.portfolio.title">Portafolio Profesional
+                                Responsive</h3>
+                            <p data-i18n="projects.portfolio.description">Single Page Application moderna desarrollada
+                                con HTML5, CSS3 y JavaScript vanilla.
                                 Incluye diseño responsive, tema claro/oscuro persistente, navegación suave,
                                 animaciones al scroll y formulario de contacto interactivo.</p>
                             <div class="project-tech">
@@ -290,7 +334,8 @@
                                 <span class="tech-tag">LocalStorage API</span>
                             </div>
                             <div class="project-links">
-                                <a href="#about"><i class="fas fa-eye"></i><span data-i18n="projects.demo">Demo</span></a>
+                                <a href="#about"><i class="fas fa-eye"></i><span
+                                        data-i18n="projects.demo">Demo</span></a>
                                 <a href="https://github.com/Christianrvdv/christianrvdv"><i class="fab fa-github"></i>
                                     <span data-i18n="projects.code">Código</span></a>
                             </div>
@@ -503,13 +548,23 @@
                         <textarea id="message" name="message" required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn" data-i18n="contact.submit">Enviar Mensaje</button>
+                    <button type="submit" class="submit-btn" data-i18n="contact.submit">
+                        <span class="btn-text">Enviar Mensaje</span>
+                        <div class="btn-loading" style="display: none;">
+                            <div class="loading-spinner"></div>
+                            <span>Enviando...</span>
+                        </div>
+                    </button>
                     <div id="formMessage" class="form-message"></div>
                 </form>
             </section>
         </div>
-    </div>
+    </main>
 </div>
+<!-- Botón Volver Arriba -->
+<button class="back-to-top" id="backToTop" aria-label="Volver al inicio">
+    <i class="fas fa-chevron-up"></i>
+</button>
 
 <footer>
     <div class="container">
