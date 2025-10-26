@@ -114,6 +114,10 @@ const translations = {
         "projects.inventory.title": "Sistema de Gestión de Inventario y Ventas",
         "projects.inventory.description": "Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y análisis de datos. Incluye control de stock, facturación PDF, dashboard con métricas y servicios especializados para lógica de negocio compleja.",
 
+        "projects.auth.type": "Sistema Backend Seguro",
+        "projects.auth.title": "Sistema de Autenticación y Control de Acceso",
+        "projects.auth.description": "Sistema completo de seguridad desarrollado con Symfony que implementa autenticación JWT, autorización granular con Voters, registro de auditoría exhaustivo y gestión de usuarios. Incluye sistema de roles, validación de DTOs, logs de seguridad y pruebas unitarias completas.",
+
         "projects.microservices.type": "Arquitectura Microservicios",
         "projects.microservices.title": "Sistema de Biblioteca con Arquitectura de Microservicios",
         "projects.microservices.description": "Sistema distribuido escalable desarrollado con Spring Boot para gestión completa de biblioteca. Implementa microservicios especializados para libros, usuarios, préstamos y notificaciones, con API Gateway, service discovery y comunicación asíncrona mediante mensajería.",
@@ -222,6 +226,10 @@ const translations = {
         "projects.inventory.type": "Backend System",
         "projects.inventory.title": "Inventory and Sales Management System",
         "projects.inventory.description": "Complete system developed with Symfony for inventory, sales, purchasing, and data analysis management. Includes stock control, PDF invoicing, dashboard with metrics, and specialized services for complex business logic.",
+
+        "projects.auth.type": "Secure Backend System",
+        "projects.auth.title": "Authentication and Access Control System",
+        "projects.auth.description": "Complete security system developed with Symfony that implements JWT authentication, granular authorization with Voters, comprehensive audit logging, and user management. Includes role system, DTO validation, security logs, and complete unit tests.",
 
         "projects.microservices.type": "Microservices Architecture",
         "projects.microservices.title": "Library System with Microservices Architecture",
