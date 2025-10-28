@@ -131,6 +131,7 @@ const translations = {
         "projects.portfolio.description": "Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla. Incluye diseño responsive, tema claro/oscuro persistente, navegación suave, animaciones al scroll y formulario de contacto interactivo.",
 
         "projects.demo": "Demo en desarrollo",
+        "projects.demo_portfolio": "Este sitio",
         "projects.code": "Código",
 
         // Habilidades
@@ -244,6 +245,7 @@ const translations = {
         "projects.portfolio.description": "Modern Single Page Application developed with HTML5, CSS3, and vanilla JavaScript. Includes responsive design, persistent light/dark theme, smooth navigation, scroll animations, and an interactive contact form.",
 
         "projects.demo": "Demo in development",
+        "projects.demo_portfolio": "This site",
         "projects.code": "Code",
 
         // Skills
