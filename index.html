@@ -15,55 +15,56 @@
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container transition-colors duration-300">
 
 <!-- Header / Navbar con sticky reveal -->
-<header id="navbar" class="fixed top-0 w-full z-50 transition-transform duration-300">
-    <nav class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant dark:border-outline shadow-sm">
+<header id="navbar" class="fixed top-0 w-full z-50 transition-transform duration-500">
+    <nav class="bg-surface/70 dark:bg-surface-dim/70 backdrop-blur-xl border-b border-white/10 dark:border-white/5 shadow-lg shadow-black/5">
         <div class="flex justify-between items-center h-16 px-margin_mobile md:px-margin_desktop max-w-container_max_width mx-auto">
-            <div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">BackendDev
+            <div class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                BackendDev
             </div>
             <div class="hidden md:flex gap-8 items-center font-body-md text-body-md">
-                <a class="nav-link text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 cursor-pointer"
+                <a class="nav-link text-primary font-bold border-b-2 border-primary pb-1 cursor-pointer"
                    href="#about" data-i18n="nav.about">Sobre mí</a>
-                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer"
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer"
                    href="#studies" data-i18n="nav.study">Estudios</a>
-                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer"
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer"
                    href="#experience" data-i18n="nav.experience">Experiencia</a>
-                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer"
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer"
                    href="#projects" data-i18n="nav.projects">Proyectos</a>
-                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer"
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer"
                    href="#skills" data-i18n="nav.skills">Habilidades</a>
-                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer"
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer"
                    href="#contact" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="flex items-center gap-4">
                 <button id="themeToggle" aria-label="Alternar tema"
-                        class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors cursor-pointer">
+                        class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
                     <span class="material-symbols-outlined">dark_mode</span>
                 </button>
                 <button id="languageToggle" aria-label="Cambiar idioma"
-                        class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors cursor-pointer font-bold text-sm">
+                        class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-bold text-sm">
                     <span class="language-text">ES</span>
                 </button>
                 <button id="mobileMenuBtn"
-                        class="md:hidden text-on-surface-variant dark:text-surface-variant cursor-pointer"
+                        class="md:hidden text-on-surface-variant cursor-pointer"
                         aria-label="Menú">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
         </div>
         <div id="mobileMenu"
-             class="mobile-menu md:hidden bg-surface dark:bg-surface-dim border-t border-outline-variant dark:border-outline">
+             class="mobile-menu md:hidden bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-t border-white/10 dark:border-white/5">
             <nav class="flex flex-col gap-2 px-margin_mobile py-4">
-                <a class="nav-link-mobile text-primary dark:text-primary-fixed font-bold py-2" href="#about"
+                <a class="nav-link-mobile text-primary font-bold py-2" href="#about"
                    data-i18n="nav.about">Sobre mí</a>
-                <a class="nav-link-mobile text-on-surface-variant dark:text-surface-variant py-2" href="#studies"
+                <a class="nav-link-mobile text-on-surface-variant py-2" href="#studies"
                    data-i18n="nav.study">Estudios</a>
-                <a class="nav-link-mobile text-on-surface-variant dark:text-surface-variant py-2" href="#experience"
+                <a class="nav-link-mobile text-on-surface-variant py-2" href="#experience"
                    data-i18n="nav.experience">Experiencia</a>
-                <a class="nav-link-mobile text-on-surface-variant dark:text-surface-variant py-2" href="#projects"
+                <a class="nav-link-mobile text-on-surface-variant py-2" href="#projects"
                    data-i18n="nav.projects">Proyectos</a>
-                <a class="nav-link-mobile text-on-surface-variant dark:text-surface-variant py-2" href="#skills"
+                <a class="nav-link-mobile text-on-surface-variant py-2" href="#skills"
                    data-i18n="nav.skills">Habilidades</a>
-                <a class="nav-link-mobile text-on-surface-variant dark:text-surface-variant py-2" href="#contact"
+                <a class="nav-link-mobile text-on-surface-variant py-2" href="#contact"
                    data-i18n="nav.contact">Contacto</a>
             </nav>
         </div>
@@ -75,8 +76,9 @@
     <section
             class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-margin_mobile md:px-margin_desktop"
             id="about">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-60 -z-10"></div>
         <div class="relative z-10 max-w-4xl text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-outline-variant mb-8 opacity-0 translate-y-4 transition-all duration-700"
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 dark:border-white/5 mb-8 opacity-0 translate-y-4 transition-all duration-700"
                  data-animate>
                 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Disponible para proyectos</span>
@@ -94,11 +96,11 @@
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center opacity-0 translate-y-4 transition-all duration-700 delay-300"
                  data-animate>
                 <a href="#projects"
-                   class="bg-primary hover:bg-primary/90 text-on-primary px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all hover:scale-105 active:scale-95">
+                   class="bg-primary hover:bg-primary/90 text-on-primary px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
                     <span class="material-symbols-outlined">work</span> VER PROYECTOS
                 </a>
                 <a href="cv_christian_vazquez.pdf" download
-                   class="border border-outline-variant hover:border-primary text-on-surface px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all glass">
+                   class="border border-white/20 hover:border-primary text-on-surface px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all glass">
                     <span class="material-symbols-outlined">download</span> DESCARGAR CV
                 </a>
             </div>
@@ -111,9 +113,9 @@
 
     <div class="max-w-container_max_width mx-auto flex flex-col lg:flex-row gap-gutter px-margin_mobile md:px-margin_desktop py-16">
         <!-- Sidebar escritorio -->
-        <aside class="hidden lg:flex flex-col p-6 gap-8 sticky top-24 h-[calc(100vh-120px)] w-sidebar_width rounded-xl bg-surface dark:bg-surface-container shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant">
+        <aside class="hidden lg:flex flex-col p-6 gap-8 sticky top-24 h-[calc(100vh-120px)] w-sidebar_width rounded-2xl bg-gradient-to-b from-surface/80 to-surface/40 dark:from-surface-dim/80 dark:to-surface-container/40 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-xl shadow-black/5">
             <div class="flex flex-col items-center gap-4 text-center">
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary">
+                <div class="w-24 h-24 rounded-full overflow-hidden ring-2 ring-primary ring-offset-2 ring-offset-surface dark:ring-offset-surface-dim">
                     <img src="https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4"
                          alt="Christián R. Vazquez" class="w-full h-full object-cover">
                 </div>
@@ -124,24 +126,24 @@
                 </div>
             </div>
             <nav class="flex flex-col gap-4">
-                <a class="side-link flex items-center gap-4 text-primary dark:text-primary-fixed font-bold border-l-2 border-primary dark:border-primary-fixed pl-4 hover:translate-x-1 transition-all duration-200"
+                <a class="side-link flex items-center gap-4 text-primary font-bold border-l-2 border-primary pl-4 hover:translate-x-1 transition-all duration-200"
                    href="#about">
                     <span class="material-symbols-outlined">person</span> <span data-i18n="nav.about">Sobre mí</span>
                 </a>
-                <a class="side-link flex items-center gap-4 text-on-surface-variant dark:text-surface-variant pl-4 hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:translate-x-1 transition-all duration-200"
+                <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#studies">
                     <span class="material-symbols-outlined">school</span> <span data-i18n="nav.study">Estudios</span>
                 </a>
-                <a class="side-link flex items-center gap-4 text-on-surface-variant dark:text-surface-variant pl-4 hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:translate-x-1 transition-all duration-200"
+                <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#experience">
                     <span class="material-symbols-outlined">work</span> <span
                         data-i18n="nav.experience">Experiencia</span>
                 </a>
-                <a class="side-link flex items-center gap-4 text-on-surface-variant dark:text-surface-variant pl-4 hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:translate-x-1 transition-all duration-200"
+                <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#projects">
                     <span class="material-symbols-outlined">code</span> <span data-i18n="nav.projects">Proyectos</span>
                 </a>
-                <a class="side-link flex items-center gap-4 text-on-surface-variant dark:text-surface-variant pl-4 hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:translate-x-1 transition-all duration-200"
+                <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#skills">
                     <span class="material-symbols-outlined">bolt</span> <span data-i18n="nav.skills">Habilidades</span>
                 </a>
@@ -162,7 +164,7 @@
                     </a>
                 </div>
                 <a href="cv_christian_vazquez.pdf" download
-                   class="bg-primary text-on-primary w-full py-3 rounded-lg font-label-sm text-label-sm text-center hover:bg-primary/90 transition-colors">
+                   class="bg-primary text-on-primary w-full py-3 rounded-lg font-label-sm text-label-sm text-center hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
                     <span data-i18n="cv.download">Descargar CV</span>
                 </a>
             </div>
@@ -172,7 +174,7 @@
         <div class="flex-1 space-y-24">
             <!-- Sobre mí (detallado) -->
             <section id="about-detail" class="space-y-6">
-                <h2 class="font-headline-md text-headline-md flex items-center gap-3 border-b border-outline-variant pb-2">
+                <h2 class="font-headline-md text-headline-md flex items-center gap-3 border-b border-white/10 pb-2">
                     <span class="material-symbols-outlined text-primary">person</span> <span data-i18n="about.title">Sobre mí</span>
                 </h2>
                 <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
@@ -190,39 +192,40 @@
                     <span class="material-symbols-outlined text-primary">bolt</span> <span data-i18n="skills.title">Habilidades Técnicas</span>
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-auto md:grid-rows-2 gap-4">
-                    <div class="md:col-span-2 md:row-span-2 bento-card p-8 rounded-2xl bg-surface-container border border-outline-variant flex flex-col justify-between overflow-hidden relative">
+                    <div class="md:col-span-2 md:row-span-2 bento-card p-8 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm flex flex-col justify-between overflow-hidden relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div class="relative z-10">
                             <span class="material-symbols-outlined text-4xl text-primary mb-6">database</span>
                             <h3 class="font-headline-md text-headline-md mb-4">Core Backend</h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-surface-container-high rounded-full font-label-sm text-label-sm">Java / Spring Boot</span>
-                                <span class="px-3 py-1 bg-surface-container-high rounded-full font-label-sm text-label-sm">PHP / Symfony</span>
-                                <span class="px-3 py-1 bg-surface-container-high rounded-full font-label-sm text-label-sm">Node.js</span>
-                                <span class="px-3 py-1 bg-surface-container-high rounded-full font-label-sm text-label-sm">Python / FastAPI</span>
+                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">Java / Spring Boot</span>
+                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">PHP / Symfony</span>
+                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">Python / FastAPI</span>
                             </div>
                         </div>
                     </div>
-                    <div class="md:col-span-2 bento-card p-6 rounded-2xl bg-surface-container border border-outline-variant">
+                    <div class="md:col-span-2 bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm">
                         <h3 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-4">
                             Infrastructure</h3>
                         <div class="flex flex-wrap gap-3">
-                            <div class="flex items-center gap-2 px-3 py-2 bg-surface-dim rounded-lg border border-outline-variant">
+                            <div class="flex items-center gap-2 px-3 py-2 bg-white/5 dark:bg-white/5 rounded-lg border border-white/10 dark:border-white/5">
                                 <span class="material-symbols-outlined text-sm">cloud</span> Docker & K8s
                             </div>
-                            <div class="flex items-center gap-2 px-3 py-2 bg-surface-dim rounded-lg border border-outline-variant">
+                            <div class="flex items-center gap-2 px-3 py-2 bg-white/5 dark:bg-white/5 rounded-lg border border-white/10 dark:border-white/5">
                                 <span class="material-symbols-outlined text-sm">terminal</span> AWS / Azure
                             </div>
-                            <div class="flex items-center gap-2 px-3 py-2 bg-surface-dim rounded-lg border border-outline-variant">
+                            <div class="flex items-center gap-2 px-3 py-2 bg-white/5 dark:bg-white/5 rounded-lg border border-white/10 dark:border-white/5">
                                 <span class="material-symbols-outlined text-sm">lan</span> CI/CD Pipelines
                             </div>
                         </div>
                     </div>
-                    <div class="bento-card p-6 rounded-2xl bg-surface-container border border-outline-variant">
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm">
                         <span class="material-symbols-outlined text-primary mb-2">storage</span>
                         <h4 class="font-bold mb-2">Databases</h4>
                         <p class="text-on-surface-variant font-label-sm">PostgreSQL, Redis, MongoDB</p>
                     </div>
-                    <div class="bento-card p-6 rounded-2xl bg-surface-container border border-outline-variant">
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm">
                         <span class="material-symbols-outlined text-primary mb-2">account_tree</span>
                         <h4 class="font-bold mb-2">Architecture</h4>
                         <p class="text-on-surface-variant font-label-sm">Microservices, Event-Driven</p>
@@ -235,7 +238,7 @@
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3">
                     <span class="material-symbols-outlined text-primary">school</span> <span data-i18n="study.title">Estudios</span>
                 </h2>
-                <div class="relative border-l border-outline-variant ml-4 space-y-12 pb-8">
+                <div class="relative border-l border-white/10 ml-4 space-y-12 pb-8">
                     <div class="relative pl-12 group">
                         <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-primary rounded-full timeline-glow"></div>
                         <span class="font-label-sm text-label-sm text-primary mb-2 block"
@@ -248,7 +251,7 @@
                            data-i18n="study.masters.description"></p>
                     </div>
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-outline-variant group-hover:bg-primary transition-colors rounded-full"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"></div>
                         <span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block"
                               data-i18n="study.degree.date">2017 - 2022</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="study.degree.title">Ingeniería en
@@ -267,7 +270,7 @@
                     <span class="material-symbols-outlined text-primary">history</span> <span
                         data-i18n="experience.title">Experiencia Profesional</span>
                 </h2>
-                <div class="relative border-l border-outline-variant ml-4 space-y-12 pb-8">
+                <div class="relative border-l border-white/10 ml-4 space-y-12 pb-8">
                     <div class="relative pl-12 group">
                         <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-primary rounded-full timeline-glow"></div>
                         <span class="font-label-sm text-label-sm text-primary mb-2 block"
@@ -280,7 +283,7 @@
                            data-i18n="experience.freelance.description"></p>
                     </div>
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-outline-variant group-hover:bg-primary transition-colors rounded-full"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"></div>
                         <span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block"
                               data-i18n="experience.junior.date">2021 - 2024</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="experience.junior.title">
@@ -291,7 +294,7 @@
                            data-i18n="experience.junior.description"></p>
                     </div>
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-outline-variant group-hover:bg-primary transition-colors rounded-full"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"></div>
                         <span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block"
                               data-i18n="experience.intern.date">2018 - 2021</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="experience.intern.title">
@@ -317,10 +320,10 @@
                     </a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Proyecto 1: Inventario -->
-                    <div class="group rounded-2xl overflow-hidden bg-surface-container border border-outline-variant flex flex-col h-full bento-card">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                    <!-- Proyecto 1 -->
+                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
                                       data-i18n="projects.inventory.type">Sistema Backend</span>
@@ -332,9 +335,9 @@
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
                                data-i18n="projects.inventory.description"></p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Symfony</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">MySQL</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Bootstrap</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Symfony</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">MySQL</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Bootstrap</span>
                             </div>
                             <div class="flex gap-4">
                                 <a href="#"
@@ -346,12 +349,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Proyecto 2: Auth -->
-                    <div class="group rounded-2xl overflow-hidden bg-surface-container border border-outline-variant flex flex-col h-full bento-card">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-secondary/20 to-surface-dim">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                    <!-- Proyecto 2 -->
+                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-secondary/20"
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
                                       data-i18n="projects.auth.type">Sistema Backend Seguro</span>
                             </div>
                         </div>
@@ -361,9 +364,9 @@
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
                                data-i18n="projects.auth.description"></p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Symfony</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">JWT</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">PHPUnit</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Symfony</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">JWT</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">PHPUnit</span>
                             </div>
                             <div class="flex gap-4">
                                 <a href="#"
@@ -375,10 +378,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Proyecto 3: Microservicios -->
-                    <div class="group rounded-2xl overflow-hidden bg-surface-container border border-outline-variant flex flex-col h-full bento-card">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                    <!-- Proyecto 3 -->
+                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
                                       data-i18n="projects.microservices.type">Arquitectura Microservicios</span>
@@ -390,9 +393,9 @@
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
                                data-i18n="projects.microservices.description"></p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Spring Boot</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Kafka</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Docker</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Spring Boot</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Kafka</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Docker</span>
                             </div>
                             <div class="flex gap-4">
                                 <a href="#"
@@ -404,12 +407,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Proyecto 4: Android -->
-                    <div class="group rounded-2xl overflow-hidden bg-surface-container border border-outline-variant flex flex-col h-full bento-card">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-secondary/20 to-surface-dim">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                    <!-- Proyecto 4 -->
+                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-secondary/20"
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
                                       data-i18n="projects.android.type">Aplicación Móvil</span>
                             </div>
                         </div>
@@ -419,9 +422,9 @@
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
                                data-i18n="projects.android.description"></p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Android Nativo</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">Java</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">SQLite</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Android Nativo</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Java</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">SQLite</span>
                             </div>
                             <div class="flex gap-4">
                                 <a href="#"
@@ -433,10 +436,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Proyecto 5: Portafolio -->
-                    <div class="group rounded-2xl overflow-hidden bg-surface-container border border-outline-variant flex flex-col h-full bento-card md:col-span-2 max-w-md mx-auto w-full">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+                    <!-- Proyecto 5 (Portafolio) -->
+                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm md:col-span-2 max-w-md mx-auto w-full">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
                                       data-i18n="projects.portfolio.type">Portafolio Profesional</span>
@@ -448,9 +451,9 @@
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
                                data-i18n="projects.portfolio.description"></p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">HTML5</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">CSS3</span>
-                                <span class="bg-surface-dim px-3 py-1 rounded-lg text-label-sm font-label-sm border border-outline-variant">JavaScript</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">HTML5</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">CSS3</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">JavaScript</span>
                             </div>
                             <div class="flex gap-4">
                                 <span class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm"
@@ -465,8 +468,11 @@
             </section>
 
             <!-- Contacto CTA -->
-            <section class="p-12 rounded-3xl bg-primary text-on-primary relative overflow-hidden group" id="contact">
+            <section
+                    class="p-12 rounded-3xl bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden group"
+                    id="contact">
                 <div class="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                <div class="absolute left-0 bottom-0 w-48 h-48 bg-accent/20 rounded-full blur-3xl -ml-24 -mb-24"></div>
                 <div class="relative z-10 max-w-xl">
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 text-on-primary"
                         data-i18n="contact.title">¿Tienes un sistema complejo que escalar?</h2>
@@ -492,7 +498,7 @@
                                   data-i18n-placeholder="contact.message"></textarea>
                         <div id="formMessage" class="form-message hidden"></div>
                         <button type="submit"
-                                class="submit-btn bg-white text-primary px-8 py-4 rounded-xl font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                                class="submit-btn bg-white text-primary px-8 py-4 rounded-xl font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2 shadow-lg shadow-black/20">
                             <span class="btn-text" data-i18n="contact.submit">ENVIAR MENSAJE</span>
                             <span class="btn-loading hidden">
                                 <span class="material-symbols-outlined animate-spin text-sm">sync</span> Enviando...
@@ -505,21 +511,21 @@
     </div>
 </main>
 
-<footer class="w-full py-8 border-t border-outline-variant dark:border-outline bg-surface-container-lowest dark:bg-surface-dim mt-24">
+<footer class="w-full py-8 border-t border-white/10 bg-surface-container/30 dark:bg-surface-dim/30 mt-24 backdrop-blur-md">
     <div class="flex flex-col md:flex-row justify-between items-center px-margin_mobile md:px-margin_desktop max-w-container_max_width mx-auto gap-4">
         <div class="flex flex-col md:flex-row items-center gap-6">
-            <span class="font-bold text-primary">Backend Architect</span>
-            <span class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant opacity-100"
+            <span class="font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Backend Architect</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant"
                   data-i18n="footer.copyright">© 2025 Christián R. Vazquez. Construido con precisión y lógica.</span>
         </div>
         <div class="flex gap-8 items-center font-label-sm text-label-sm">
             <a href="#"
-               class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors opacity-100"
+               class="text-on-surface-variant hover:text-primary transition-colors"
                data-i18n="footer.privacy">Privacidad</a>
             <a href="#"
-               class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors opacity-100"
+               class="text-on-surface-variant hover:text-primary transition-colors"
                data-i18n="footer.terms">Términos</a>
-            <div class="flex gap-4 border-l border-outline-variant pl-8 ml-4">
+            <div class="flex gap-4 border-l border-white/20 pl-8 ml-4">
                 <a href="https://github.com/Christianrvdv" target="_blank"
                    class="text-on-surface-variant hover:text-primary transition-colors">GitHub</a>
                 <a href="https://t.me/christianrvdv" target="_blank"
@@ -530,7 +536,7 @@
 </footer>
 
 <button id="backToTop"
-        class="fixed bottom-6 right-6 w-12 h-12 bg-primary-container text-on-primary rounded-full shadow-lg hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center z-40 opacity-0 pointer-events-none transition-opacity duration-300">
+        class="fixed bottom-6 right-6 w-12 h-12 bg-primary/90 text-on-primary rounded-full shadow-lg shadow-primary/25 hover:bg-primary hover:scale-110 transition-all flex items-center justify-center z-40 opacity-0 pointer-events-none">
     <span class="material-symbols-outlined">keyboard_arrow_up</span>
 </button>
 
