@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   MENÚ MÓVIL
+   ============================================ */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.open {
+    max-height: 500px;
+}
+
+/* ============================================
+   ESTILOS GLASS Y BENTO
+   ============================================ */
+.glass {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.code-block {
+    background: #011627;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bento-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(26, 188, 156, 0.3);
+}
+
+/* ============================================
+   TIMELINE GLOW
+   ============================================ */
+.timeline-glow {
+    box-shadow: 0 0 15px 2px rgba(26, 188, 156, 0.5);
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #1abc9c 0%, #4eddbb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============================================
+   FORMULARIO
+   ============================================ */
+.form-message {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.form-message.success {
+    background: rgba(26, 188, 156, 0.2);
+    color: #6ff9d6;
+    border: 1px solid rgba(26, 188, 156, 0.3);
+}
+
+.form-message.error {
+    background: rgba(207, 102, 121, 0.2);
+    color: #ffdad6;
+    border: 1px solid rgba(207, 102, 121, 0.3);
+}
+
+/* ============================================
+   BOTÓN VOLVER ARRIBA
+   ============================================ */
+#backToTop {
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ============================================
+   SCROLL SUAVE
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   TRANSICIONES PARA ANIMACIONES AL SCROLL
+   ============================================ */
+[data-animate] {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-animate].visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
