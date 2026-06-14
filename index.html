@@ -33,8 +33,6 @@
                    href="#experience" data-i18n="nav.experience">Experiencia</a>
                 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer"
                    href="#projects" data-i18n="nav.projects">Proyectos</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 cursor-pointer"
-                   href="#contact" data-i18n="nav.contact">Contacto</a>
             </div>
             <div class="flex items-center gap-4">
                 <button id="themeToggle" aria-label="Alternar tema"
@@ -65,8 +63,6 @@
                    data-i18n="nav.experience">Experiencia</a>
                 <a class="nav-link-mobile text-on-surface-variant py-2" href="#projects"
                    data-i18n="nav.projects">Proyectos</a>
-                <a class="nav-link-mobile text-on-surface-variant py-2" href="#contact"
-                   data-i18n="nav.contact">Contacto</a>
             </nav>
         </div>
     </nav>
@@ -150,10 +146,6 @@
                    href="#projects">
                     <span class="material-symbols-outlined">code</span> <span data-i18n="nav.projects">Proyectos</span>
                 </a>
-                <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
-                   href="#contact">
-                    <span class="material-symbols-outlined">mail</span> <span data-i18n="nav.contact">Contacto</span>
-                </a>
             </nav>
             <div class="mt-auto flex flex-col gap-4">
                 <div class="flex gap-4 px-4">
@@ -194,7 +186,7 @@
                 </div>
             </section>
 
-            <!-- Habilidades (Bento Grid mejorado) -->
+            <!-- Habilidades (Bento Grid) -->
             <section class="space-y-8" id="skills">
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3">
                     <span class="material-symbols-outlined text-primary">bolt</span>
@@ -384,7 +376,7 @@
                 </div>
             </section>
 
-            <!-- Proyectos (Grid) - ACTUALIZADO: ComercioLocal con enlace a sitio -->
+            <!-- Proyectos (Grid) -->
             <section class="space-y-8" id="projects">
                 <div class="flex justify-between items-end">
                     <h2 class="font-headline-md text-headline-md flex items-center gap-3">
@@ -429,7 +421,7 @@
                         </div>
                     </div>
 
-                    <!-- ComercioLocal (con enlace a sitio) -->
+                    <!-- ComercioLocal -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
                         <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
@@ -609,46 +601,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Contacto CTA -->
-            <section
-                    class="p-12 rounded-3xl bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden group"
-                    id="contact">
-                <div class="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-                <div class="absolute left-0 bottom-0 w-48 h-48 bg-accent/20 rounded-full blur-3xl -ml-24 -mb-24"></div>
-                <div class="relative z-10 max-w-xl">
-                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 text-on-primary"
-                        data-i18n="contact.title">¿Tienes un sistema complejo que escalar?</h2>
-                    <p class="text-on-primary/80 font-body-lg mb-8" data-i18n="contact.description">Hablemos sobre cómo
-                        puedo ayudarte a optimizar tu arquitectura backend y mejorar el rendimiento de tus
-                        servicios.</p>
-                    <form id="contactForm" class="space-y-4" netlify>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" id="name" name="name"
-                                   class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 placeholder:text-on-primary/50 focus:ring-2 focus:ring-white outline-none text-on-primary"
-                                   placeholder="Tu nombre" required data-i18n-placeholder="contact.name">
-                            <input type="email" id="email" name="email"
-                                   class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 placeholder:text-on-primary/50 focus:ring-2 focus:ring-white outline-none text-on-primary"
-                                   placeholder="Tu email" required data-i18n-placeholder="contact.email">
-                        </div>
-                        <input type="text" id="subject" name="subject"
-                               class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 placeholder:text-on-primary/50 focus:ring-2 focus:ring-white outline-none text-on-primary"
-                               placeholder="Asunto" required data-i18n-placeholder="contact.subject">
-                        <textarea id="message" name="message"
-                                  class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 placeholder:text-on-primary/50 focus:ring-2 focus:ring-white outline-none text-on-primary"
-                                  placeholder="Mensaje" rows="4" required
-                                  data-i18n-placeholder="contact.message"></textarea>
-                        <div id="formMessage" class="form-message hidden"></div>
-                        <button type="submit"
-                                class="submit-btn bg-white text-primary px-8 py-4 rounded-xl font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2 shadow-lg shadow-black/20">
-                            <span class="btn-text" data-i18n="contact.submit">ENVIAR MENSAJE</span>
-                            <span class="btn-loading hidden">
-                                <span class="material-symbols-outlined animate-spin text-sm">sync</span> Enviando...
-                            </span>
-                        </button>
-                    </form>
                 </div>
             </section>
         </div>
