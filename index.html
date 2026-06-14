@@ -69,12 +69,20 @@
 </header>
 
 <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Hero Section (con foto móvil añadida) -->
     <section
             class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-margin_mobile md:px-margin_desktop"
             id="about">
         <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-60 -z-10"></div>
         <div class="relative z-10 max-w-4xl text-center">
+            <!-- Foto de perfil para móvil (visible solo en pantallas pequeñas) -->
+            <div class="block lg:hidden mb-6">
+                <div class="w-28 h-28 rounded-full overflow-hidden ring-2 ring-primary ring-offset-2 ring-offset-surface dark:ring-offset-surface-dim mx-auto">
+                    <img src="https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4"
+                         alt="Christián R. Vazquez" class="w-full h-full object-cover">
+                </div>
+            </div>
+
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 dark:border-white/5 mb-8 opacity-0 translate-y-4 transition-all duration-700"
                  data-animate>
                 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -111,7 +119,7 @@
     </section>
 
     <div class="max-w-container_max_width mx-auto flex flex-col lg:flex-row gap-gutter px-margin_mobile md:px-margin_desktop py-16">
-        <!-- Sidebar escritorio -->
+        <!-- Sidebar escritorio (oculto en móvil) -->
         <aside class="hidden lg:flex flex-col p-6 gap-8 sticky top-24 h-[calc(100vh-120px)] w-sidebar_width rounded-2xl bg-gradient-to-b from-surface/80 to-surface/40 dark:from-surface-dim/80 dark:to-surface-container/40 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-xl shadow-black/5">
             <div class="flex flex-col items-center gap-4 text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden ring-2 ring-primary ring-offset-2 ring-offset-surface dark:ring-offset-surface-dim">
@@ -169,9 +177,9 @@
             </div>
         </aside>
 
-        <!-- Contenido principal -->
+        <!-- Contenido principal (sin cambios) -->
         <div class="flex-1 space-y-24">
-            <!-- Sobre mí (detallado) -->
+            <!-- Sobre mí -->
             <section id="about-detail" class="space-y-6">
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3 border-b border-white/10 pb-2">
                     <span class="material-symbols-outlined text-primary">person</span>
@@ -186,13 +194,12 @@
                 </div>
             </section>
 
-            <!-- Habilidades (Bento Grid) -->
+            <!-- Habilidades -->
             <section class="space-y-8" id="skills">
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3">
                     <span class="material-symbols-outlined text-primary">bolt</span>
                     <span data-i18n="skills.title">Habilidades Técnicas</span>
                 </h2>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Tarjeta: Lenguajes -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
