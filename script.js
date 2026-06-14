@@ -56,13 +56,13 @@ const translations = {
         "hero.button.cv": "DESCARGAR CV",
         "hero.description": "Especializado en la construcción de sistemas distribuidos, microservicios de alto rendimiento y arquitecturas escalables. Transformo lógica compleja en soluciones elegantes y eficientes.",
 
-        // Sobre mí
+        // Sobre mí (corregido)
         "about.title": "Sobre mí",
-        "about.paragraph1": "Hola, soy Christián Vazquez, un Ingeniero en Ciencias Informáticas apasionado por el desarrollo de software y la creación de soluciones web innovadoras. Mi formación en la UCI me proporcionó una base sólida en ingeniería de software, la cual he consolidado a través de proyectos personales donde aplico mi conocimiento en la práctica.",
-        "about.paragraph2": "Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores prácticas y estándares de la industria. Aunque mi trayectoria profesional inicial ha estado fuera del ámbito del desarrollo, he dedicado los últimos dos años a mantener y potenciar mis habilidades de forma autodidacta, construyendo aplicaciones y explorando tecnologías modernas de front-end y back-end.",
-        "about.paragraph3": "Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he trabajado con frameworks como Spring Boot y Symfony. También tengo capacidad para crear interfaces frontend básicas y me adapto bien a entornos full-stack cuando el proyecto lo requiere, siempre con la humildad de reconocer que el aprendizaje en este campo es continuo.",
-        "about.paragraph4": "Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y especializarme, demostrando mi firme compromiso con el crecimiento continuo en este campo.",
-        "about.paragraph5": "Cuando no estoy programando, disfruto de la lectura, el tiempo en familia y aprender sobre nuevas tecnologías. Creo firmemente en el aprendizaje continuo y en mantenerme actualizado con las últimas tendencias en desarrollo web.",
+        "about.paragraph1": "Hola, soy Christián Vazquez, Ingeniero en Ciencias Informáticas y Desarrollador Backend con experiencia comprobada en empresas y proyectos freelance. Mi formación en la UCI me proporcionó una base sólida en ingeniería de software, que he consolidado trabajando con Symfony, Spring Boot y arquitecturas modernas.",
+        "about.paragraph2": "Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores prácticas. He trabajado como desarrollador backend junior en el Centro de Desarrollo Local (2021-2024) y actualmente desarrollo proyectos independientes de alta complejidad, como sistemas de turnos bancarios y plataformas SaaS con Stripe y autenticación OAuth2/2FA.",
+        "about.paragraph3": "Mi experiencia se centra en backend con Java (Spring Boot) y PHP (Symfony 7/8). Domino frameworks como Doctrine ORM, y también construyo interfaces modernas con Tailwind CSS, Alpine.js, Twig y JavaScript vanilla. Me adapto a entornos full-stack cuando el proyecto lo requiere.",
+        "about.paragraph4": "Actualmente curso una Maestría en Informática Aplicada para profundizar en arquitecturas distribuidas y sistemas de alta concurrencia, demostrando mi compromiso con el crecimiento continuo.",
+        "about.paragraph5": "Cuando no estoy programando, disfruto la lectura, el tiempo en familia y aprender nuevas tecnologías. Creo firmemente en el aprendizaje continuo y en mantenerme actualizado con las últimas tendencias en desarrollo backend y cloud.",
 
         // Estudios
         "study.title": "Estudios",
@@ -93,26 +93,42 @@ const translations = {
         // Proyectos
         "projects.title": "Proyectos Destacados",
         "projects.view_all": "VER TODO EL GITHUB",
+
+        "projects.sgrturnos.type": "Sistema Backend Avanzado",
+        "projects.sgrturnos.title": "SGR-Turnos - Gestión de Turnos Bancarios",
+        "projects.sgrturnos.description": "Sistema integral de gestión y reserva de turnos bancarios desarrollado con Symfony 8 para eliminar la especulación en filas. Incluye control de frecuencia anti-colero, calendario avanzado, auditoría exhaustiva, JWT authentication, rate limiting y exportación a Excel. Optimizado para entornos de alta concurrencia en redes locales.",
+
+        "projects.comerciolocal.type": "SaaS / E-commerce",
+        "projects.comerciolocal.title": "ComercioLocal - Plataforma E-commerce",
+        "projects.comerciolocal.description": "Plataforma SaaS completa para comercios locales. Implementa pasarela de pagos Stripe, autenticación social OAuth2 (Google/Facebook), 2FA con Google Authenticator, catálogos de productos, carrito de compras y panel de administración. Backend Symfony 7.4, frontend con Tailwind, Alpine.js y Stimulus.",
+        "projects.comerciolocal.visit": "Ver sitio",
+        "projects.comerciolocal.contact": "Contactar",
+
         "projects.inventory.type": "Sistema Backend",
         "projects.inventory.title": "Sistema de Gestión de Inventario y Ventas",
-        "projects.inventory.description": "Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y análisis de datos. Incluye control de stock, facturación PDF, dashboard con métricas y servicios especializados para lógica de negocio compleja.",
+        "projects.inventory.description": "Sistema completo desarrollado con Symfony 7.3 para gestión de inventario, ventas, compras y análisis de datos. Incluye control de stock por ubicaciones, facturación PDF (dompdf), dashboard con métricas, exportación a Excel (PhpSpreadsheet) y servicios especializados para lógica de negocio compleja.",
+
         "projects.auth.type": "Sistema Backend Seguro",
         "projects.auth.title": "Sistema de Autenticación y Control de Acceso",
-        "projects.auth.description": "Sistema completo de seguridad desarrollado con Symfony que implementa autenticación JWT, autorización granular con Voters, registro de auditoría exhaustivo y gestión de usuarios. Incluye sistema de roles, validación de DTOs, logs de seguridad y pruebas unitarias completas.",
+        "projects.auth.description": "Sistema completo de seguridad desarrollado con Symfony 7.3 que implementa autenticación JWT, autorización granular con Voters, registro de auditoría exhaustivo, gestión de usuarios, sistema de roles, validación de DTOs, logs de seguridad y pruebas unitarias completas (PHPUnit).",
+
         "projects.microservices.type": "Arquitectura Microservicios",
-        "projects.microservices.title": "Sistema de Biblioteca con Arquitectura de Microservicios",
-        "projects.microservices.description": "Sistema distribuido escalable desarrollado con Spring Boot para gestión completa de biblioteca. Implementa microservicios especializados para libros, usuarios, préstamos y notificaciones, con API Gateway, service discovery y comunicación asíncrona mediante mensajería.",
+        "projects.microservices.title": "Sistema de Biblioteca con Microservicios",
+        "projects.microservices.description": "Sistema distribuido escalable desarrollado con Spring Boot 3 para gestión completa de biblioteca. Implementa microservicios especializados para libros, usuarios, préstamos y notificaciones, con Kong API Gateway, service discovery y comunicación asíncrona mediante mensajería. Docker Compose para orquestación.",
+
         "projects.android.type": "Aplicación Móvil",
         "projects.android.title": "Sistema Móvil para Gestión de Solicitudes de Tarjetas BANCEC",
-        "projects.android.description": "Aplicación Android completa desarrollada para optimizar el proceso de recepción de solicitudes de tarjetas magnéticas en entornos bancarios. Incluye captura de datos mediante QR, gestión de clientes, exportación/importación Excel, estadísticas en tiempo real y transferencia segura de datos entre dispositivos.",
+        "projects.android.description": "Aplicación Android completa desarrollada para optimizar el proceso de recepción de solicitudes de tarjetas magnéticas en entornos bancarios. Incluye captura de datos mediante QR (ZXing), gestión de clientes, exportación/importación Excel, estadísticas en tiempo real y transferencia segura de datos entre dispositivos.",
+
         "projects.portfolio.type": "Portafolio Profesional",
         "projects.portfolio.title": "Portafolio Profesional Responsive",
-        "projects.portfolio.description": "Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla. Incluye diseño responsive, tema claro/oscuro persistente, navegación suave, animaciones al scroll y formulario de contacto interactivo.",
+        "projects.portfolio.description": "Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla. Incluye diseño responsive, tema claro/oscuro persistente, navegación suave, animaciones al scroll, formulario de contacto con Netlify Forms y traducción a inglés.",
+
         "projects.demo": "Demo en desarrollo",
         "projects.demo_portfolio": "Este sitio",
         "projects.code": "Código",
 
-        // Habilidades (Skills - nueva estructura)
+        // Habilidades
         "skills.title": "Habilidades Técnicas",
         "skills.languages.title": "Lenguajes",
         "skills.languages.desc": "Dominio en los siguientes lenguajes de programación para desarrollo backend y sistemas.",
@@ -122,10 +138,10 @@ const translations = {
         "skills.databases.desc": "Gestión y diseño de bases de datos relacionales y NoSQL.",
         "skills.devops.title": "DevOps & Cloud",
         "skills.devops.desc": "Herramientas de contenerización, orquestación y nube.",
-        "skills.frontend.title": "Frontend (Básico)",
-        "skills.frontend.desc": "Conocimientos para construir interfaces funcionales y responsivas.",
-        "skills.architecture.title": "Arquitectura & Metodologías",
-        "skills.architecture.desc": "Patrones de diseño, estilos arquitectónicos y metodologías ágiles.",
+        "skills.frontend.title": "Frontend (Intermedio)",
+        "skills.frontend.desc": "Construcción de interfaces funcionales y responsivas con herramientas modernas.",
+        "skills.architecture.title": "Arquitectura & Seguridad",
+        "skills.architecture.desc": "Patrones de diseño, microservicios, autenticación avanzada y buenas prácticas.",
 
         // Contacto
         "contact.title": "¿Tienes un sistema complejo que escalar?",
@@ -162,13 +178,13 @@ const translations = {
         "hero.button.cv": "DOWNLOAD CV",
         "hero.description": "Specialized in building distributed systems, high-performance microservices, and scalable architectures. I transform complex logic into elegant and efficient solutions.",
 
-        // About
+        // About (corregido)
         "about.title": "About Me",
-        "about.paragraph1": "Hello, I am Christián Vazquez, a Computer Science Engineer passionate about software development and creating innovative web solutions. My education at UCI provided me with a solid foundation in software engineering, which I have consolidated through personal projects where I apply my knowledge in practice.",
-        "about.paragraph2": "My motivation is to transform ideas into functional, clean, and efficient code, following industry best practices and standards. Although my initial professional career has been outside the development field, I have dedicated the last two years to maintaining and enhancing my skills through self-learning, building applications, and exploring modern front-end and back-end technologies.",
-        "about.paragraph3": "My experience is mainly focused on backend development with Java and PHP, where I have worked with frameworks like Spring Boot and Symfony. I also have the capacity to create basic front-end interfaces and adapt well to full-stack environments when the project requires it, always with the humility to recognize that learning in this field is continuous.",
-        "about.paragraph4": "I am currently pursuing a Master's degree in Applied Informatics to deepen my knowledge and specialize, demonstrating my firm commitment to continuous growth in this field.",
-        "about.paragraph5": "When I'm not coding, I enjoy reading, family time, and learning about new technologies. I strongly believe in continuous learning and staying updated with the latest trends in web development.",
+        "about.paragraph1": "Hello, I am Christián Vazquez, a Computer Science Engineer and Backend Developer with proven experience in companies and freelance projects. My education at UCI provided me with a solid foundation in software engineering, which I have consolidated working with Symfony, Spring Boot, and modern architectures.",
+        "about.paragraph2": "My motivation is to transform ideas into functional, clean, and efficient code, following industry best practices. I have worked as a junior backend developer at the Local Development Center (2021-2024) and currently develop high-complexity independent projects, such as banking queue systems and SaaS platforms with Stripe and OAuth2/2FA authentication.",
+        "about.paragraph3": "My experience is mainly focused on backend with Java (Spring Boot) and PHP (Symfony 7/8). I master frameworks like Doctrine ORM, and I also build modern interfaces with Tailwind CSS, Alpine.js, Twig, and vanilla JavaScript. I adapt well to full-stack environments when the project requires it.",
+        "about.paragraph4": "I am currently pursuing a Master's degree in Applied Informatics to deepen my knowledge in distributed architectures and high-concurrency systems, demonstrating my commitment to continuous growth.",
+        "about.paragraph5": "When I'm not coding, I enjoy reading, family time, and learning about new technologies. I strongly believe in continuous learning and staying updated with the latest trends in backend and cloud development.",
 
         // Education
         "study.title": "Education",
@@ -199,21 +215,37 @@ const translations = {
         // Projects
         "projects.title": "Featured Projects",
         "projects.view_all": "VIEW ALL GITHUB",
+
+        "projects.sgrturnos.type": "Advanced Backend System",
+        "projects.sgrturnos.title": "SGR-Turnos - Banking Queue Management",
+        "projects.sgrturnos.description": "Comprehensive banking queue management system developed with Symfony 8 to eliminate speculation in lines. Includes anti-queue frequency control, advanced calendar, exhaustive audit logging, JWT authentication, rate limiting, and Excel export. Optimized for high-concurrency local network environments.",
+
+        "projects.comerciolocal.type": "SaaS / E-commerce",
+        "projects.comerciolocal.title": "ComercioLocal - E-commerce Platform",
+        "projects.comerciolocal.description": "Complete SaaS platform for local businesses. Implements Stripe payment gateway, OAuth2 social login (Google/Facebook), 2FA with Google Authenticator, product catalogs, shopping cart, and admin panel. Backend Symfony 7.4, frontend with Tailwind, Alpine.js, and Stimulus.",
+        "projects.comerciolocal.visit": "View site",
+        "projects.comerciolocal.contact": "Contact",
+
         "projects.inventory.type": "Backend System",
         "projects.inventory.title": "Inventory and Sales Management System",
-        "projects.inventory.description": "Complete system developed with Symfony for inventory, sales, purchasing, and data analysis management. Includes stock control, PDF invoicing, dashboard with metrics, and specialized services for complex business logic.",
+        "projects.inventory.description": "Complete system developed with Symfony 7.3 for inventory, sales, purchases, and data analysis management. Includes location-based stock control, PDF invoicing (dompdf), dashboard with metrics, Excel export (PhpSpreadsheet), and specialized services for complex business logic.",
+
         "projects.auth.type": "Secure Backend System",
         "projects.auth.title": "Authentication and Access Control System",
-        "projects.auth.description": "Complete security system developed with Symfony that implements JWT authentication, granular authorization with Voters, comprehensive audit logging, and user management. Includes role system, DTO validation, security logs, and complete unit tests.",
+        "projects.auth.description": "Complete security system developed with Symfony 7.3 implementing JWT authentication, granular authorization with Voters, exhaustive audit logging, user management, role system, DTO validation, security logs, and full unit tests (PHPUnit).",
+
         "projects.microservices.type": "Microservices Architecture",
         "projects.microservices.title": "Library System with Microservices Architecture",
-        "projects.microservices.description": "Scalable distributed system developed with Spring Boot for complete library management. Implements specialized microservices for books, users, loans, and notifications, with API Gateway, service discovery, and asynchronous communication via messaging.",
+        "projects.microservices.description": "Scalable distributed system developed with Spring Boot 3 for complete library management. Implements specialized microservices for books, users, loans, and notifications, with Kong API Gateway, service discovery, and asynchronous messaging. Docker Compose for orchestration.",
+
         "projects.android.type": "Mobile Application",
         "projects.android.title": "Mobile System for BANCEC Card Request Management",
-        "projects.android.description": "Complete Android application developed to optimize the process of receiving magnetic card requests in banking environments. Includes data capture via QR, client management, Excel export/import, real-time statistics, and secure data transfer between devices.",
+        "projects.android.description": "Complete Android application developed to optimize the process of receiving magnetic card requests in banking environments. Includes QR data capture (ZXing), client management, Excel export/import, real-time statistics, and secure data transfer between devices.",
+
         "projects.portfolio.type": "Professional Portfolio",
         "projects.portfolio.title": "Responsive Professional Portfolio",
-        "projects.portfolio.description": "Modern Single Page Application developed with HTML5, CSS3, and vanilla JavaScript. Includes responsive design, persistent light/dark theme, smooth navigation, scroll animations, and an interactive contact form.",
+        "projects.portfolio.description": "Modern Single Page Application developed with HTML5, CSS3, and vanilla JavaScript. Includes responsive design, persistent light/dark theme, smooth navigation, scroll animations, contact form with Netlify Forms, and English/Spanish translation.",
+
         "projects.demo": "Demo in development",
         "projects.demo_portfolio": "This site",
         "projects.code": "Code",
@@ -228,10 +260,10 @@ const translations = {
         "skills.databases.desc": "Management and design of relational and NoSQL databases.",
         "skills.devops.title": "DevOps & Cloud",
         "skills.devops.desc": "Containerization, orchestration, and cloud tools.",
-        "skills.frontend.title": "Frontend (Basic)",
-        "skills.frontend.desc": "Knowledge to build functional and responsive interfaces.",
-        "skills.architecture.title": "Architecture & Methodologies",
-        "skills.architecture.desc": "Design patterns, architectural styles, and agile methodologies.",
+        "skills.frontend.title": "Frontend (Intermediate)",
+        "skills.frontend.desc": "Building functional and responsive interfaces with modern tools.",
+        "skills.architecture.title": "Architecture & Security",
+        "skills.architecture.desc": "Design patterns, microservices, advanced authentication, and best practices.",
 
         // Contact
         "contact.title": "Do you have a complex system to scale?",
