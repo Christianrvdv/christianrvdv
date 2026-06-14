@@ -18,7 +18,8 @@
 <header id="navbar" class="fixed top-0 w-full z-50 transition-transform duration-500">
     <nav class="bg-surface/70 dark:bg-surface-dim/70 backdrop-blur-xl border-b border-white/10 dark:border-white/5 shadow-lg shadow-black/5">
         <div class="flex justify-between items-center h-16 px-margin_mobile md:px-margin_desktop max-w-container_max_width mx-auto">
-            <div class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <div class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+                 data-i18n="logo">
                 BackendDev
             </div>
             <div class="hidden md:flex gap-8 items-center font-body-md text-body-md">
@@ -81,7 +82,7 @@
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 dark:border-white/5 mb-8 opacity-0 translate-y-4 transition-all duration-700"
                  data-animate>
                 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Disponible para proyectos</span>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary" data-i18n="hero.badge">Disponible para proyectos</span>
             </div>
             <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 opacity-0 translate-y-4 transition-all duration-700 delay-100"
                 data-animate>
@@ -97,11 +98,13 @@
                  data-animate>
                 <a href="#projects"
                    class="bg-primary hover:bg-primary/90 text-on-primary px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
-                    <span class="material-symbols-outlined">work</span> VER PROYECTOS
+                    <span class="material-symbols-outlined">work</span>
+                    <span data-i18n="hero.button.projects">VER PROYECTOS</span>
                 </a>
                 <a href="cv_christian.html"
                    class="border border-white/20 hover:border-primary text-on-surface px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all glass">
-                    <span class="material-symbols-outlined">download</span> DESCARGAR CV
+                    <span class="material-symbols-outlined">download</span>
+                    <span data-i18n="hero.button.cv">DESCARGAR CV</span>
                 </a>
             </div>
         </div>
@@ -179,7 +182,8 @@
             <!-- Sobre mí (detallado) -->
             <section id="about-detail" class="space-y-6">
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3 border-b border-white/10 pb-2">
-                    <span class="material-symbols-outlined text-primary">person</span> <span data-i18n="about.title">Sobre mí</span>
+                    <span class="material-symbols-outlined text-primary">person</span>
+                    <span data-i18n="about.title">Sobre mí</span>
                 </h2>
                 <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
                     <p data-i18n="about.paragraph1"></p>
@@ -190,49 +194,116 @@
                 </div>
             </section>
 
-            <!-- Habilidades (Bento Grid) -->
+            <!-- Habilidades (Bento Grid mejorado) -->
             <section class="space-y-8" id="skills">
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary">bolt</span> <span data-i18n="skills.title">Habilidades Técnicas</span>
+                    <span class="material-symbols-outlined text-primary">bolt</span>
+                    <span data-i18n="skills.title">Habilidades Técnicas</span>
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-auto md:grid-rows-2 gap-4">
-                    <div class="md:col-span-2 md:row-span-2 bento-card p-8 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm flex flex-col justify-between overflow-hidden relative group">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="relative z-10">
-                            <span class="material-symbols-outlined text-4xl text-primary mb-6">database</span>
-                            <h3 class="font-headline-md text-headline-md mb-4">Core Backend</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">Java / Spring Boot</span>
-                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">PHP / Symfony</span>
-                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">Node.js</span>
-                                <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full font-label-sm text-label-sm">Python / FastAPI</span>
-                            </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Tarjeta: Lenguajes -->
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">code</span>
+                            <h3 class="font-headline-md text-headline-md" data-i18n="skills.languages.title">
+                                Lenguajes</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-4" data-i18n="skills.languages.desc">Dominio en los
+                            siguientes lenguajes de programación para desarrollo backend y sistemas.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Java</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Python</span>
                         </div>
                     </div>
-                    <div class="md:col-span-2 bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm">
-                        <h3 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-4">
-                            Infrastructure</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <div class="flex items-center gap-2 px-3 py-2 bg-white/5 dark:bg-white/5 rounded-lg border border-white/10 dark:border-white/5">
-                                <span class="material-symbols-outlined text-sm">cloud</span> Docker & K8s
-                            </div>
-                            <div class="flex items-center gap-2 px-3 py-2 bg-white/5 dark:bg-white/5 rounded-lg border border-white/10 dark:border-white/5">
-                                <span class="material-symbols-outlined text-sm">terminal</span> AWS / Azure
-                            </div>
-                            <div class="flex items-center gap-2 px-3 py-2 bg-white/5 dark:bg-white/5 rounded-lg border border-white/10 dark:border-white/5">
-                                <span class="material-symbols-outlined text-sm">lan</span> CI/CD Pipelines
-                            </div>
+
+                    <!-- Tarjeta: Frameworks Backend -->
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">layers</span>
+                            <h3 class="font-headline-md text-headline-md" data-i18n="skills.frameworks.title">Frameworks
+                                Backend</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-4" data-i18n="skills.frameworks.desc">Frameworks
+                            principales utilizados en proyectos profesionales y personales.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Spring Boot</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Symfony</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">FastAPI</span>
                         </div>
                     </div>
-                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm">
-                        <span class="material-symbols-outlined text-primary mb-2">storage</span>
-                        <h4 class="font-bold mb-2">Databases</h4>
-                        <p class="text-on-surface-variant font-label-sm">PostgreSQL, Redis, MongoDB</p>
+
+                    <!-- Tarjeta: Bases de Datos -->
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">storage</span>
+                            <h3 class="font-headline-md text-headline-md" data-i18n="skills.databases.title">Bases de
+                                Datos</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-4" data-i18n="skills.databases.desc">Gestión y
+                            diseño de bases de datos relacionales y NoSQL.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">SQLite</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Redis</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">MongoDB</span>
+                        </div>
                     </div>
-                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm">
-                        <span class="material-symbols-outlined text-primary mb-2">account_tree</span>
-                        <h4 class="font-bold mb-2">Architecture</h4>
-                        <p class="text-on-surface-variant font-label-sm">Microservices, Event-Driven</p>
+
+                    <!-- Tarjeta: DevOps & Cloud -->
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">cloud</span>
+                            <h3 class="font-headline-md text-headline-md" data-i18n="skills.devops.title">DevOps &
+                                Cloud</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-4" data-i18n="skills.devops.desc">Herramientas de
+                            contenerización, orquestación y nube.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Docker</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Kubernetes</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">AWS</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Azure</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">CI/CD</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta: Frontend Básico -->
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">web</span>
+                            <h3 class="font-headline-md text-headline-md" data-i18n="skills.frontend.title">Frontend
+                                (Básico)</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-4" data-i18n="skills.frontend.desc">Conocimientos
+                            para construir interfaces funcionales y responsivas.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">HTML5</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">CSS3</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Tailwind</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta: Arquitectura y Metodologías -->
+                    <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">account_tree</span>
+                            <h3 class="font-headline-md text-headline-md" data-i18n="skills.architecture.title">
+                                Arquitectura & Metodologías</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-4" data-i18n="skills.architecture.desc">Patrones de
+                            diseño, estilos arquitectónicos y metodologías ágiles.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Microservicios</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">REST APIs</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Event-Driven</span>
+                            <span class="px-3 py-1 bg-white/10 dark:bg-white/10 rounded-full text-sm font-medium">Scrum</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -240,7 +311,8 @@
             <!-- Estudios (Timeline) -->
             <section class="space-y-8" id="studies">
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary">school</span> <span data-i18n="study.title">Estudios</span>
+                    <span class="material-symbols-outlined text-primary">school</span>
+                    <span data-i18n="study.title">Estudios</span>
                 </h2>
                 <div class="relative border-l border-white/10 ml-4 space-y-12 pb-8">
                     <div class="relative pl-12 group">
@@ -271,8 +343,8 @@
             <!-- Experiencia (Timeline) -->
             <section class="space-y-8" id="experience">
                 <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary">history</span> <span
-                        data-i18n="experience.title">Experiencia Profesional</span>
+                    <span class="material-symbols-outlined text-primary">history</span>
+                    <span data-i18n="experience.title">Experiencia Profesional</span>
                 </h2>
                 <div class="relative border-l border-white/10 ml-4 space-y-12 pb-8">
                     <div class="relative pl-12 group">
@@ -315,12 +387,13 @@
             <section class="space-y-8" id="projects">
                 <div class="flex justify-between items-end">
                     <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">code</span> <span
-                            data-i18n="projects.title">Proyectos Destacados</span>
+                        <span class="material-symbols-outlined text-primary">code</span>
+                        <span data-i18n="projects.title">Proyectos Destacados</span>
                     </h2>
                     <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener"
                        class="text-primary font-label-sm text-label-sm flex items-center gap-2 hover:underline">
-                        VER TODO EL GITHUB <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        <span data-i18n="projects.view_all">VER TODO EL GITHUB</span>
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
                     </a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -480,10 +553,9 @@
                 <div class="relative z-10 max-w-xl">
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 text-on-primary"
                         data-i18n="contact.title">¿Tienes un sistema complejo que escalar?</h2>
-                    <p class="text-on-primary/80 font-body-lg mb-8" data-i18n="contact.description">
-                        Hablemos sobre cómo puedo ayudarte a optimizar tu arquitectura backend y mejorar el rendimiento
-                        de tus servicios.
-                    </p>
+                    <p class="text-on-primary/80 font-body-lg mb-8" data-i18n="contact.description">Hablemos sobre cómo
+                        puedo ayudarte a optimizar tu arquitectura backend y mejorar el rendimiento de tus
+                        servicios.</p>
                     <form id="contactForm" class="space-y-4" netlify>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input type="text" id="name" name="name"
@@ -518,22 +590,19 @@
 <footer class="w-full py-8 border-t border-white/10 bg-surface-container/30 dark:bg-surface-dim/30 mt-24 backdrop-blur-md">
     <div class="flex flex-col md:flex-row justify-between items-center px-margin_mobile md:px-margin_desktop max-w-container_max_width mx-auto gap-4">
         <div class="flex flex-col md:flex-row items-center gap-6">
-            <span class="font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Backend Architect</span>
-            <span class="font-label-sm text-label-sm text-on-surface-variant"
-                  data-i18n="footer.copyright">© 2025 Christián R. Vazquez. Construido con precisión y lógica.</span>
+            <span class="font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+                  data-i18n="footer.brand">Backend Architect</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="footer.copyright">© 2025 Christián R. Vazquez. Construido con precisión y lógica.</span>
         </div>
         <div class="flex gap-8 items-center font-label-sm text-label-sm">
-            <a href="#"
-               class="text-on-surface-variant hover:text-primary transition-colors"
-               data-i18n="footer.privacy">Privacidad</a>
-            <a href="#"
-               class="text-on-surface-variant hover:text-primary transition-colors"
-               data-i18n="footer.terms">Términos</a>
+            <a href="#" class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="footer.privacy">Privacidad</a>
+            <a href="#" class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="footer.terms">Términos</a>
             <div class="flex gap-4 border-l border-white/20 pl-8 ml-4">
                 <a href="https://github.com/Christianrvdv" target="_blank"
-                   class="text-on-surface-variant hover:text-primary transition-colors">GitHub</a>
+                   class="text-on-surface-variant hover:text-primary transition-colors"
+                   data-i18n="footer.github">GitHub</a>
                 <a href="https://t.me/christianrvdv" target="_blank"
-                   class="text-on-surface-variant hover:text-primary transition-colors">Telegram</a>
+                   class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="footer.telegram">Telegram</a>
             </div>
         </div>
     </div>

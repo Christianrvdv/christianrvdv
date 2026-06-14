@@ -39,24 +39,32 @@ if (languageText) languageText.textContent = currentLang === 'en' ? 'EN' : 'ES';
 
 const translations = {
     es: {
-        "logo": "Portafolio",
+        // Navbar y general
+        "logo": "BackendDev",
         "nav.about": "Sobre mí",
         "nav.study": "Estudios",
         "nav.experience": "Experiencia",
         "nav.projects": "Proyectos",
         "nav.skills": "Habilidades",
         "nav.contact": "Contacto",
-        "language.es": "ES",
-        "language.en": "EN",
-        "profile.title": "Desarrollador Backend",
+        "profile.title": "Backend Architect",
         "cv.download": "Descargar CV",
+
+        // Hero
+        "hero.badge": "Disponible para proyectos",
+        "hero.button.projects": "VER PROYECTOS",
+        "hero.button.cv": "DESCARGAR CV",
         "hero.description": "Especializado en la construcción de sistemas distribuidos, microservicios de alto rendimiento y arquitecturas escalables. Transformo lógica compleja en soluciones elegantes y eficientes.",
+
+        // Sobre mí
         "about.title": "Sobre mí",
         "about.paragraph1": "Hola, soy Christián Vazquez, un Ingeniero en Ciencias Informáticas apasionado por el desarrollo de software y la creación de soluciones web innovadoras. Mi formación en la UCI me proporcionó una base sólida en ingeniería de software, la cual he consolidado a través de proyectos personales donde aplico mi conocimiento en la práctica.",
         "about.paragraph2": "Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores prácticas y estándares de la industria. Aunque mi trayectoria profesional inicial ha estado fuera del ámbito del desarrollo, he dedicado los últimos dos años a mantener y potenciar mis habilidades de forma autodidacta, construyendo aplicaciones y explorando tecnologías modernas de front-end y back-end.",
         "about.paragraph3": "Mi experiencia se centra principalmente en el desarrollo backend con Java y PHP, donde he trabajado con frameworks como Spring Boot y Symfony. También tengo capacidad para crear interfaces frontend básicas y me adapto bien a entornos full-stack cuando el proyecto lo requiere, siempre con la humildad de reconocer que el aprendizaje en este campo es continuo.",
         "about.paragraph4": "Actualmente, curso una Maestría en Informática Aplicada para profundizar en mis conocimientos y especializarme, demostrando mi firme compromiso con el crecimiento continuo en este campo.",
         "about.paragraph5": "Cuando no estoy programando, disfruto de la lectura, el tiempo en familia y aprender sobre nuevas tecnologías. Creo firmemente en el aprendizaje continuo y en mantenerme actualizado con las últimas tendencias en desarrollo web.",
+
+        // Estudios
         "study.title": "Estudios",
         "study.masters.date": "2025 - Presente",
         "study.masters.title": "Maestría en Informática Aplicada",
@@ -66,6 +74,8 @@ const translations = {
         "study.degree.title": "Ingeniería en Ciencias Informáticas",
         "study.degree.university": "Universidad de las Ciencias Informáticas (UCI)",
         "study.degree.description": "Graduado de un programa de ingeniería con un enfoque práctico en el desarrollo de software. La formación en la UCI se caracterizó por un modelo de aprendizaje basado en proyectos reales, donde consolidé mis conocimientos en fundamentos de la computación, ingeniería de software, bases de datos y tecnologías de vanguardia, preparándome para enfrentar desafíos complejos en el ámbito del desarrollo de software.",
+
+        // Experiencia
         "experience.title": "Experiencia",
         "experience.freelance.date": "2024 - Presente",
         "experience.freelance.title": "Desarrollador Backend",
@@ -79,7 +89,10 @@ const translations = {
         "experience.intern.title": "Practicante de Desarrollo de Software",
         "experience.intern.company": "Universidad de las Ciencias Informáticas",
         "experience.intern.description": "Desarrollo de proyectos académicos y de investigación aplicando metodologías de ingeniería de software. Implementación de soluciones con Java y PHP. Aprendizaje y aplicación de patrones de diseño, bases de datos y mejores prácticas de desarrollo bajo supervisión académica.",
+
+        // Proyectos
         "projects.title": "Proyectos Destacados",
+        "projects.view_all": "VER TODO EL GITHUB",
         "projects.inventory.type": "Sistema Backend",
         "projects.inventory.title": "Sistema de Gestión de Inventario y Ventas",
         "projects.inventory.description": "Sistema completo desarrollado con Symfony para gestión de inventario, ventas, compras y análisis de datos. Incluye control de stock, facturación PDF, dashboard con métricas y servicios especializados para lógica de negocio compleja.",
@@ -98,7 +111,23 @@ const translations = {
         "projects.demo": "Demo en desarrollo",
         "projects.demo_portfolio": "Este sitio",
         "projects.code": "Código",
+
+        // Habilidades (Skills - nueva estructura)
         "skills.title": "Habilidades Técnicas",
+        "skills.languages.title": "Lenguajes",
+        "skills.languages.desc": "Dominio en los siguientes lenguajes de programación para desarrollo backend y sistemas.",
+        "skills.frameworks.title": "Frameworks Backend",
+        "skills.frameworks.desc": "Frameworks principales utilizados en proyectos profesionales y personales.",
+        "skills.databases.title": "Bases de Datos",
+        "skills.databases.desc": "Gestión y diseño de bases de datos relacionales y NoSQL.",
+        "skills.devops.title": "DevOps & Cloud",
+        "skills.devops.desc": "Herramientas de contenerización, orquestación y nube.",
+        "skills.frontend.title": "Frontend (Básico)",
+        "skills.frontend.desc": "Conocimientos para construir interfaces funcionales y responsivas.",
+        "skills.architecture.title": "Arquitectura & Metodologías",
+        "skills.architecture.desc": "Patrones de diseño, estilos arquitectónicos y metodologías ágiles.",
+
+        // Contacto
         "contact.title": "¿Tienes un sistema complejo que escalar?",
         "contact.description": "Hablemos sobre cómo puedo ayudarte a optimizar tu arquitectura backend y mejorar el rendimiento de tus servicios.",
         "contact.name": "Tu nombre",
@@ -106,29 +135,42 @@ const translations = {
         "contact.subject": "Asunto",
         "contact.message": "Mensaje",
         "contact.submit": "ENVIAR MENSAJE",
+
+        // Footer
+        "footer.brand": "Backend Architect",
         "footer.copyright": "© 2025 Christián R. Vazquez. Construido con precisión y lógica.",
         "footer.privacy": "Privacidad",
-        "footer.terms": "Términos"
+        "footer.terms": "Términos",
+        "footer.github": "GitHub",
+        "footer.telegram": "Telegram"
     },
     en: {
-        "logo": "Portfolio",
+        // Navbar
+        "logo": "BackendDev",
         "nav.about": "About Me",
         "nav.study": "Education",
         "nav.experience": "Experience",
         "nav.projects": "Projects",
         "nav.skills": "Skills",
         "nav.contact": "Contact",
-        "language.es": "ES",
-        "language.en": "EN",
-        "profile.title": "Backend Developer",
+        "profile.title": "Backend Architect",
         "cv.download": "Download CV",
+
+        // Hero
+        "hero.badge": "Available for projects",
+        "hero.button.projects": "VIEW PROJECTS",
+        "hero.button.cv": "DOWNLOAD CV",
         "hero.description": "Specialized in building distributed systems, high-performance microservices, and scalable architectures. I transform complex logic into elegant and efficient solutions.",
+
+        // About
         "about.title": "About Me",
         "about.paragraph1": "Hello, I am Christián Vazquez, a Computer Science Engineer passionate about software development and creating innovative web solutions. My education at UCI provided me with a solid foundation in software engineering, which I have consolidated through personal projects where I apply my knowledge in practice.",
         "about.paragraph2": "My motivation is to transform ideas into functional, clean, and efficient code, following industry best practices and standards. Although my initial professional career has been outside the development field, I have dedicated the last two years to maintaining and enhancing my skills through self-learning, building applications, and exploring modern front-end and back-end technologies.",
         "about.paragraph3": "My experience is mainly focused on backend development with Java and PHP, where I have worked with frameworks like Spring Boot and Symfony. I also have the capacity to create basic front-end interfaces and adapt well to full-stack environments when the project requires it, always with the humility to recognize that learning in this field is continuous.",
         "about.paragraph4": "I am currently pursuing a Master's degree in Applied Informatics to deepen my knowledge and specialize, demonstrating my firm commitment to continuous growth in this field.",
         "about.paragraph5": "When I'm not coding, I enjoy reading, family time, and learning about new technologies. I strongly believe in continuous learning and staying updated with the latest trends in web development.",
+
+        // Education
         "study.title": "Education",
         "study.masters.date": "2025 - Present",
         "study.masters.title": "Master's Degree in Applied Informatics",
@@ -138,6 +180,8 @@ const translations = {
         "study.degree.title": "Computer Science Engineering",
         "study.degree.university": "University of Informatics Sciences (UCI)",
         "study.degree.description": "Graduate of an engineering program with a practical focus on software development. The education at UCI was characterized by a project-based learning model, where I consolidated my knowledge in computing fundamentals, software engineering, databases, and cutting-edge technologies, preparing me to face complex challenges in the field of software development.",
+
+        // Experience
         "experience.title": "Experience",
         "experience.freelance.date": "2024 - Present",
         "experience.freelance.title": "Backend Developer",
@@ -151,7 +195,10 @@ const translations = {
         "experience.intern.title": "Software Development Intern",
         "experience.intern.company": "University of Informatics Sciences",
         "experience.intern.description": "Development of academic and research projects applying software engineering methodologies. Implementation of solutions with Java and PHP. Learning and application of design patterns, databases, and development best practices under academic supervision.",
+
+        // Projects
         "projects.title": "Featured Projects",
+        "projects.view_all": "VIEW ALL GITHUB",
         "projects.inventory.type": "Backend System",
         "projects.inventory.title": "Inventory and Sales Management System",
         "projects.inventory.description": "Complete system developed with Symfony for inventory, sales, purchasing, and data analysis management. Includes stock control, PDF invoicing, dashboard with metrics, and specialized services for complex business logic.",
@@ -170,7 +217,23 @@ const translations = {
         "projects.demo": "Demo in development",
         "projects.demo_portfolio": "This site",
         "projects.code": "Code",
+
+        // Skills
         "skills.title": "Technical Skills",
+        "skills.languages.title": "Languages",
+        "skills.languages.desc": "Proficiency in programming languages for backend development and systems.",
+        "skills.frameworks.title": "Backend Frameworks",
+        "skills.frameworks.desc": "Main frameworks used in professional and personal projects.",
+        "skills.databases.title": "Databases",
+        "skills.databases.desc": "Management and design of relational and NoSQL databases.",
+        "skills.devops.title": "DevOps & Cloud",
+        "skills.devops.desc": "Containerization, orchestration, and cloud tools.",
+        "skills.frontend.title": "Frontend (Basic)",
+        "skills.frontend.desc": "Knowledge to build functional and responsive interfaces.",
+        "skills.architecture.title": "Architecture & Methodologies",
+        "skills.architecture.desc": "Design patterns, architectural styles, and agile methodologies.",
+
+        // Contact
         "contact.title": "Do you have a complex system to scale?",
         "contact.description": "Let's talk about how I can help you optimize your backend architecture and improve the performance of your services.",
         "contact.name": "Your name",
@@ -178,9 +241,14 @@ const translations = {
         "contact.subject": "Subject",
         "contact.message": "Message",
         "contact.submit": "SEND MESSAGE",
+
+        // Footer
+        "footer.brand": "Backend Architect",
         "footer.copyright": "© 2025 Christián R. Vazquez. Built with precision and logic.",
         "footer.privacy": "Privacy",
-        "footer.terms": "Terms"
+        "footer.terms": "Terms",
+        "footer.github": "GitHub",
+        "footer.telegram": "Telegram"
     }
 };
 
