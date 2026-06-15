@@ -110,7 +110,7 @@ const translations = {
         "projects.portfolio.title": "Portafolio Profesional Responsive",
         "projects.portfolio.description": "Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla. Incluye diseño responsive, tema claro/oscuro persistente, navegación suave, animaciones al scroll, formulario de contacto con Netlify Forms y traducción a inglés.",
         "projects.demo": "Demo en desarrollo",
-        "projects.demo_portfolio": "Este sitio",
+        "projects.demo_portfolio": "Ver demo",
         "projects.code": "Código",
 
         "skills.title": "Habilidades Técnicas",
@@ -206,7 +206,7 @@ const translations = {
         "projects.portfolio.title": "Responsive Professional Portfolio",
         "projects.portfolio.description": "Modern Single Page Application developed with HTML5, CSS3, and vanilla JavaScript. Includes responsive design, persistent light/dark theme, smooth navigation, scroll animations, contact form with Netlify Forms, and English/Spanish translation.",
         "projects.demo": "Demo in development",
-        "projects.demo_portfolio": "This site",
+        "projects.demo_portfolio": "View demo",
         "projects.code": "Code",
 
         "skills.title": "Technical Skills",
