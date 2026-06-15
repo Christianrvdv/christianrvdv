@@ -682,9 +682,48 @@
                         </div>
                     </div>
 
+                    <!-- Este sitio (portafolio actual) -->
+                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
+                             aria-hidden="true">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
+                            <div class="absolute bottom-4 left-6">
+            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
+                  data-i18n="projects.current_site.type">Portafolio en vivo</span>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.current_site.title">
+                                Portafolio Backend Architect — Este sitio</h3>
+                            <p class="text-on-surface-variant font-body-md mb-6 flex-1"
+                               data-i18n="projects.current_site.description">
+                                El sitio que estás viendo. Desarrollado con HTML5, Tailwind CSS y JavaScript vanilla.
+                                Implementa tema oscuro/claro persistente, navegación suave, animaciones al scroll,
+                                cambio de idioma (ES/EN) y está optimizado en accesibilidad y SEO.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">HTML5</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Tailwind CSS</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">JavaScript</span>
+                                <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">a11y + i18n</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <!-- Indicador de "Este sitio" deshabilitado -->
+                                <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
+                                      aria-disabled="true" data-i18n="projects.current_site.this_site">Este sitio</span>
+                                <!-- Código (repositorio correcto) -->
+                                <a href="https://github.com/Christianrvdv/christianrvdv" target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
+                                   data-i18n="projects.code">Código</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Portafolio profesional -->
-                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm md:col-span-2 max-w-md mx-auto w-full">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20" aria-hidden="true">
+                    <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
             <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
@@ -695,7 +734,10 @@
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.portfolio.title">
                                 Portafolio Profesional Responsive</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.portfolio.description">Single Page Application moderna desarrollada con HTML5, CSS3 y JavaScript vanilla. Incluye diseño responsive, tema claro/oscuro persistente, navegación suave, animaciones al scroll, formulario de contacto con Netlify Forms y traducción a inglés.</p>
+                               data-i18n="projects.portfolio.description">Single Page Application moderna desarrollada
+                                con HTML5, CSS3 y JavaScript vanilla. Incluye diseño responsive, tema claro/oscuro
+                                persistente, navegación suave, animaciones al scroll, formulario de contacto con Netlify
+                                Forms y traducción a inglés.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">HTML5/CSS3</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Tailwind</span>
@@ -703,16 +745,19 @@
                             </div>
                             <div class="flex gap-4">
                                 <!-- Enlace a la demo en vivo -->
-                                <a href="https://christianrvdv.github.io/portafolio_christian/" target="_blank" rel="noopener noreferrer"
+                                <a href="https://christianrvdv.github.io/portafolio_christian/" target="_blank"
+                                   rel="noopener noreferrer"
                                    class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
                                    data-i18n="projects.demo_portfolio">Ver demo</a>
                                 <!-- Enlace al código -->
-                                <a href="https://github.com/Christianrvdv/portafolio_christian" target="_blank" rel="noopener noreferrer"
+                                <a href="https://github.com/Christianrvdv/portafolio_christian" target="_blank"
+                                   rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.code">Código</a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
         </div>

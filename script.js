@@ -113,6 +113,11 @@ const translations = {
         "projects.demo_portfolio": "Ver demo",
         "projects.code": "Código",
 
+        "projects.current_site.type": "Portafolio en vivo",
+        "projects.current_site.title": "Portafolio Backend Architect — Este sitio",
+        "projects.current_site.description": "El sitio que estás viendo. Desarrollado con HTML5, Tailwind CSS y JavaScript vanilla. Implementa tema oscuro/claro persistente, navegación suave, animaciones al scroll, cambio de idioma (ES/EN) y está optimizado en accesibilidad y SEO.",
+        "projects.current_site.this_site": "Este sitio",
+
         "skills.title": "Habilidades Técnicas",
         "skills.languages.title": "Lenguajes",
         "skills.languages.desc": "Dominio en los siguientes lenguajes de programación para desarrollo backend y sistemas.",
@@ -208,6 +213,11 @@ const translations = {
         "projects.demo": "Demo in development",
         "projects.demo_portfolio": "View demo",
         "projects.code": "Code",
+
+        "projects.current_site.type": "Live Portfolio",
+        "projects.current_site.title": "Backend Architect Portfolio — This site",
+        "projects.current_site.description": "The site you're viewing. Built with HTML5, Tailwind CSS and vanilla JavaScript. Features persistent dark/light theme, smooth scrolling, scroll animations, language switch (EN/ES) and is optimized for accessibility and SEO.",
+        "projects.current_site.this_site": "This site",
 
         "skills.title": "Technical Skills",
         "skills.languages.title": "Languages",
