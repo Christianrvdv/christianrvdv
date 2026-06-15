@@ -6,17 +6,39 @@
     <title>Christián R. Vazquez | Backend Architect</title>
     <meta name="description"
           content="Portafolio profesional de Christián R. Vazquez, Desarrollador Backend especializado en Java, PHP y Symfony">
+
+    <!-- Open Graph / Redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Christián R. Vazquez | Backend Architect">
+    <meta property="og:description"
+          content="Especializado en sistemas distribuidos, microservicios de alto rendimiento y arquitecturas escalables.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/61900349?s=400&v=4">
+    <meta property="og:url" content="https://christianvazquez.dev">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Christián R. Vazquez | Backend Architect">
+    <meta name="twitter:description"
+          content="Especializado en sistemas distribuidos, microservicios de alto rendimiento y arquitecturas escalables.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/61900349?s=400&v=4">
+
     <link href="estilo.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap"
-          rel="stylesheet">
+    <!-- Solo fuente Inter (Fira Code eliminada) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet">
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container transition-colors duration-300">
 
+<!-- Enlace de salto para teclado -->
+<a href="#main-content"
+   class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-on-primary focus:rounded-md">
+    Saltar al contenido principal
+</a>
+
 <!-- Header / Navbar con sticky reveal -->
-<header id="navbar" class="fixed top-0 w-full z-50 transition-transform duration-500">
-    <nav class="bg-surface/70 dark:bg-surface-dim/70 backdrop-blur-xl border-b border-white/10 dark:border-white/5 shadow-lg shadow-black/5">
+<header id="navbar" class="fixed top-0 w-full z-50 transition-transform duration-500" role="banner">
+    <nav class="bg-surface/70 dark:bg-surface-dim/70 backdrop-blur-xl border-b border-white/10 dark:border-white/5 shadow-lg shadow-black/5"
+         aria-label="Navegación principal">
         <div class="flex justify-between items-center h-16 px-margin_mobile md:px-margin_desktop max-w-container_max_width mx-auto">
             <div class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
                  data-i18n="logo">
@@ -37,7 +59,7 @@
             <div class="flex items-center gap-4">
                 <button id="themeToggle" aria-label="Alternar tema"
                         class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
-                    <span class="material-symbols-outlined">dark_mode</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
                 </button>
                 <button id="languageToggle" aria-label="Cambiar idioma"
                         class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-bold text-sm">
@@ -45,14 +67,14 @@
                 </button>
                 <button id="mobileMenuBtn"
                         class="md:hidden text-on-surface-variant cursor-pointer"
-                        aria-label="Menú">
-                    <span class="material-symbols-outlined">menu</span>
+                        aria-label="Menú" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
                 </button>
             </div>
         </div>
         <div id="mobileMenu"
-             class="mobile-menu md:hidden bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-t border-white/10 dark:border-white/5">
-            <nav class="flex flex-col gap-2 px-margin_mobile py-4">
+             class="mobile-menu md:hidden bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-t border-white/10 dark:border-white/5 hidden">
+            <nav class="flex flex-col gap-2 px-margin_mobile py-4" aria-label="Navegación móvil">
                 <a class="nav-link-mobile text-primary font-bold py-2" href="#about"
                    data-i18n="nav.about">Sobre mí</a>
                 <a class="nav-link-mobile text-on-surface-variant py-2" href="#skills"
@@ -68,24 +90,26 @@
     </nav>
 </header>
 
-<main class="pt-16">
-    <!-- Hero Section (con foto móvil añadida) -->
+<main id="main-content" class="pt-16">
+    <!-- Hero Section -->
     <section
             class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-margin_mobile md:px-margin_desktop"
             id="about">
         <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-60 -z-10"></div>
         <div class="relative z-10 max-w-4xl text-center">
-            <!-- Foto de perfil para móvil (visible solo en pantallas pequeñas) -->
+            <!-- Foto de perfil para móvil -->
             <div class="block lg:hidden mb-6">
                 <div class="w-28 h-28 rounded-full overflow-hidden ring-2 ring-primary ring-offset-2 ring-offset-surface dark:ring-offset-surface-dim mx-auto">
-                    <img src="https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4"
-                         alt="Christián R. Vazquez" class="w-full h-full object-cover">
+                    <img src="https://avatars.githubusercontent.com/u/61900349?s=200&v=4"
+                         srcset="https://avatars.githubusercontent.com/u/61900349?s=200&v=4 1x, https://avatars.githubusercontent.com/u/61900349?s=400&v=4 2x"
+                         alt="Christián R. Vazquez" class="w-full h-full object-cover" loading="lazy" width="112"
+                         height="112">
                 </div>
             </div>
 
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 dark:border-white/5 mb-8 opacity-0 translate-y-4 transition-all duration-700"
                  data-animate>
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary" data-i18n="hero.badge">Disponible para proyectos</span>
             </div>
             <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 opacity-0 translate-y-4 transition-all duration-700 delay-100"
@@ -102,29 +126,32 @@
                  data-animate>
                 <a href="#projects"
                    class="bg-primary hover:bg-primary/90 text-on-primary px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
-                    <span class="material-symbols-outlined">work</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">work</span>
                     <span data-i18n="hero.button.projects">VER PROYECTOS</span>
                 </a>
                 <a href="cv_christian.html"
                    class="border border-white/20 hover:border-primary text-on-surface px-8 py-4 rounded-xl font-label-sm text-label-sm flex items-center gap-2 transition-all glass">
-                    <span class="material-symbols-outlined">download</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">download</span>
                     <span data-i18n="hero.button.cv">DESCARGAR CV</span>
                 </a>
             </div>
         </div>
         <div class="absolute bottom-10 animate-bounce opacity-0 translate-y-4 transition-all duration-700 delay-500"
              data-animate>
-            <span class="material-symbols-outlined text-primary text-4xl">expand_more</span>
+            <span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">expand_more</span>
         </div>
     </section>
 
     <div class="max-w-container_max_width mx-auto flex flex-col lg:flex-row gap-gutter px-margin_mobile md:px-margin_desktop py-16">
         <!-- Sidebar escritorio -->
-        <aside class="hidden lg:flex flex-col p-6 gap-8 sticky top-24 h-[calc(100vh-120px)] w-sidebar_width rounded-2xl bg-gradient-to-b from-surface/80 to-surface/40 dark:from-surface-dim/80 dark:to-surface-container/40 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-xl shadow-black/5">
+        <aside class="hidden lg:flex flex-col p-6 gap-8 sticky top-24 h-[calc(100vh-120px)] w-sidebar_width rounded-2xl bg-gradient-to-b from-surface/80 to-surface/40 dark:from-surface-dim/80 dark:to-surface-container/40 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-xl shadow-black/5"
+               aria-label="Barra lateral de navegación">
             <div class="flex flex-col items-center gap-4 text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden ring-2 ring-primary ring-offset-2 ring-offset-surface dark:ring-offset-surface-dim">
-                    <img src="https://avatars.githubusercontent.com/u/61900349?s=400&u=9babd1740dd87e49cb0e7ca0be505830fad63365&v=4"
-                         alt="Christián R. Vazquez" class="w-full h-full object-cover">
+                    <img src="https://avatars.githubusercontent.com/u/61900349?s=200&v=4"
+                         srcset="https://avatars.githubusercontent.com/u/61900349?s=200&v=4 1x, https://avatars.githubusercontent.com/u/61900349?s=400&v=4 2x"
+                         alt="Christián R. Vazquez" class="w-full h-full object-cover" loading="lazy" width="96"
+                         height="96">
                 </div>
                 <div>
                     <h3 class="font-headline-md text-headline-md text-primary">Christián V.</h3>
@@ -132,42 +159,46 @@
                         Architect</p>
                 </div>
             </div>
-            <nav class="flex flex-col gap-4">
+            <nav class="flex flex-col gap-4" aria-label="Secciones del portafolio">
                 <a class="side-link flex items-center gap-4 text-primary font-bold border-l-2 border-primary pl-4 hover:translate-x-1 transition-all duration-200"
-                   href="#about">
-                    <span class="material-symbols-outlined">person</span> <span data-i18n="nav.about">Sobre mí</span>
+                   href="#about" aria-current="page">
+                    <span class="material-symbols-outlined" aria-hidden="true">person</span> <span
+                        data-i18n="nav.about">Sobre mí</span>
                 </a>
                 <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#skills">
-                    <span class="material-symbols-outlined">bolt</span> <span data-i18n="nav.skills">Habilidades</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">bolt</span> <span data-i18n="nav.skills">Habilidades</span>
                 </a>
                 <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#studies">
-                    <span class="material-symbols-outlined">school</span> <span data-i18n="nav.study">Estudios</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">school</span> <span
+                        data-i18n="nav.study">Estudios</span>
                 </a>
                 <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#experience">
-                    <span class="material-symbols-outlined">work</span> <span
+                    <span class="material-symbols-outlined" aria-hidden="true">work</span> <span
                         data-i18n="nav.experience">Experiencia</span>
                 </a>
                 <a class="side-link flex items-center gap-4 text-on-surface-variant pl-4 hover:bg-white/5 dark:hover:bg-white/5 hover:translate-x-1 transition-all duration-200"
                    href="#projects">
-                    <span class="material-symbols-outlined">code</span> <span data-i18n="nav.projects">Proyectos</span>
+                    <span class="material-symbols-outlined" aria-hidden="true">code</span> <span
+                        data-i18n="nav.projects">Proyectos</span>
                 </a>
             </nav>
             <div class="mt-auto flex flex-col gap-4">
                 <div class="flex gap-4 px-4">
-                    <a href="https://github.com/Christianrvdv" target="_blank" aria-label="GitHub"
+                    <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener noreferrer"
+                       aria-label="GitHub"
                        class="text-on-surface-variant hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined">code</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">code</span>
                     </a>
-                    <a href="https://t.me/christianrvdv" target="_blank" aria-label="Telegram"
+                    <a href="https://t.me/christianrvdv" target="_blank" rel="noopener noreferrer" aria-label="Telegram"
                        class="text-on-surface-variant hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined">send</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">send</span>
                     </a>
                     <a href="mailto:christianrvdv.1999@gmail.com" aria-label="Email"
                        class="text-on-surface-variant hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined">mail</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
                     </a>
                 </div>
                 <a href="cv_christian.html"
@@ -180,31 +211,46 @@
         <!-- Contenido principal -->
         <div class="flex-1 space-y-24">
             <!-- Sobre mí -->
-            <section id="about-detail" class="space-y-6">
-                <h2 class="font-headline-md text-headline-md flex items-center gap-3 border-b border-white/10 pb-2">
-                    <span class="material-symbols-outlined text-primary">person</span>
+            <section id="about-detail" class="space-y-6" aria-labelledby="about-title">
+                <h2 id="about-title"
+                    class="font-headline-md text-headline-md flex items-center gap-3 border-b border-white/10 pb-2">
+                    <span class="material-symbols-outlined text-primary" aria-hidden="true">person</span>
                     <span data-i18n="about.title">Sobre mí</span>
                 </h2>
                 <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
-                    <p data-i18n="about.paragraph1"></p>
-                    <p data-i18n="about.paragraph2"></p>
-                    <p data-i18n="about.paragraph3"></p>
-                    <p data-i18n="about.paragraph4"></p>
-                    <p data-i18n="about.paragraph5"></p>
+                    <p data-i18n="about.paragraph1">Hola, soy Christián Vazquez, Ingeniero en Ciencias Informáticas y
+                        Desarrollador Backend con experiencia comprobada en empresas y proyectos freelance. Mi formación
+                        en la UCI me proporcionó una base sólida en ingeniería de software, que he consolidado
+                        trabajando con Symfony, Spring Boot y arquitecturas modernas.</p>
+                    <p data-i18n="about.paragraph2">Mi motivación es transformar ideas en código funcional, limpio y
+                        eficiente, siguiendo las mejores prácticas. He trabajado como desarrollador backend junior en el
+                        Centro de Desarrollo Local (2021-2024) y actualmente desarrollo proyectos independientes de alta
+                        complejidad, como sistemas de turnos bancarios y plataformas SaaS con Stripe y autenticación
+                        OAuth2/2FA.</p>
+                    <p data-i18n="about.paragraph3">Mi experiencia se centra en backend con Java (Spring Boot) y PHP
+                        (Symfony 7/8). Domino frameworks como Doctrine ORM, y también construyo interfaces modernas con
+                        Tailwind CSS, Alpine.js, Twig y JavaScript vanilla. Me adapto a entornos full-stack cuando el
+                        proyecto lo requiere.</p>
+                    <p data-i18n="about.paragraph4">Actualmente curso una Maestría en Informática Aplicada para
+                        profundizar en arquitecturas distribuidas y sistemas de alta concurrencia, demostrando mi
+                        compromiso con el crecimiento continuo.</p>
+                    <p data-i18n="about.paragraph5">Cuando no estoy programando, disfruto la lectura, el tiempo en
+                        familia y aprender nuevas tecnologías. Creo firmemente en el aprendizaje continuo y en
+                        mantenerme actualizado con las últimas tendencias en desarrollo backend y cloud.</p>
                 </div>
             </section>
 
             <!-- Habilidades -->
-            <section class="space-y-8" id="skills">
-                <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary">bolt</span>
+            <section class="space-y-8" id="skills" aria-labelledby="skills-title">
+                <h2 id="skills-title" class="font-headline-md text-headline-md flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary" aria-hidden="true">bolt</span>
                     <span data-i18n="skills.title">Habilidades Técnicas</span>
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Tarjeta: Lenguajes -->
+                    <!-- Tarjetas de habilidades (mismo contenido, solo se añade aria-hidden en íconos) -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-3xl text-primary">code</span>
+                            <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">code</span>
                             <h3 class="font-headline-md text-headline-md" data-i18n="skills.languages.title">
                                 Lenguajes</h3>
                         </div>
@@ -219,10 +265,11 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta: Frameworks Backend -->
+                    <!-- Las demás tarjetas de habilidades se dejan igual en estructura, solo con aria-hidden en iconos -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-3xl text-primary">layers</span>
+                            <span class="material-symbols-outlined text-3xl text-primary"
+                                  aria-hidden="true">layers</span>
                             <h3 class="font-headline-md text-headline-md" data-i18n="skills.frameworks.title">Frameworks
                                 Backend</h3>
                         </div>
@@ -236,10 +283,10 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta: Bases de Datos -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-3xl text-primary">storage</span>
+                            <span class="material-symbols-outlined text-3xl text-primary"
+                                  aria-hidden="true">storage</span>
                             <h3 class="font-headline-md text-headline-md" data-i18n="skills.databases.title">Bases de
                                 Datos</h3>
                         </div>
@@ -253,10 +300,10 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta: DevOps & Cloud -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-3xl text-primary">cloud</span>
+                            <span class="material-symbols-outlined text-3xl text-primary"
+                                  aria-hidden="true">cloud</span>
                             <h3 class="font-headline-md text-headline-md" data-i18n="skills.devops.title">DevOps &
                                 Cloud</h3>
                         </div>
@@ -270,10 +317,9 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta: Frontend -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-3xl text-primary">web</span>
+                            <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">web</span>
                             <h3 class="font-headline-md text-headline-md" data-i18n="skills.frontend.title">Frontend
                                 (Intermedio)</h3>
                         </div>
@@ -288,10 +334,9 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta: Arquitectura y Seguridad -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
                         <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-3xl text-primary">account_tree</span>
+                            <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">account_tree</span>
                             <h3 class="font-headline-md text-headline-md" data-i18n="skills.architecture.title">
                                 Arquitectura & Seguridad</h3>
                         </div>
@@ -309,14 +354,15 @@
             </section>
 
             <!-- Estudios -->
-            <section class="space-y-8" id="studies">
-                <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary">school</span>
+            <section class="space-y-8" id="studies" aria-labelledby="studies-title">
+                <h2 id="studies-title" class="font-headline-md text-headline-md flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary" aria-hidden="true">school</span>
                     <span data-i18n="study.title">Estudios</span>
                 </h2>
                 <div class="relative border-l border-white/10 ml-4 space-y-12 pb-8">
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-primary rounded-full timeline-glow"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-primary rounded-full timeline-glow"
+                             aria-hidden="true"></div>
                         <span class="font-label-sm text-label-sm text-primary mb-2 block"
                               data-i18n="study.masters.date">2025 - Presente</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="study.masters.title">Maestría en
@@ -324,10 +370,15 @@
                         <h4 class="text-on-surface-variant font-body-md mb-4" data-i18n="study.masters.university">
                             Universidad José Martí (UNISS)</h4>
                         <p class="text-on-surface-variant font-body-md max-w-2xl"
-                           data-i18n="study.masters.description"></p>
+                           data-i18n="study.masters.description">Complementando mi formación de grado con una
+                            especialización que busca cerrar la brecha entre la teoría avanzada en informática y su
+                            aplicación práctica en entornos empresariales y de investigación. Me estoy enfocando en
+                            adquirir competencias de alto nivel para el diseño e implementación de sistemas complejos
+                            que respondan a desafíos tecnológicos actuales.</p>
                     </div>
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"
+                             aria-hidden="true"></div>
                         <span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block"
                               data-i18n="study.degree.date">2017 - 2022</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="study.degree.title">Ingeniería en
@@ -335,20 +386,25 @@
                         <h4 class="text-on-surface-variant font-body-md mb-4" data-i18n="study.degree.university">
                             Universidad de las Ciencias Informáticas (UCI)</h4>
                         <p class="text-on-surface-variant font-body-md max-w-2xl"
-                           data-i18n="study.degree.description"></p>
+                           data-i18n="study.degree.description">Graduado de un programa de ingeniería con un enfoque
+                            práctico en el desarrollo de software. La formación en la UCI se caracterizó por un modelo
+                            de aprendizaje basado en proyectos reales, donde consolidé mis conocimientos en fundamentos
+                            de la computación, ingeniería de software, bases de datos y tecnologías de vanguardia,
+                            preparándome para enfrentar desafíos complejos en el ámbito del desarrollo de software.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Experiencia -->
-            <section class="space-y-8" id="experience">
-                <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary">history</span>
+            <section class="space-y-8" id="experience" aria-labelledby="experience-title">
+                <h2 id="experience-title" class="font-headline-md text-headline-md flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary" aria-hidden="true">history</span>
                     <span data-i18n="experience.title">Experiencia Profesional</span>
                 </h2>
                 <div class="relative border-l border-white/10 ml-4 space-y-12 pb-8">
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-primary rounded-full timeline-glow"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-primary rounded-full timeline-glow"
+                             aria-hidden="true"></div>
                         <span class="font-label-sm text-label-sm text-primary mb-2 block"
                               data-i18n="experience.freelance.date">2024 - Presente</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="experience.freelance.title">
@@ -356,10 +412,14 @@
                         <h4 class="text-on-surface-variant font-body-md mb-4" data-i18n="experience.freelance.company">
                             Freelance / Proyectos Independientes</h4>
                         <p class="text-on-surface-variant font-body-md max-w-2xl"
-                           data-i18n="experience.freelance.description"></p>
+                           data-i18n="experience.freelance.description">Desarrollo de aplicaciones web robustas
+                            utilizando Symfony y Spring Boot. Implementación de APIs RESTful, diseño de bases de datos
+                            MySQL, y creación de arquitecturas escalables. Colaboración en el ciclo completo de
+                            desarrollo desde el análisis hasta el despliegue.</p>
                     </div>
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"
+                             aria-hidden="true"></div>
                         <span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block"
                               data-i18n="experience.junior.date">2021 - 2024</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="experience.junior.title">
@@ -367,10 +427,15 @@
                         <h4 class="text-on-surface-variant font-body-md mb-4" data-i18n="experience.junior.company">
                             Centro de Desarrollo Local</h4>
                         <p class="text-on-surface-variant font-body-md max-w-2xl"
-                           data-i18n="experience.junior.description"></p>
+                           data-i18n="experience.junior.description">Desarrollo de aplicaciones móviles nativas para
+                            Android utilizando Java (Android Nativo). Desarrollo y mantenimiento de aplicaciones web
+                            utilizando Java y Spring Boot. Creación de interfaces de usuario con HTML, CSS y JavaScript.
+                            Soporte técnico y resolución de incidencias en sistemas existentes. Participación en equipos
+                            ágiles para el desarrollo de soluciones empresariales.</p>
                     </div>
                     <div class="relative pl-12 group">
-                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"></div>
+                        <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 group-hover:bg-primary transition-colors rounded-full"
+                             aria-hidden="true"></div>
                         <span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block"
                               data-i18n="experience.intern.date">2018 - 2021</span>
                         <h3 class="font-headline-md text-headline-md mb-1" data-i18n="experience.intern.title">
@@ -378,39 +443,47 @@
                         <h4 class="text-on-surface-variant font-body-md mb-4" data-i18n="experience.intern.company">
                             Universidad de las Ciencias Informáticas</h4>
                         <p class="text-on-surface-variant font-body-md max-w-2xl"
-                           data-i18n="experience.intern.description"></p>
+                           data-i18n="experience.intern.description">Desarrollo de proyectos académicos y de
+                            investigación aplicando metodologías de ingeniería de software. Implementación de soluciones
+                            con Java y PHP. Aprendizaje y aplicación de patrones de diseño, bases de datos y mejores
+                            prácticas de desarrollo bajo supervisión académica.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Proyectos -->
-            <section class="space-y-8" id="projects">
+            <section class="space-y-8" id="projects" aria-labelledby="projects-title">
                 <div class="flex justify-between items-end">
-                    <h2 class="font-headline-md text-headline-md flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">code</span>
+                    <h2 id="projects-title" class="font-headline-md text-headline-md flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary" aria-hidden="true">code</span>
                         <span data-i18n="projects.title">Proyectos Destacados</span>
                     </h2>
-                    <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener"
+                    <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener noreferrer"
                        class="text-primary font-label-sm text-label-sm flex items-center gap-2 hover:underline">
                         <span data-i18n="projects.view_all">VER TODO EL GITHUB</span>
-                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
                     </a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- SGR-Turnos -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
-                                      data-i18n="projects.sgrturnos.type">Sistema Backend Avanzado</span>
+            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
+                  data-i18n="projects.sgrturnos.type">Sistema Backend Avanzado</span>
                             </div>
                         </div>
                         <div class="p-8 flex flex-col flex-1">
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.sgrturnos.title">
                                 SGR-Turnos - Gestión de Turnos Bancarios</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.sgrturnos.description"></p>
+                               data-i18n="projects.sgrturnos.description">Sistema integral de gestión y reserva de
+                                turnos bancarios desarrollado con Symfony 8 para eliminar la especulación en filas.
+                                Incluye control de frecuencia anti-colero, calendario avanzado, auditoría exhaustiva,
+                                JWT authentication, rate limiting y exportación a Excel. Optimizado para entornos de
+                                alta concurrencia en redes locales.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Symfony 8</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">PHP 8.4</span>
@@ -418,19 +491,22 @@
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">JWT + Rate Limiting</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="https://github.com/Christianrvdv/SGR-Turnos" target="_blank"
-                                   class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
-                                   data-i18n="projects.demo">Demo restringida</a>
-                                <a href="https://github.com/Christianrvdv/SGR-Turnos" target="_blank"
+                                <!-- Demo deshabilitada -->
+                                <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
+                                      aria-disabled="true"
+                                      data-i18n="projects.demo">Próximamente (demo en desarrollo)</span>
+                                <!-- Contactar (antes Código) -->
+                                <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
-                                   data-i18n="projects.code">Código</a>
+                                   data-i18n="projects.comerciolocal.contact">Contactar</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- ComercioLocal -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
@@ -441,7 +517,11 @@
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.comerciolocal.title">
                                 ComercioLocal - Plataforma E-commerce</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.comerciolocal.description"></p>
+                               data-i18n="projects.comerciolocal.description">Plataforma SaaS completa para comercios
+                                locales. Implementa pasarela de pagos Stripe, autenticación social OAuth2
+                                (Google/Facebook), 2FA con Google Authenticator, catálogos de productos, carrito de
+                                compras y panel de administración. Backend Symfony 7.4, frontend con Tailwind, Alpine.js
+                                y Stimulus.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Symfony 7.4</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Stripe</span>
@@ -449,10 +529,10 @@
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Redis</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="https://islamarket.aserenet.com/" target="_blank"
+                                <a href="https://islamarket.aserenet.com/" target="_blank" rel="noopener noreferrer"
                                    class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
                                    data-i18n="projects.comerciolocal.visit">Ver sitio</a>
-                                <a href="https://github.com/Christianrvdv" target="_blank"
+                                <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.comerciolocal.contact">Contactar</a>
                             </div>
@@ -461,7 +541,8 @@
 
                     <!-- app_almacen -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
@@ -472,17 +553,22 @@
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.inventory.title">
                                 Sistema de Gestión de Inventario y Ventas</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.inventory.description"></p>
+                               data-i18n="projects.inventory.description">Sistema completo desarrollado con Symfony 7.3
+                                para gestión de inventario, ventas, compras y análisis de datos. Incluye control de
+                                stock por ubicaciones, facturación PDF (dompdf), dashboard con métricas, exportación a
+                                Excel (PhpSpreadsheet) y servicios especializados para lógica de negocio compleja.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Symfony 7.3</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">MySQL</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">dompdf / PhpSpreadsheet</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#"
-                                   class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
-                                   data-i18n="projects.demo">Demo en desarrollo</a>
+                                <!-- Enlace roto reemplazado por span deshabilitado -->
+                                <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
+                                      aria-disabled="true"
+                                      data-i18n="projects.demo">Próximamente (demo en desarrollo)</span>
                                 <a href="https://github.com/Christianrvdv/app_almacen" target="_blank"
+                                   rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.code">Código</a>
                             </div>
@@ -491,7 +577,8 @@
 
                     <!-- auth-system -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
@@ -502,17 +589,21 @@
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.auth.title">Sistema
                                 de Autenticación y Control de Acceso</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.auth.description"></p>
+                               data-i18n="projects.auth.description">Sistema completo de seguridad desarrollado con
+                                Symfony 7.3 que implementa autenticación JWT, autorización granular con Voters, registro
+                                de auditoría exhaustivo, gestión de usuarios, sistema de roles, validación de DTOs, logs
+                                de seguridad y pruebas unitarias completas (PHPUnit).</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Symfony 7.3</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">JWT + Voters</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">PHPUnit</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#"
-                                   class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
-                                   data-i18n="projects.demo">Demo en desarrollo</a>
+                                <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
+                                      aria-disabled="true"
+                                      data-i18n="projects.demo">Próximamente (demo en desarrollo)</span>
                                 <a href="https://github.com/Christianrvdv/auth-system" target="_blank"
+                                   rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.code">Código</a>
                             </div>
@@ -521,7 +612,8 @@
 
                     <!-- Microservicios biblioteca -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
@@ -532,18 +624,22 @@
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.microservices.title">
                                 Sistema de Biblioteca con Microservicios</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.microservices.description"></p>
+                               data-i18n="projects.microservices.description">Sistema distribuido escalable desarrollado
+                                con Spring Boot 3 para gestión completa de biblioteca. Implementa microservicios
+                                especializados para libros, usuarios, préstamos y notificaciones, con Kong API Gateway,
+                                service discovery y comunicación asíncrona mediante mensajería. Docker Compose para
+                                orquestación.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Spring Boot 3</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Kong API Gateway</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Docker Compose</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#"
-                                   class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
-                                   data-i18n="projects.demo">Demo en desarrollo</a>
+                                <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
+                                      aria-disabled="true"
+                                      data-i18n="projects.demo">Próximamente (demo en desarrollo)</span>
                                 <a href="https://github.com/Christianrvdv/sistema-biblioteca-microservicios"
-                                   target="_blank"
+                                   target="_blank" rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.code">Código</a>
                             </div>
@@ -552,7 +648,8 @@
 
                     <!-- App Móvil BANCEC -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
@@ -563,17 +660,22 @@
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.android.title">
                                 Sistema Móvil para Gestión de Solicitudes de Tarjetas BANCEC</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.android.description"></p>
+                               data-i18n="projects.android.description">Aplicación Android completa desarrollada para
+                                optimizar el proceso de recepción de solicitudes de tarjetas magnéticas en entornos
+                                bancarios. Incluye captura de datos mediante QR (ZXing), gestión de clientes,
+                                exportación/importación Excel, estadísticas en tiempo real y transferencia segura de
+                                datos entre dispositivos.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Android Nativo</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Java + QR</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">SQLite + Excel</span>
                             </div>
                             <div class="flex gap-4">
-                                <a href="#"
-                                   class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
-                                   data-i18n="projects.demo">Demo en desarrollo</a>
+                                <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
+                                      aria-disabled="true"
+                                      data-i18n="projects.demo">Próximamente (demo en desarrollo)</span>
                                 <a href="https://github.com/Christianrvdv/SolicitudtarjetaBANDEC" target="_blank"
+                                   rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.code">Código</a>
                             </div>
@@ -582,7 +684,8 @@
 
                     <!-- Portafolio profesional -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm md:col-span-2 max-w-md mx-auto w-full">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20">
+                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
+                             aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
                                 <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
@@ -593,7 +696,10 @@
                             <h3 class="font-headline-md text-headline-md mb-3" data-i18n="projects.portfolio.title">
                                 Portafolio Profesional Responsive</h3>
                             <p class="text-on-surface-variant font-body-md mb-6 flex-1"
-                               data-i18n="projects.portfolio.description"></p>
+                               data-i18n="projects.portfolio.description">Single Page Application moderna desarrollada
+                                con HTML5, CSS3 y JavaScript vanilla. Incluye diseño responsive, tema claro/oscuro
+                                persistente, navegación suave, animaciones al scroll, formulario de contacto con Netlify
+                                Forms y traducción a inglés.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">HTML5/CSS3</span>
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">Tailwind</span>
@@ -602,7 +708,7 @@
                             <div class="flex gap-4">
                                 <span class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm"
                                       data-i18n="projects.demo_portfolio">Este sitio</span>
-                                <a href="https://github.com/Christianrvdv" target="_blank"
+                                <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.code">Código</a>
                             </div>
@@ -615,21 +721,17 @@
 </main>
 
 <!-- FOOTER MEJORADO -->
-<footer class="w-full border-t border-white/10 bg-surface-container/30 dark:bg-surface-dim/30 backdrop-blur-md mt-24">
+<footer class="w-full border-t border-white/10 bg-surface-container/30 dark:bg-surface-dim/30 backdrop-blur-md mt-24"
+        role="contentinfo">
     <div class="max-w-container_max_width mx-auto px-margin_mobile md:px-margin_desktop py-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <!-- Columna izquierda: marca y copyright -->
             <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
                 <span class="font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
-                      data-i18n="footer.brand">
-                    Backend Architect
-                </span>
+                      data-i18n="footer.brand">Backend Architect</span>
                 <span class="text-xs text-on-surface-variant" data-i18n="footer.copyright">
                     © 2025 Christián R. Vazquez. Construido con precisión y lógica.
                 </span>
             </div>
-
-            <!-- Columna central: enlaces rápidos -->
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
                 <a href="#" class="text-on-surface-variant hover:text-primary transition-colors"
                    data-i18n="footer.privacy">Privacidad</a>
@@ -637,20 +739,18 @@
                    data-i18n="footer.terms">Términos</a>
                 <a href="#about" class="text-on-surface-variant hover:text-primary transition-colors">Volver arriba</a>
             </div>
-
-            <!-- Columna derecha: redes sociales con iconos -->
             <div class="flex gap-5">
                 <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener noreferrer"
                    class="text-on-surface-variant hover:text-primary transition-colors" aria-label="GitHub">
-                    <span class="material-symbols-outlined text-2xl">code</span>
+                    <span class="material-symbols-outlined text-2xl" aria-hidden="true">code</span>
                 </a>
                 <a href="https://t.me/christianrvdv" target="_blank" rel="noopener noreferrer"
                    class="text-on-surface-variant hover:text-primary transition-colors" aria-label="Telegram">
-                    <span class="material-symbols-outlined text-2xl">send</span>
+                    <span class="material-symbols-outlined text-2xl" aria-hidden="true">send</span>
                 </a>
                 <a href="mailto:christianrvdv.1999@gmail.com"
                    class="text-on-surface-variant hover:text-primary transition-colors" aria-label="Email">
-                    <span class="material-symbols-outlined text-2xl">mail</span>
+                    <span class="material-symbols-outlined text-2xl" aria-hidden="true">mail</span>
                 </a>
             </div>
         </div>
@@ -658,8 +758,9 @@
 </footer>
 
 <button id="backToTop"
-        class="fixed bottom-6 right-6 w-12 h-12 bg-primary/90 text-on-primary rounded-full shadow-lg shadow-primary/25 hover:bg-primary hover:scale-110 transition-all flex items-center justify-center z-40 opacity-0 pointer-events-none">
-    <span class="material-symbols-outlined">keyboard_arrow_up</span>
+        class="fixed bottom-6 right-6 w-12 h-12 bg-primary/90 text-on-primary rounded-full shadow-lg shadow-primary/25 hover:bg-primary hover:scale-110 transition-all flex items-center justify-center z-40 opacity-0 pointer-events-none"
+        aria-label="Volver arriba">
+    <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span>
 </button>
 
 <script src="script.js" defer></script>
