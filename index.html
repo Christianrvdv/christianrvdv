@@ -265,7 +265,6 @@
                         </div>
                     </div>
 
-                    <!-- Las demás tarjetas de habilidades se dejan igual en estructura, solo con aria-hidden en iconos -->
                     <div class="bento-card p-6 rounded-2xl bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 backdrop-blur-sm hover:shadow-xl transition-all group">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-3xl text-primary"
@@ -467,12 +466,14 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- SGR-Turnos -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
-                             aria-hidden="true">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="imagen/sgr.webp" alt="SGR-Turnos - Gestión de Turnos Bancarios"
+                                 class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"
+                                 aria-hidden="true"></div>
                             <div class="absolute bottom-4 left-6">
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
-                  data-i18n="projects.sgrturnos.type">Sistema Backend Avanzado</span>
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-primary dark:text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/30 dark:border-primary/40 shadow-lg"
+                                      data-i18n="projects.sgrturnos.type">Sistema Backend Avanzado</span>
                             </div>
                         </div>
                         <div class="p-8 flex flex-col flex-1">
@@ -491,11 +492,9 @@
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">JWT + Rate Limiting</span>
                             </div>
                             <div class="flex gap-4">
-                                <!-- Demo deshabilitada -->
                                 <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
                                       aria-disabled="true"
                                       data-i18n="projects.demo">Próximamente (demo en desarrollo)</span>
-                                <!-- Contactar (antes Código) -->
                                 <a href="https://github.com/Christianrvdv" target="_blank" rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
                                    data-i18n="projects.comerciolocal.contact">Contactar</a>
@@ -505,11 +504,13 @@
 
                     <!-- ComercioLocal -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
-                             aria-hidden="true">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="imagen/comerciolocal2.webp" alt="ComercioLocal - Plataforma E-commerce"
+                                 class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"
+                                 aria-hidden="true"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-accent dark:text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/30 dark:border-accent/40 shadow-lg"
                                       data-i18n="projects.comerciolocal.type">SaaS / E-commerce</span>
                             </div>
                         </div>
@@ -541,11 +542,13 @@
 
                     <!-- app_almacen -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
-                             aria-hidden="true">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="imagen/almacen.webp" alt="Sistema de Gestión de Inventario y Ventas"
+                                 class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"
+                                 aria-hidden="true"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-primary dark:text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/30 dark:border-primary/40 shadow-lg"
                                       data-i18n="projects.inventory.type">Sistema Backend</span>
                             </div>
                         </div>
@@ -563,7 +566,6 @@
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">dompdf / PhpSpreadsheet</span>
                             </div>
                             <div class="flex gap-4">
-                                <!-- Enlace roto reemplazado por span deshabilitado -->
                                 <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
                                       aria-disabled="true"
                                       data-i18n="projects.demo">Próximamente (demo en desarrollo)</span>
@@ -577,11 +579,13 @@
 
                     <!-- auth-system -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
-                             aria-hidden="true">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="imagen/autenticacion.webp" alt="Sistema de Autenticación y Control de Acceso"
+                                 class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"
+                                 aria-hidden="true"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-accent dark:text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/30 dark:border-accent/40 shadow-lg"
                                       data-i18n="projects.auth.type">Sistema Backend Seguro</span>
                             </div>
                         </div>
@@ -610,13 +614,13 @@
                         </div>
                     </div>
 
-                    <!-- Microservicios biblioteca -->
+                    <!-- Microservicios biblioteca (SIN IMAGEN - FONDO GRADIENTE) -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
                         <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
                              aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-primary dark:text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/30 dark:border-primary/40 shadow-lg"
                                       data-i18n="projects.microservices.type">Arquitectura Microservicios</span>
                             </div>
                         </div>
@@ -646,13 +650,13 @@
                         </div>
                     </div>
 
-                    <!-- App Móvil BANCEC -->
+                    <!-- App Móvil BANCEC (SIN IMAGEN - FONDO GRADIENTE) -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
                         <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
                              aria-hidden="true">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
-                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-accent dark:text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/30 dark:border-accent/40 shadow-lg"
                                       data-i18n="projects.android.type">Aplicación Móvil</span>
                             </div>
                         </div>
@@ -684,12 +688,14 @@
 
                     <!-- Este sitio (portafolio actual) -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-accent/20 to-surface-dim/20"
-                             aria-hidden="true">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="imagen/portafolio1.webp" alt="Portafolio Backend Architect - Este sitio"
+                                 class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"
+                                 aria-hidden="true"></div>
                             <div class="absolute bottom-4 left-6">
-            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/20"
-                  data-i18n="projects.current_site.type">Portafolio en vivo</span>
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-accent dark:text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accent/30 dark:border-accent/40 shadow-lg"
+                                      data-i18n="projects.current_site.type">Portafolio en vivo</span>
                             </div>
                         </div>
                         <div class="p-8 flex flex-col flex-1">
@@ -708,10 +714,8 @@
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">a11y + i18n</span>
                             </div>
                             <div class="flex gap-4">
-                                <!-- Indicador de "Este sitio" deshabilitado -->
                                 <span class="bg-primary/50 text-on-primary/70 px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 cursor-not-allowed opacity-70"
                                       aria-disabled="true" data-i18n="projects.current_site.this_site">Este sitio</span>
-                                <!-- Código (repositorio correcto) -->
                                 <a href="https://github.com/Christianrvdv/christianrvdv" target="_blank"
                                    rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
@@ -720,14 +724,16 @@
                         </div>
                     </div>
 
-                    <!-- Portafolio profesional -->
+                    <!-- Portafolio profesional (anterior) -->
                     <div class="group rounded-2xl overflow-hidden bg-surface-container/60 dark:bg-surface-container/60 border border-white/10 dark:border-white/5 flex flex-col h-full bento-card backdrop-blur-sm">
-                        <div class="h-48 relative overflow-hidden bg-gradient-to-br from-primary/20 to-surface-dim/20"
-                             aria-hidden="true">
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"></div>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="imagen/portafolio2.webp" alt="Portafolio Profesional Responsive"
+                                 class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent"
+                                 aria-hidden="true"></div>
                             <div class="absolute bottom-4 left-6">
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/20"
-                  data-i18n="projects.portfolio.type">Portafolio Profesional</span>
+                                <span class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md text-primary dark:text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/30 dark:border-primary/40 shadow-lg"
+                                      data-i18n="projects.portfolio.type">Portafolio Profesional</span>
                             </div>
                         </div>
                         <div class="p-8 flex flex-col flex-1">
@@ -744,12 +750,10 @@
                                 <span class="bg-white/5 dark:bg-white/5 px-3 py-1 rounded-lg text-label-sm font-label-sm border border-white/10 dark:border-white/5">JavaScript</span>
                             </div>
                             <div class="flex gap-4">
-                                <!-- Enlace a la demo en vivo -->
                                 <a href="https://christianrvdv.github.io/portafolio_christian/" target="_blank"
                                    rel="noopener noreferrer"
                                    class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2"
                                    data-i18n="projects.demo_portfolio">Ver demo</a>
-                                <!-- Enlace al código -->
                                 <a href="https://github.com/Christianrvdv/portafolio_christian" target="_blank"
                                    rel="noopener noreferrer"
                                    class="text-on-surface hover:text-primary px-4 py-2 rounded-lg text-label-sm font-label-sm flex items-center gap-2 transition-colors"
@@ -757,7 +761,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
