@@ -39,13 +39,13 @@ if (languageText) languageText.textContent = currentLang === 'en' ? 'EN' : 'ES';
 
 const translations = {
     es: {
-        "logo": "BackendDev",
+        "logo": "FullStark",
         "nav.about": "Sobre mí",
         "nav.study": "Estudios",
         "nav.experience": "Experiencia",
         "nav.projects": "Proyectos",
         "nav.skills": "Habilidades",
-        "profile.title": "Backend Architect",
+        "profile.title": "Full Stack Developer",
         "cv.download": "Descargar CV",
 
         "hero.badge": "Disponible para proyectos",
@@ -55,8 +55,8 @@ const translations = {
 
         "about.title": "Sobre mí",
         "about.paragraph1": "Hola, soy Christián Vazquez, Ingeniero en Ciencias Informáticas y Desarrollador Backend con experiencia comprobada en empresas y proyectos freelance. Mi formación en la UCI me proporcionó una base sólida en ingeniería de software, que he consolidado trabajando con Symfony, Spring Boot y arquitecturas modernas.",
-        "about.paragraph2": "Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores prácticas. He trabajado como desarrollador backend junior en el Centro de Desarrollo Local (2021-2024) y actualmente desarrollo proyectos independientes de alta complejidad, como sistemas de turnos bancarios y plataformas SaaS con Stripe y autenticación OAuth2/2FA.",
-        "about.paragraph3": "Mi experiencia se centra en backend con Java (Spring Boot) y PHP (Symfony 7/8). Domino frameworks como Doctrine ORM, y también construyo interfaces modernas con Tailwind CSS, Alpine.js, Twig y JavaScript vanilla. Me adapto a entornos full-stack cuando el proyecto lo requiere.",
+        "about.paragraph2": "Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores prácticas. He trabajado como desarrollador backend en el Centro de Desarrollo Local (2021-2024) y actualmente desarrollo proyectos independientes de alta complejidad, como sistemas de turnos bancarios y plataformas SaaS con Stripe y autenticación OAuth2/2FA.",
+        "about.paragraph3": "Mi experiencia se especializa en el desarrollo backend con Java (Spring Boot) y PHP (Symfony 7/8), dominando frameworks como Doctrine ORM. Además, poseo sólidos conocimientos en frontend, construyendo interfaces modernas y reactivas con Tailwind CSS, Alpine.js, React, Twig y JavaScript vanilla. Esta versatilidad me permite adaptarme a entornos full-stack cuando el proyecto lo demanda.",
         "about.paragraph4": "Actualmente curso una Maestría en Informática Aplicada para profundizar en arquitecturas distribuidas y sistemas de alta concurrencia, demostrando mi compromiso con el crecimiento continuo.",
         "about.paragraph5": "Cuando no estoy programando, disfruto la lectura, el tiempo en familia y aprender nuevas tecnologías. Creo firmemente en el aprendizaje continuo y en mantenerme actualizado con las últimas tendencias en desarrollo backend y cloud.",
 
@@ -76,7 +76,7 @@ const translations = {
         "experience.freelance.company": "Freelance / Proyectos Independientes",
         "experience.freelance.description": "Desarrollo de aplicaciones web robustas utilizando Symfony y Spring Boot. Implementación de APIs RESTful, diseño de bases de datos MySQL, y creación de arquitecturas escalables. Colaboración en el ciclo completo de desarrollo desde el análisis hasta el despliegue.",
         "experience.junior.date": "2021 - 2024",
-        "experience.junior.title": "Desarrollador Backend Junior",
+        "experience.junior.title": "Desarrollador Backend",
         "experience.junior.company": "Centro de Desarrollo Local",
         "experience.junior.description": "Desarrollo de aplicaciones móviles nativas para Android utilizando Java (Android Nativo). Desarrollo y mantenimiento de aplicaciones web utilizando Java y Spring Boot. Creación de interfaces de usuario con HTML, CSS y JavaScript. Soporte técnico y resolución de incidencias en sistemas existentes. Participación en equipos ágiles para el desarrollo de soluciones empresariales.",
         "experience.intern.date": "2018 - 2021",
@@ -114,7 +114,7 @@ const translations = {
         "projects.code": "Código",
 
         "projects.current_site.type": "Portafolio en vivo",
-        "projects.current_site.title": "Portafolio Backend Architect — Este sitio",
+        "projects.current_site.title": "Portafolio Full Stack Developer — Este sitio",
         "projects.current_site.description": "El sitio que estás viendo. Desarrollado con HTML5, Tailwind CSS y JavaScript vanilla. Implementa tema oscuro/claro persistente, navegación suave, animaciones al scroll, cambio de idioma (ES/EN) y está optimizado en accesibilidad y SEO.",
         "projects.current_site.this_site": "Este sitio",
 
@@ -131,8 +131,14 @@ const translations = {
         "skills.frontend.desc": "Construcción de interfaces funcionales y responsivas con herramientas modernas.",
         "skills.architecture.title": "Arquitectura & Seguridad",
         "skills.architecture.desc": "Patrones de diseño, microservicios, autenticación avanzada y buenas prácticas.",
+        // NUEVAS CLAVES PARA AI
+        "skills.ai.title": "Desarrollo Asistido por IA",
+        "skills.ai.desc": "Integración de asistentes de IA en el flujo de trabajo para acelerar el desarrollo, mejorar la calidad del código y automatizar tareas repetitivas.",
+        "skills.ai.chatgpt": "ChatGPT / Claude",
+        "skills.ai.copilot": "GitHub Copilot",
+        "skills.ai.prompt": "Ingeniería de Prompts",
 
-        "footer.brand": "Backend Architect",
+        "footer.brand": "Full Stack Developer",
         "footer.copyright": "© 2025 Christián R. Vazquez. Construido con precisión y lógica.",
         "footer.privacy": "Privacidad",
         "footer.terms": "Términos",
@@ -140,13 +146,13 @@ const translations = {
         "footer.telegram": "Telegram"
     },
     en: {
-        "logo": "BackendDev",
+        "logo": "FullStark",
         "nav.about": "About Me",
         "nav.study": "Education",
         "nav.experience": "Experience",
         "nav.projects": "Projects",
         "nav.skills": "Skills",
-        "profile.title": "Backend Architect",
+        "profile.title": "Full Stack Developer",
         "cv.download": "Download CV",
 
         "hero.badge": "Available for projects",
@@ -156,8 +162,8 @@ const translations = {
 
         "about.title": "About Me",
         "about.paragraph1": "Hello, I am Christián Vazquez, a Computer Science Engineer and Backend Developer with proven experience in companies and freelance projects. My education at UCI provided me with a solid foundation in software engineering, which I have consolidated working with Symfony, Spring Boot, and modern architectures.",
-        "about.paragraph2": "My motivation is to transform ideas into functional, clean, and efficient code, following industry best practices. I have worked as a junior backend developer at the Local Development Center (2021-2024) and currently develop high-complexity independent projects, such as banking queue systems and SaaS platforms with Stripe and OAuth2/2FA authentication.",
-        "about.paragraph3": "My experience is mainly focused on backend with Java (Spring Boot) and PHP (Symfony 7/8). I master frameworks like Doctrine ORM, and I also build modern interfaces with Tailwind CSS, Alpine.js, Twig, and vanilla JavaScript. I adapt well to full-stack environments when the project requires it.",
+        "about.paragraph2": "My motivation is to transform ideas into functional, clean, and efficient code, following industry best practices. I have worked as a backend developer at the Local Development Center (2021-2024) and currently develop high-complexity independent projects, such as banking queue systems and SaaS platforms with Stripe and OAuth2/2FA authentication.",
+        "about.paragraph3": "My experience specializes in backend development with Java (Spring Boot) and PHP (Symfony 7/8), mastering frameworks like Doctrine ORM. Additionally, I have strong frontend skills, building modern and reactive interfaces with Tailwind CSS, Alpine.js, React, Twig, and vanilla JavaScript. This versatility allows me to adapt to full-stack environments when the project requires it.",
         "about.paragraph4": "I am currently pursuing a Master's degree in Applied Informatics to deepen my knowledge in distributed architectures and high-concurrency systems, demonstrating my commitment to continuous growth.",
         "about.paragraph5": "When I'm not coding, I enjoy reading, family time, and learning about new technologies. I strongly believe in continuous learning and staying updated with the latest trends in backend and cloud development.",
 
@@ -177,7 +183,7 @@ const translations = {
         "experience.freelance.company": "Freelance / Independent Projects",
         "experience.freelance.description": "Development of robust web applications using Symfony and Spring Boot. Implementation of RESTful APIs, MySQL database design, and creation of scalable architectures. Collaboration in the full development cycle from analysis to deployment.",
         "experience.junior.date": "2021 - 2024",
-        "experience.junior.title": "Junior Backend Developer",
+        "experience.junior.title": "Backend Developer",
         "experience.junior.company": "Local Development Center",
         "experience.junior.description": "Development of native Android mobile applications using Java (Native Android). Development and maintenance of web applications using Java and Spring Boot. Creation of user interfaces with HTML, CSS, and JavaScript. Technical support and resolution of incidents in existing systems. Participation in agile teams for the development of business solutions.",
         "experience.intern.date": "2018 - 2021",
@@ -215,7 +221,7 @@ const translations = {
         "projects.code": "Code",
 
         "projects.current_site.type": "Live Portfolio",
-        "projects.current_site.title": "Backend Architect Portfolio — This site",
+        "projects.current_site.title": "Full Stack Developer Portfolio — This site",
         "projects.current_site.description": "The site you're viewing. Built with HTML5, Tailwind CSS and vanilla JavaScript. Features persistent dark/light theme, smooth scrolling, scroll animations, language switch (EN/ES) and is optimized for accessibility and SEO.",
         "projects.current_site.this_site": "This site",
 
@@ -232,8 +238,14 @@ const translations = {
         "skills.frontend.desc": "Building functional and responsive interfaces with modern tools.",
         "skills.architecture.title": "Architecture & Security",
         "skills.architecture.desc": "Design patterns, microservices, advanced authentication, and best practices.",
+        // NUEVAS CLAVES PARA AI
+        "skills.ai.title": "AI-Assisted Development",
+        "skills.ai.desc": "Integration of AI assistants into the workflow to accelerate development, improve code quality, and automate repetitive tasks.",
+        "skills.ai.chatgpt": "ChatGPT / Claude",
+        "skills.ai.copilot": "GitHub Copilot",
+        "skills.ai.prompt": "Prompt Engineering",
 
-        "footer.brand": "Backend Architect",
+        "footer.brand": "Full Stack Developer",
         "footer.copyright": "© 2025 Christián R. Vazquez. Built with precision and logic.",
         "footer.privacy": "Privacy",
         "footer.terms": "Terms",
@@ -276,7 +288,6 @@ const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 if (mobileMenuBtn && mobileMenu) {
-    // Asegurar que el menú comience oculto y el botón refleje eso
     mobileMenu.classList.remove('open');
     mobileMenuBtn.setAttribute('aria-expanded', 'false');
 
@@ -294,18 +305,16 @@ if (mobileMenuBtn && mobileMenu) {
         link.addEventListener('click', closeMenu);
     });
 
-    // Cerrar al hacer clic fuera
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
             closeMenu();
         }
     });
 
-    // Cerrar con tecla Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
             closeMenu();
-            mobileMenuBtn.focus(); // Devuelve el foco al botón
+            mobileMenuBtn.focus();
         }
     });
 }
@@ -364,7 +373,7 @@ document.querySelectorAll('[data-animate]').forEach(el => {
 });
 
 // ========================
-// NAVEGACIÓN SUAVE Y ENLACE ACTIVO (con aria-current)
+// NAVEGACIÓN SUAVE Y ENLACE ACTIVO
 // ========================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -381,20 +390,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 function updateActiveNavLink(activeId) {
-    // Quitar aria-current de todos los enlaces de navegación
     document.querySelectorAll('.nav-link, .side-link, .nav-link-mobile').forEach(link => {
         link.removeAttribute('aria-current');
     });
 
-    // Actualizar clases y poner aria-current en el enlace activo
     document.querySelectorAll('.nav-link, .side-link, .nav-link-mobile').forEach(link => {
         const href = link.getAttribute('href');
-        // Limpiar clases activas previas
         link.classList.remove('text-primary', 'dark:text-primary-fixed', 'font-bold', 'border-b-2', 'border-primary', 'dark:border-primary-fixed', 'border-l-2', 'pl-4', 'pb-1');
         link.classList.add('text-on-surface-variant', 'dark:text-surface-variant');
 
         if (href === activeId || href === `#${activeId}`) {
-            // Enlace activo
             link.classList.add('text-primary', 'dark:text-primary-fixed', 'font-bold');
             link.classList.remove('text-on-surface-variant', 'dark:text-surface-variant');
             link.setAttribute('aria-current', 'page');
@@ -423,7 +428,6 @@ window.addEventListener('scroll', () => {
     updateActiveOnScroll();
 });
 
-// Inicialización
 window.addEventListener('load', () => {
     toggleBackToTop();
     updateActiveOnScroll();
