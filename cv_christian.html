@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Christián Vazquez · Full Stack Developer CV</title>
+    <title data-i18n="cv.title">Christián Vazquez · Full Stack Developer CV</title>
     <!-- Fuentes e iconos -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos principales (incluye las utilidades que tenías) -->
     <link rel="stylesheet" href="estilo.css">
     <style>
-        /* Reset y estilos base */
+        /* Reset y estilos base (sin cambios) */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             background: #f8fafc;
             font-family: 'Inter', sans-serif;
             color: #0f172a;
             line-height: 1.5;
         }
-
         .a4-page {
             max-width: 1200px;
             margin: 0 auto;
@@ -31,7 +29,6 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             overflow: hidden;
         }
-
         .cv-header {
             display: flex;
             flex-wrap: wrap;
@@ -41,14 +38,12 @@
             padding: 2rem 2rem 1.5rem 2rem;
             border-bottom: 1px solid #e2e8f0;
         }
-
         .header-info {
             display: flex;
             align-items: center;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
-
         .avatar img {
             width: 100px;
             height: 100px;
@@ -57,7 +52,6 @@
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-
         .avatar-badge {
             position: absolute;
             bottom: -8px;
@@ -72,14 +66,12 @@
             color: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-
         .title h1 {
             font-size: 1.8rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             margin-bottom: 0.25rem;
         }
-
         .title p {
             color: #1abc9c;
             font-weight: 600;
@@ -87,7 +79,6 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(2, auto);
@@ -96,36 +87,30 @@
             font-weight: 500;
             color: #475569;
         }
-
         .contact-grid i {
             color: #1abc9c;
             width: 1rem;
         }
-
         .cv-body {
             display: flex;
             flex-wrap: wrap;
         }
-
         .main-col {
             flex: 2;
             padding: 2rem 2rem 2rem 2rem;
             border-right: 1px solid #e2e8f0;
         }
-
         .sidebar-col {
             flex: 1;
             background: #f8fafc;
             padding: 2rem 1.5rem;
         }
-
         .section-header {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
-
         .section-header h2 {
             font-size: 0.7rem;
             font-weight: 700;
@@ -133,35 +118,24 @@
             letter-spacing: 0.1em;
             color: #1e293b;
         }
-
         .section-header::after {
             content: "";
             flex: 1;
             height: 1px;
             background: #e2e8f0;
         }
-
-        /* Línea de tiempo corregida: cada elemento tiene su propia línea */
-        .timeline-border {
-            border-left: none;
-            margin-left: 0;
-            padding-left: 0;
-        }
-
         .timeline-border > .relative {
             padding-left: 2rem;
             border-left: 2px solid #e2e8f0;
             margin-bottom: 2rem;
             position: relative;
         }
-
         .timeline-border > .relative:last-child {
             border-left-color: transparent;
         }
-
         .timeline-border > .relative .experience-dot {
             position: absolute;
-            left: -0.3125rem; /* centrado en la línea de 2px */
+            left: -0.3125rem;
             top: 0.25rem;
             width: 10px;
             height: 10px;
@@ -171,13 +145,11 @@
             box-shadow: 0 0 0 1px #1abc9c;
             z-index: 2;
         }
-
         .experience-dot-gray {
             background: #cbd5e1 !important;
             box-shadow: none !important;
             border-color: #cbd5e1 !important;
         }
-
         .skill-tag {
             background: #f1f5f9;
             border: 1px solid #e2e8f0;
@@ -190,7 +162,6 @@
             gap: 0.35rem;
             color: #1e293b;
         }
-
         .bento-card {
             background: white;
             border: 1px solid #e2e8f0;
@@ -198,7 +169,6 @@
             padding: 1rem;
             transition: all 0.2s;
         }
-
         .floating-buttons {
             position: fixed;
             bottom: 1rem;
@@ -208,7 +178,6 @@
             flex-direction: column;
             gap: 0.75rem;
         }
-
         .btn-print, .btn-pdf {
             display: flex;
             align-items: center;
@@ -222,40 +191,35 @@
             text-decoration: none;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
-
         .btn-print {
             background: #1e293b;
             color: white;
             border: none;
         }
-
         .btn-pdf {
             background: #1abc9c;
             color: white;
         }
-
         .btn-print:hover, .btn-pdf:hover {
             transform: translateY(-2px);
             box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.2);
         }
 
+        /* Responsive (igual que antes) */
         @media screen and (max-width: 768px) {
             .cv-header {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 1.5rem;
             }
-
             .header-info {
                 width: 100%;
                 justify-content: center;
                 text-align: center;
             }
-
             .title h1 {
                 font-size: 1.5rem;
             }
-
             .contact-grid {
                 width: 100%;
                 justify-content: center;
@@ -263,117 +227,94 @@
                 gap: 0.4rem;
                 text-align: center;
             }
-
             .cv-body {
                 flex-direction: column;
             }
-
             .main-col {
                 border-right: none;
                 padding: 1.5rem;
             }
-
             .sidebar-col {
                 padding: 1.5rem;
             }
-
             .timeline-border > .relative {
                 padding-left: 1rem;
             }
-
             .timeline-border > .relative .experience-dot {
                 left: -0.25rem;
             }
-
             .floating-buttons {
                 bottom: 1rem;
                 right: 1rem;
                 left: auto;
                 flex-direction: column;
             }
-
             .btn-print, .btn-pdf {
                 padding: 0.5rem 0.9rem;
                 font-size: 0.7rem;
             }
-
             .section-header h2 {
                 font-size: 0.65rem;
             }
-
             .skill-tag {
                 font-size: 0.65rem;
                 padding: 0.2rem 0.6rem;
             }
         }
-
         @media screen and (max-width: 480px) {
             .avatar img {
                 width: 80px;
                 height: 80px;
             }
-
             .title h1 {
                 font-size: 1.25rem;
             }
-
             .main-col, .sidebar-col {
                 padding: 1rem;
             }
-
             .bento-card {
                 padding: 0.75rem;
             }
         }
-
         @media print {
             body {
                 background: white;
                 padding: 0;
                 margin: 0;
             }
-
             .a4-page {
                 box-shadow: none;
                 margin: 0;
                 max-width: 100%;
             }
-
             .floating-buttons {
                 display: none !important;
             }
-
             .cv-body {
                 display: flex !important;
                 flex-direction: row !important;
                 flex-wrap: nowrap !important;
             }
-
             .main-col {
                 flex: 2 !important;
                 padding: 1rem !important;
                 border-right: 1px solid #e2e8f0 !important;
             }
-
             .sidebar-col {
                 flex: 1 !important;
                 padding: 1rem !important;
                 background: white !important;
             }
-
             .section-header, .experience-dot, .skill-tag, .bento-card {
                 break-inside: avoid;
             }
-
             .experience-dot {
                 print-color-adjust: exact;
                 -webkit-print-color-adjust: exact;
             }
-
             .title h1 {
                 font-size: 1.8rem !important;
             }
-
             .contact-grid {
                 grid-template-columns: repeat(2, auto) !important;
                 text-align: left !important;
@@ -385,10 +326,10 @@
 
 <div class="floating-buttons no-print">
     <button class="btn-print" onclick="window.print();">
-        <i class="fas fa-print"></i> Imprimir
+        <i class="fas fa-print"></i> <span data-i18n="cv.button.print">Imprimir</span>
     </button>
-    <a href="cv_christian_vazquez.pdf" download class="btn-pdf">
-        <i class="fas fa-file-pdf"></i> Descargar PDF
+    <a id="cv-pdf-link" href="cv_christian_vazquez.pdf" download class="btn-pdf">
+        <i class="fas fa-file-pdf"></i> <span data-i18n="cv.button.pdf">Descargar PDF</span>
     </a>
 </div>
 
@@ -403,8 +344,8 @@
                 </div>
             </div>
             <div class="title">
-                <h1>CHRISTIÁN R. VAZQUEZ</h1>
-                <p>Full Stack Developer</p>
+                <h1 data-i18n="cv.header.name">CHRISTIÁN R. VAZQUEZ</h1>
+                <p data-i18n="cv.header.title">Full Stack Developer</p>
             </div>
         </div>
         <div class="contact-grid">
@@ -421,83 +362,59 @@
             <!-- Sobre mí -->
             <section style="margin-bottom: 2rem;">
                 <div class="section-header">
-                    <h2>Sobre Mí</h2>
+                    <h2 data-i18n="cv.about.title">Sobre Mí</h2>
                 </div>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Ingeniero en Ciencias Informáticas y <strong>Full Stack Developer</strong> con una visión integral del desarrollo de software. Mi formación en la UCI sentó las bases de una ingeniería sólida, que he evolucionado construyendo soluciones completas con <strong>Symfony 7/8</strong>, <strong>Spring Boot 3</strong> y arquitecturas modernas, siempre pensando en el producto final.
-                </p>
-                <p class="text-slate-600 text-sm leading-relaxed mt-3">
-                    Me motiva transformar ideas en productos funcionales, limpios y eficientes, asumiendo la responsabilidad de todo el ciclo: desde el modelado de datos y la lógica de negocio hasta la interfaz de usuario y el despliegue. He trabajado en entornos empresariales (Centro de Desarrollo Local, 2021–2024) y en proyectos independientes de alta complejidad, como sistemas de turnos bancarios (<strong>SGR-Turnos</strong>) y plataformas SaaS con <strong>Stripe</strong>, <strong>OAuth2</strong> y <strong>2FA</strong>, donde he actuado como arquitecto y desarrollador principal.
-                </p>
-                <p class="text-slate-600 text-sm leading-relaxed mt-3">
-                    Mi dominio técnico abarca tanto el backend (Java/Spring Boot, PHP/Symfony, Doctrine ORM) como el frontend moderno (Tailwind CSS, Alpine.js, React, Twig, JavaScript vanilla). Esta versatilidad me permite tomar decisiones que equilibran rendimiento, mantenibilidad y experiencia de usuario, adaptándome a las necesidades de cada proyecto sin perder de vista la visión global.
-                </p>
-                <p class="text-slate-600 text-sm leading-relaxed mt-3">
-                    Actualmente curso una <strong>Maestría en Informática Aplicada</strong> para profundizar en arquitecturas distribuidas y sistemas de alta concurrencia, convencido de que el aprendizaje continuo es el motor que impulsa soluciones innovadoras y escalables.
-                </p>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="cv.about.p1"></p>
+                <p class="text-slate-600 text-sm leading-relaxed mt-3" data-i18n="cv.about.p2"></p>
+                <p class="text-slate-600 text-sm leading-relaxed mt-3" data-i18n="cv.about.p3"></p>
+                <p class="text-slate-600 text-sm leading-relaxed mt-3" data-i18n="cv.about.p4"></p>
             </section>
 
-            <!-- Experiencia (con línea de tiempo corregida) -->
+            <!-- Experiencia -->
             <section style="margin-bottom: 2rem;">
                 <div class="section-header">
-                    <h2>Experiencia</h2>
+                    <h2 data-i18n="cv.experience.title">Experiencia</h2>
                 </div>
                 <div class="timeline-border">
-                    <!-- Item 1 -->
+                    <!-- Freelance -->
                     <div class="relative">
                         <div class="experience-dot"></div>
                         <div class="flex flex-wrap justify-between items-baseline mb-1">
-                            <h3 class="font-bold text-slate-800">Desarrollador Full Stack · Freelance</h3>
-                            <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2024 — Presente</span>
+                            <h3 class="font-bold text-slate-800" data-i18n="cv.exp.freelance.title">Desarrollador Full Stack · Freelance</h3>
+                            <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded" data-i18n="cv.exp.freelance.date">2024 — Presente</span>
                         </div>
-                        <p class="text-[#1abc9c] font-semibold text-sm mb-2">Proyectos Independientes</p>
+                        <p class="text-[#1abc9c] font-semibold text-sm mb-2" data-i18n="cv.exp.freelance.company">Proyectos Independientes</p>
                         <ul class="text-xs text-slate-600 space-y-1.5 list-none">
-                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
-                                <strong>SGR-Turnos</strong>: sistema bancario anti‑colas con Symfony 8, JWT, rate limiting, auditoría y exportación Excel.
-                            </li>
-                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
-                                <strong>ComercioLocal</strong>: SaaS e‑commerce con Stripe, OAuth2 (Google/Facebook), 2FA y Redis.
-                            </li>
-                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
-                                Desarrollo de APIs RESTful, microservicios con Spring Boot y Docker.
-                            </li>
+                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span> <span data-i18n="cv.exp.freelance.item1"></span></li>
+                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span> <span data-i18n="cv.exp.freelance.item2"></span></li>
+                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span> <span data-i18n="cv.exp.freelance.item3"></span></li>
                         </ul>
                     </div>
-                    <!-- Item 2 (eliminada la palabra "Junior") -->
+                    <!-- Backend -->
                     <div class="relative">
                         <div class="experience-dot experience-dot-gray"></div>
                         <div class="flex flex-wrap justify-between items-baseline mb-1">
-                            <h3 class="font-bold text-slate-800">Desarrollador Backend</h3>
-                            <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2021 — 2024</span>
+                            <h3 class="font-bold text-slate-800" data-i18n="cv.exp.junior.title">Desarrollador Backend</h3>
+                            <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded" data-i18n="cv.exp.junior.date">2021 — 2024</span>
                         </div>
-                        <p class="text-[#1abc9c] font-semibold text-sm mb-2">Centro de Desarrollo Local</p>
+                        <p class="text-[#1abc9c] font-semibold text-sm mb-2" data-i18n="cv.exp.junior.company">Centro de Desarrollo Local</p>
                         <ul class="text-xs text-slate-600 space-y-1.5 list-none">
-                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
-                                Desarrollo y mantenimiento de aplicaciones web con Java / Spring Boot y PHP / Symfony.
-                            </li>
-                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
-                                Construcción de interfaces frontend con HTML5, CSS3, JavaScript y Tailwind.
-                            </li>
-                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
-                                Metodologías ágiles (Scrum), control de versiones Git y soporte técnico.
-                            </li>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span> <span data-i18n="cv.exp.junior.item1"></span></li>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span> <span data-i18n="cv.exp.junior.item2"></span></li>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span> <span data-i18n="cv.exp.junior.item3"></span></li>
                         </ul>
                     </div>
-                    <!-- Item 3 -->
+                    <!-- Intern -->
                     <div class="relative">
                         <div class="experience-dot experience-dot-gray"></div>
                         <div class="flex flex-wrap justify-between items-baseline mb-1">
-                            <h3 class="font-bold text-slate-800">Practicante de Desarrollo de Software</h3>
-                            <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2018 — 2021</span>
+                            <h3 class="font-bold text-slate-800" data-i18n="cv.exp.intern.title">Practicante de Desarrollo de Software</h3>
+                            <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded" data-i18n="cv.exp.intern.date">2018 — 2021</span>
                         </div>
-                        <p class="text-[#1abc9c] font-semibold text-sm mb-2">Universidad de las Ciencias Informáticas (UCI)</p>
+                        <p class="text-[#1abc9c] font-semibold text-sm mb-2" data-i18n="cv.exp.intern.company">Universidad de las Ciencias Informáticas (UCI)</p>
                         <ul class="text-xs text-slate-600 space-y-1.5 list-none">
-                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
-                                Proyectos académicos con Java, PHP y MySQL.
-                            </li>
-                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
-                                Aplicación de patrones de diseño y buenas prácticas bajo supervisión.
-                            </li>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span> <span data-i18n="cv.exp.intern.item1"></span></li>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span> <span data-i18n="cv.exp.intern.item2"></span></li>
                         </ul>
                     </div>
                 </div>
@@ -506,70 +423,66 @@
             <!-- Estudios -->
             <section style="margin-bottom: 2rem;">
                 <div class="section-header">
-                    <h2>Estudios</h2>
+                    <h2 data-i18n="cv.studies.title">Estudios</h2>
                 </div>
                 <div class="space-y-4">
                     <div>
                         <div class="flex flex-wrap justify-between items-start">
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Maestría en Informática Aplicada</h4>
-                                <p class="text-xs text-slate-500">Universidad José Martí (UNISS)</p>
+                                <h4 class="font-bold text-slate-800 text-sm" data-i18n="cv.studies.masters.title">Maestría en Informática Aplicada</h4>
+                                <p class="text-xs text-slate-500" data-i18n="cv.studies.masters.university">Universidad José Martí (UNISS)</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-400">2025 — Presente</span>
+                            <span class="text-[10px] font-bold text-slate-400" data-i18n="cv.studies.masters.date">2025 — Presente</span>
                         </div>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                            Especialización en arquitecturas distribuidas y sistemas de alta concurrencia.
-                        </p>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed" data-i18n="cv.studies.masters.description">Especialización en arquitecturas distribuidas y sistemas de alta concurrencia.</p>
                     </div>
                     <div>
                         <div class="flex flex-wrap justify-between items-start">
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Ingeniería en Ciencias Informáticas</h4>
-                                <p class="text-xs text-slate-500">Universidad de las Ciencias Informáticas (UCI)</p>
+                                <h4 class="font-bold text-slate-800 text-sm" data-i18n="cv.studies.degree.title">Ingeniería en Ciencias Informáticas</h4>
+                                <p class="text-xs text-slate-500" data-i18n="cv.studies.degree.university">Universidad de las Ciencias Informáticas (UCI)</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-400">2017 — 2022</span>
+                            <span class="text-[10px] font-bold text-slate-400" data-i18n="cv.studies.degree.date">2017 — 2022</span>
                         </div>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                            Formación basada en proyectos reales, con énfasis en fundamentos de computación, ingeniería de software, bases de datos y tecnologías de vanguardia.
-                        </p>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed" data-i18n="cv.studies.degree.description">Formación basada en proyectos reales, con énfasis en fundamentos de computación, ingeniería de software, bases de datos y tecnologías de vanguardia.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Proyectos Destacados (dos columnas) -->
+            <!-- Proyectos Destacados -->
             <section>
                 <div class="section-header">
-                    <h2>Proyectos Destacados</h2>
+                    <h2 data-i18n="cv.projects.title">Proyectos Destacados</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">SGR-Turnos <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 8</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Gestión de turnos bancarios anti‑cola con JWT, rate limiting, auditoría y exportación Excel.</p>
-                        <div class="mt-2"><span class="text-xs text-slate-400">(demo en desarrollo)</span></div>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><span data-i18n="cv.projects.sgrturnos.title">SGR-Turnos</span> <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 8</span></h5>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cv.projects.sgrturnos.desc">Gestión de turnos bancarios anti‑cola con JWT, rate limiting, auditoría y exportación Excel.</p>
+                        <div class="mt-2"><span class="text-xs text-slate-400" data-i18n="cv.projects.demo">(demo en desarrollo)</span></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">ComercioLocal <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">SaaS</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Plataforma e‑commerce con Stripe, OAuth2, 2FA, carrito y panel admin.</p>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><span data-i18n="cv.projects.comerciolocal.title">ComercioLocal</span> <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">SaaS</span></h5>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cv.projects.comerciolocal.desc">Plataforma e‑commerce con Stripe, OAuth2, 2FA, carrito y panel admin.</p>
                         <div class="mt-2"><a href="https://islamarket.aserenet.com/" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fas fa-external-link-alt"></i> islamarket.aserenet.com</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">app_almacen <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 7</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Control de inventario, facturación PDF (dompdf) y dashboard de métricas.</p>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><span data-i18n="cv.projects.almacen.title">app_almacen</span> <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 7</span></h5>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cv.projects.almacen.desc">Control de inventario, facturación PDF (dompdf) y dashboard de métricas.</p>
                         <div class="mt-2"><a href="https://github.com/Christianrvdv/app_almacen" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/app_almacen</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">Auth System + JWT <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Autenticación JWT, Voters, auditoría y pruebas unitarias.</p>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><span data-i18n="cv.projects.auth.title">Auth System + JWT</span> <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony</span></h5>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cv.projects.auth.desc">Autenticación JWT, Voters, auditoría y pruebas unitarias.</p>
                         <div class="mt-2"><a href="https://github.com/Christianrvdv/auth-system" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/auth-system</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">Microservicios Biblioteca <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Spring Boot</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">API Gateway (Kong), Eureka, comunicación asíncrona.</p>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><span data-i18n="cv.projects.microservices.title">Microservicios Biblioteca</span> <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Spring Boot</span></h5>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cv.projects.microservices.desc">API Gateway (Kong), Eureka, comunicación asíncrona.</p>
                         <div class="mt-2"><a href="https://github.com/Christianrvdv/sistema-biblioteca-microservicios" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/sistema-biblioteca-microservicios</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">App BANCEC <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Android</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Solicitud de tarjetas magnéticas con QR (ZXing), exportación Excel y estadísticas.</p>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5"><span data-i18n="cv.projects.android.title">App BANCEC</span> <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Android</span></h5>
+                        <p class="text-xs text-slate-500 mt-1" data-i18n="cv.projects.android.desc">Solicitud de tarjetas magnéticas con QR (ZXing), exportación Excel y estadísticas.</p>
                         <div class="mt-2"><a href="https://github.com/Christianrvdv/SolicitudtarjetaBANDEC" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/SolicitudtarjetaBANDEC</a></div>
                     </div>
                 </div>
@@ -580,11 +493,11 @@
             <!-- Habilidades Técnicas -->
             <section class="mb-8">
                 <h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-4 flex items-center gap-2">
-                    <i class="fas fa-code text-[#1abc9c] text-sm"></i> Habilidades Técnicas
+                    <i class="fas fa-code text-[#1abc9c] text-sm"></i> <span data-i18n="cv.skills.title">Habilidades Técnicas</span>
                 </h3>
                 <div class="grid grid-cols-1 gap-4">
                     <div class="bento-card">
-                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2">Lenguajes &amp; Frameworks</p>
+                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2" data-i18n="cv.skills.languages.title">Lenguajes &amp; Frameworks</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag"><i class="fab fa-php"></i> PHP 8.x</span>
                             <span class="skill-tag"><i class="fab fa-symfony"></i> Symfony 7/8</span>
@@ -596,7 +509,7 @@
                         </div>
                     </div>
                     <div class="bento-card">
-                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2">Frontend (Intermedio)</p>
+                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2" data-i18n="cv.skills.frontend.title">Frontend (Intermedio)</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag"><i class="fab fa-html5"></i> HTML5/CSS3</span>
                             <span class="skill-tag"><i class="fab fa-tailwind"></i> Tailwind</span>
@@ -606,7 +519,7 @@
                         </div>
                     </div>
                     <div class="bento-card">
-                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2">DevOps &amp; Cloud</p>
+                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2" data-i18n="cv.skills.devops.title">DevOps &amp; Cloud</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
                             <span class="skill-tag"><i class="fas fa-cloud"></i> Nginx/Apache</span>
@@ -615,7 +528,7 @@
                         </div>
                     </div>
                     <div class="bento-card">
-                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2">Arquitectura &amp; Seguridad</p>
+                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2" data-i18n="cv.skills.architecture.title">Arquitectura &amp; Seguridad</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag"><i class="fas fa-shield-alt"></i> JWT / OAuth2</span>
                             <span class="skill-tag"><i class="fas fa-key"></i> 2FA</span>
@@ -625,7 +538,7 @@
                         </div>
                     </div>
                     <div class="bento-card">
-                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2">AI‑Assisted Development</p>
+                        <p class="text-[10px] uppercase font-bold text-[#1abc9c] mb-2" data-i18n="cv.skills.ai.title">AI‑Assisted Development</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag"><i class="fas fa-robot"></i> ChatGPT / Claude</span>
                             <span class="skill-tag"><i class="fas fa-code"></i> GitHub Copilot</span>
@@ -635,28 +548,63 @@
                 </div>
             </section>
 
-            <!-- Idiomas (sin barras de progreso) -->
+            <!-- Idiomas -->
             <section class="mb-8">
                 <h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-4 flex items-center gap-2">
-                    <i class="fas fa-globe-americas text-[#1abc9c] text-sm"></i> Idiomas
+                    <i class="fas fa-globe-americas text-[#1abc9c] text-sm"></i> <span data-i18n="cv.languages.title">Idiomas</span>
                 </h3>
                 <div class="space-y-2">
                     <div class="flex items-center gap-3 text-sm">
-                        <span class="font-semibold text-slate-700 w-20">Español</span>
-                        <span class="text-[#1abc9c] font-medium">Nativo</span>
+                        <span class="font-semibold text-slate-700 w-20" data-i18n="cv.languages.spanish">Español</span>
+                        <span class="text-[#1abc9c] font-medium" data-i18n="cv.languages.native">Nativo</span>
                     </div>
                     <div class="flex items-center gap-3 text-sm">
-                        <span class="font-semibold text-slate-700 w-20">Inglés</span>
-                        <span class="text-[#1abc9c] font-medium">Básico (A2)</span>
+                        <span class="font-semibold text-slate-700 w-20" data-i18n="cv.languages.english">Inglés</span>
+                        <span class="text-[#1abc9c] font-medium" data-i18n="cv.languages.level">Básico (A2)</span>
                     </div>
                 </div>
             </section>
 
             <div class="mt-8 pt-3 border-t border-slate-100 text-center">
-                <p class="text-[9px] text-slate-300 uppercase tracking-[0.2rem] font-medium">clean code · arquitectura escalable · seguridad</p>
+                <p class="text-[9px] text-slate-300 uppercase tracking-[0.2rem] font-medium" data-i18n="cv.footer.tagline">clean code · arquitectura escalable · seguridad</p>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Cargar traducciones y aplicar -->
+<script src="cv-translations.js"></script>
+<script>
+    (function() {
+        const lang = localStorage.getItem('language') || 'es';
+        document.documentElement.lang = lang;
+
+        function applyTranslations(lang) {
+            const t = cvTranslations[lang] || cvTranslations.es;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    el.innerHTML = t[key];
+                }
+            });
+            // Actualizar PDF
+            const pdfLink = document.getElementById('cv-pdf-link');
+            if (pdfLink) {
+                pdfLink.href = lang === 'en' ? 'cv_christian_vazquez_en.pdf' : 'cv_christian_vazquez.pdf';
+            }
+        }
+
+        applyTranslations(lang);
+
+        // Sincronizar cambios en otras pestañas
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'language') {
+                const newLang = e.newValue || 'es';
+                document.documentElement.lang = newLang;
+                applyTranslations(newLang);
+            }
+        });
+    })();
+</script>
 </body>
 </html>
