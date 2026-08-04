@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
     <style>
-        /* Estilos ya existentes, se mantienen igual */
+        /* Reset y estilos base */
         * {
             margin: 0;
             padding: 0;
@@ -141,16 +141,27 @@
             background: #e2e8f0;
         }
 
+        /* Línea de tiempo corregida: cada elemento tiene su propia línea */
         .timeline-border {
-            border-left: 1px solid #e2e8f0;
-            margin-left: 0.75rem;
-            padding-left: 1.5rem;
+            border-left: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .timeline-border > .relative {
+            padding-left: 2rem;
+            border-left: 2px solid #e2e8f0;
+            margin-bottom: 2rem;
             position: relative;
         }
 
-        .experience-dot {
+        .timeline-border > .relative:last-child {
+            border-left-color: transparent;
+        }
+
+        .timeline-border > .relative .experience-dot {
             position: absolute;
-            left: -0.5rem;
+            left: -0.3125rem; /* centrado en la línea de 2px */
             top: 0.25rem;
             width: 10px;
             height: 10px;
@@ -158,12 +169,13 @@
             border-radius: 50%;
             border: 2px solid white;
             box-shadow: 0 0 0 1px #1abc9c;
+            z-index: 2;
         }
 
         .experience-dot-gray {
-            background: #cbd5e1;
-            box-shadow: none;
-            border-color: #cbd5e1;
+            background: #cbd5e1 !important;
+            box-shadow: none !important;
+            border-color: #cbd5e1 !important;
         }
 
         .skill-tag {
@@ -265,13 +277,12 @@
                 padding: 1.5rem;
             }
 
-            .timeline-border {
-                margin-left: 0.25rem;
+            .timeline-border > .relative {
                 padding-left: 1rem;
             }
 
-            .experience-dot {
-                left: -0.45rem;
+            .timeline-border > .relative .experience-dot {
+                left: -0.25rem;
             }
 
             .floating-buttons {
@@ -332,7 +343,6 @@
                 display: none !important;
             }
 
-            /* Forzar diseño de dos columnas exactamente como en PC */
             .cv-body {
                 display: flex !important;
                 flex-direction: row !important;
@@ -375,7 +385,7 @@
 
 <div class="floating-buttons no-print">
     <button class="btn-print" onclick="window.print();">
-        <i class="fas fa-print"></i> Guardar como PDF
+        <i class="fas fa-print"></i> Imprimir
     </button>
     <a href="cv_christian_vazquez.pdf" download class="btn-pdf">
         <i class="fas fa-file-pdf"></i> Descargar PDF
@@ -394,7 +404,7 @@
             </div>
             <div class="title">
                 <h1>CHRISTIÁN R. VAZQUEZ</h1>
-                <p>Full Stack Developer | Symfony &amp; Spring Boot</p>
+                <p>Full Stack Developer</p>
             </div>
         </div>
         <div class="contact-grid">
@@ -408,46 +418,32 @@
 
     <div class="cv-body">
         <div class="main-col">
-            <!-- Sobre mí actualizado con la información del portafolio -->
+            <!-- Sobre mí -->
             <section style="margin-bottom: 2rem;">
                 <div class="section-header">
                     <h2>Sobre Mí</h2>
                 </div>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                    Ingeniero en Ciencias Informáticas y <strong>Full Stack Developer</strong> con experiencia
-                    comprobada
-                    en empresas y proyectos freelance. Mi formación en la UCI me proporcionó una base sólida en
-                    ingeniería de software, que he consolidado trabajando con <strong>Symfony 7/8</strong>,
-                    <strong>Spring Boot 3</strong> y arquitecturas modernas.
+                    Ingeniero en Ciencias Informáticas y <strong>Full Stack Developer</strong> con una visión integral del desarrollo de software. Mi formación en la UCI sentó las bases de una ingeniería sólida, que he evolucionado construyendo soluciones completas con <strong>Symfony 7/8</strong>, <strong>Spring Boot 3</strong> y arquitecturas modernas, siempre pensando en el producto final.
                 </p>
                 <p class="text-slate-600 text-sm leading-relaxed mt-3">
-                    Mi motivación es transformar ideas en código funcional, limpio y eficiente, siguiendo las mejores
-                    prácticas. He trabajado como desarrollador backend en el Centro de Desarrollo Local (2021–2024) y
-                    actualmente desarrollo proyectos independientes de alta complejidad, como sistemas de turnos
-                    bancarios (<strong>SGR-Turnos</strong>) y plataformas SaaS con <strong>Stripe</strong>,
-                    <strong>OAuth2</strong> y <strong>2FA</strong>.
+                    Me motiva transformar ideas en productos funcionales, limpios y eficientes, asumiendo la responsabilidad de todo el ciclo: desde el modelado de datos y la lógica de negocio hasta la interfaz de usuario y el despliegue. He trabajado en entornos empresariales (Centro de Desarrollo Local, 2021–2024) y en proyectos independientes de alta complejidad, como sistemas de turnos bancarios (<strong>SGR-Turnos</strong>) y plataformas SaaS con <strong>Stripe</strong>, <strong>OAuth2</strong> y <strong>2FA</strong>, donde he actuado como arquitecto y desarrollador principal.
                 </p>
                 <p class="text-slate-600 text-sm leading-relaxed mt-3">
-                    Mi experiencia se especializa en el desarrollo backend con Java (Spring Boot) y PHP (Symfony),
-                    dominando frameworks como Doctrine ORM. Además, poseo sólidos conocimientos en frontend,
-                    construyendo
-                    interfaces modernas y reactivas con <strong>Tailwind CSS</strong>, <strong>Alpine.js</strong>,
-                    <strong>React</strong>, <strong>Twig</strong> y JavaScript vanilla. Esta versatilidad me permite
-                    adaptarme a entornos full‑stack cuando el proyecto lo demanda.
+                    Mi dominio técnico abarca tanto el backend (Java/Spring Boot, PHP/Symfony, Doctrine ORM) como el frontend moderno (Tailwind CSS, Alpine.js, React, Twig, JavaScript vanilla). Esta versatilidad me permite tomar decisiones que equilibran rendimiento, mantenibilidad y experiencia de usuario, adaptándome a las necesidades de cada proyecto sin perder de vista la visión global.
                 </p>
                 <p class="text-slate-600 text-sm leading-relaxed mt-3">
-                    Actualmente curso una <strong>Maestría en Informática Aplicada</strong> para profundizar en
-                    arquitecturas distribuidas y sistemas de alta concurrencia, demostrando mi compromiso con el
-                    crecimiento continuo.
+                    Actualmente curso una <strong>Maestría en Informática Aplicada</strong> para profundizar en arquitecturas distribuidas y sistemas de alta concurrencia, convencido de que el aprendizaje continuo es el motor que impulsa soluciones innovadoras y escalables.
                 </p>
             </section>
 
-            <!-- Experiencia actualizada con más detalles -->
+            <!-- Experiencia (con línea de tiempo corregida) -->
             <section style="margin-bottom: 2rem;">
                 <div class="section-header">
                     <h2>Experiencia</h2>
                 </div>
-                <div class="timeline-border space-y-8">
+                <div class="timeline-border">
+                    <!-- Item 1 -->
                     <div class="relative">
                         <div class="experience-dot"></div>
                         <div class="flex flex-wrap justify-between items-baseline mb-1">
@@ -456,61 +452,50 @@
                         </div>
                         <p class="text-[#1abc9c] font-semibold text-sm mb-2">Proyectos Independientes</p>
                         <ul class="text-xs text-slate-600 space-y-1.5 list-none">
-                            <li class="flex gap-2"><span
-                                    class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
-                                <strong>SGR-Turnos</strong>: sistema bancario anti‑colas con Symfony 8, JWT, rate
-                                limiting,
-                                auditoría y exportación Excel.
+                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
+                                <strong>SGR-Turnos</strong>: sistema bancario anti‑colas con Symfony 8, JWT, rate limiting, auditoría y exportación Excel.
                             </li>
-                            <li class="flex gap-2"><span
-                                    class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
-                                <strong>ComercioLocal</strong>: SaaS e‑commerce con Stripe, OAuth2 (Google/Facebook),
-                                2FA
-                                y Redis.
+                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
+                                <strong>ComercioLocal</strong>: SaaS e‑commerce con Stripe, OAuth2 (Google/Facebook), 2FA y Redis.
                             </li>
-                            <li class="flex gap-2"><span
-                                    class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
+                            <li class="flex gap-2"><span class="text-[#1abc9c] mt-1.5 h-1 w-1 rounded-full bg-[#1abc9c] shrink-0"></span>
                                 Desarrollo de APIs RESTful, microservicios con Spring Boot y Docker.
                             </li>
                         </ul>
                     </div>
+                    <!-- Item 2 (eliminada la palabra "Junior") -->
                     <div class="relative">
                         <div class="experience-dot experience-dot-gray"></div>
                         <div class="flex flex-wrap justify-between items-baseline mb-1">
-                            <h3 class="font-bold text-slate-800">Desarrollador Backend Junior</h3>
+                            <h3 class="font-bold text-slate-800">Desarrollador Backend</h3>
                             <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2021 — 2024</span>
                         </div>
                         <p class="text-[#1abc9c] font-semibold text-sm mb-2">Centro de Desarrollo Local</p>
                         <ul class="text-xs text-slate-600 space-y-1.5 list-none">
-                            <li class="flex gap-2"><span
-                                    class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
                                 Desarrollo y mantenimiento de aplicaciones web con Java / Spring Boot y PHP / Symfony.
                             </li>
-                            <li class="flex gap-2"><span
-                                    class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
                                 Construcción de interfaces frontend con HTML5, CSS3, JavaScript y Tailwind.
                             </li>
-                            <li class="flex gap-2"><span
-                                    class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
                                 Metodologías ágiles (Scrum), control de versiones Git y soporte técnico.
                             </li>
                         </ul>
                     </div>
+                    <!-- Item 3 -->
                     <div class="relative">
                         <div class="experience-dot experience-dot-gray"></div>
                         <div class="flex flex-wrap justify-between items-baseline mb-1">
                             <h3 class="font-bold text-slate-800">Practicante de Desarrollo de Software</h3>
                             <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2018 — 2021</span>
                         </div>
-                        <p class="text-[#1abc9c] font-semibold text-sm mb-2">Universidad de las Ciencias Informáticas
-                            (UCI)</p>
+                        <p class="text-[#1abc9c] font-semibold text-sm mb-2">Universidad de las Ciencias Informáticas (UCI)</p>
                         <ul class="text-xs text-slate-600 space-y-1.5 list-none">
-                            <li class="flex gap-2"><span
-                                    class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
                                 Proyectos académicos con Java, PHP y MySQL.
                             </li>
-                            <li class="flex gap-2"><span
-                                    class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
+                            <li class="flex gap-2"><span class="text-slate-300 mt-1.5 h-1 w-1 rounded-full bg-slate-300 shrink-0"></span>
                                 Aplicación de patrones de diseño y buenas prácticas bajo supervisión.
                             </li>
                         </ul>
@@ -545,78 +530,54 @@
                             <span class="text-[10px] font-bold text-slate-400">2017 — 2022</span>
                         </div>
                         <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                            Formación basada en proyectos reales, con énfasis en fundamentos de computación, ingeniería
-                            de software, bases de datos y tecnologías de vanguardia.
+                            Formación basada en proyectos reales, con énfasis en fundamentos de computación, ingeniería de software, bases de datos y tecnologías de vanguardia.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Proyectos Destacados -->
+            <!-- Proyectos Destacados (dos columnas) -->
             <section>
                 <div class="section-header">
                     <h2>Proyectos Destacados</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">SGR-Turnos <span
-                                class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 8</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Gestión de turnos bancarios anti‑cola con JWT, rate
-                            limiting, auditoría y exportación Excel.</p>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">SGR-Turnos <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 8</span></h5>
+                        <p class="text-xs text-slate-500 mt-1">Gestión de turnos bancarios anti‑cola con JWT, rate limiting, auditoría y exportación Excel.</p>
                         <div class="mt-2"><span class="text-xs text-slate-400">(demo en desarrollo)</span></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">ComercioLocal <span
-                                class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">SaaS</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Plataforma e‑commerce con Stripe, OAuth2, 2FA, carrito y
-                            panel admin.</p>
-                        <div class="mt-2"><a href="https://islamarket.aserenet.com/" target="_blank"
-                                             class="text-xs text-[#006b58] hover:underline"><i
-                                class="fas fa-external-link-alt"></i> islamarket.aserenet.com</a></div>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">ComercioLocal <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">SaaS</span></h5>
+                        <p class="text-xs text-slate-500 mt-1">Plataforma e‑commerce con Stripe, OAuth2, 2FA, carrito y panel admin.</p>
+                        <div class="mt-2"><a href="https://islamarket.aserenet.com/" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fas fa-external-link-alt"></i> islamarket.aserenet.com</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">app_almacen <span
-                                class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 7</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Control de inventario, facturación PDF (dompdf) y
-                            dashboard de métricas.</p>
-                        <div class="mt-2"><a href="https://github.com/Christianrvdv/app_almacen" target="_blank"
-                                             class="text-xs text-[#006b58] hover:underline"><i
-                                class="fab fa-github"></i> github.com/Christianrvdv/app_almacen</a></div>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">app_almacen <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony 7</span></h5>
+                        <p class="text-xs text-slate-500 mt-1">Control de inventario, facturación PDF (dompdf) y dashboard de métricas.</p>
+                        <div class="mt-2"><a href="https://github.com/Christianrvdv/app_almacen" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/app_almacen</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">Auth System + JWT <span
-                                class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Autenticación JWT, Voters, auditoría y pruebas
-                            unitarias.</p>
-                        <div class="mt-2"><a href="https://github.com/Christianrvdv/auth-system" target="_blank"
-                                             class="text-xs text-[#006b58] hover:underline"><i
-                                class="fab fa-github"></i> github.com/Christianrvdv/auth-system</a></div>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">Auth System + JWT <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Symfony</span></h5>
+                        <p class="text-xs text-slate-500 mt-1">Autenticación JWT, Voters, auditoría y pruebas unitarias.</p>
+                        <div class="mt-2"><a href="https://github.com/Christianrvdv/auth-system" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/auth-system</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">Microservicios Biblioteca
-                            <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Spring Boot</span></h5>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">Microservicios Biblioteca <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Spring Boot</span></h5>
                         <p class="text-xs text-slate-500 mt-1">API Gateway (Kong), Eureka, comunicación asíncrona.</p>
-                        <div class="mt-2"><a href="https://github.com/Christianrvdv/sistema-biblioteca-microservicios"
-                                             target="_blank" class="text-xs text-[#006b58] hover:underline"><i
-                                class="fab fa-github"></i>
-                            github.com/Christianrvdv/sistema-biblioteca-microservicios</a>
-                        </div>
+                        <div class="mt-2"><a href="https://github.com/Christianrvdv/sistema-biblioteca-microservicios" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/sistema-biblioteca-microservicios</a></div>
                     </div>
                     <div class="bento-card">
-                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">App BANCEC <span
-                                class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Android</span></h5>
-                        <p class="text-xs text-slate-500 mt-1">Solicitud de tarjetas magnéticas con QR (ZXing),
-                            exportación Excel y estadísticas.</p>
-                        <div class="mt-2"><a href="https://github.com/Christianrvdv/SolicitudtarjetaBANDEC"
-                                             target="_blank" class="text-xs text-[#006b58] hover:underline"><i
-                                class="fab fa-github"></i> github.com/Christianrvdv/SolicitudtarjetaBANDEC</a></div>
+                        <h5 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">App BANCEC <span class="text-[10px] bg-slate-100 px-1.5 rounded text-[#1abc9c]">Android</span></h5>
+                        <p class="text-xs text-slate-500 mt-1">Solicitud de tarjetas magnéticas con QR (ZXing), exportación Excel y estadísticas.</p>
+                        <div class="mt-2"><a href="https://github.com/Christianrvdv/SolicitudtarjetaBANDEC" target="_blank" class="text-xs text-[#006b58] hover:underline"><i class="fab fa-github"></i> github.com/Christianrvdv/SolicitudtarjetaBANDEC</a></div>
                     </div>
                 </div>
             </section>
         </div>
 
         <div class="sidebar-col">
-            <!-- Habilidades Técnicas actualizadas -->
+            <!-- Habilidades Técnicas -->
             <section class="mb-8">
                 <h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-4 flex items-center gap-2">
                     <i class="fas fa-code text-[#1abc9c] text-sm"></i> Habilidades Técnicas
@@ -692,8 +653,7 @@
             </section>
 
             <div class="mt-8 pt-3 border-t border-slate-100 text-center">
-                <p class="text-[9px] text-slate-300 uppercase tracking-[0.2rem] font-medium">clean code · arquitectura
-                    escalable · seguridad</p>
+                <p class="text-[9px] text-slate-300 uppercase tracking-[0.2rem] font-medium">clean code · arquitectura escalable · seguridad</p>
             </div>
         </div>
     </div>
