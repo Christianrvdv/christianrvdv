@@ -131,7 +131,6 @@ const translations = {
         "skills.frontend.desc": "Construcción de interfaces funcionales y responsivas con herramientas modernas.",
         "skills.architecture.title": "Arquitectura & Seguridad",
         "skills.architecture.desc": "Patrones de diseño, microservicios, autenticación avanzada y buenas prácticas.",
-        // NUEVAS CLAVES PARA AI
         "skills.ai.title": "Desarrollo Asistido por IA",
         "skills.ai.desc": "Integración de asistentes de IA en el flujo de trabajo para acelerar el desarrollo, mejorar la calidad del código y automatizar tareas repetitivas.",
         "skills.ai.chatgpt": "ChatGPT / Claude",
@@ -238,7 +237,6 @@ const translations = {
         "skills.frontend.desc": "Building functional and responsive interfaces with modern tools.",
         "skills.architecture.title": "Architecture & Security",
         "skills.architecture.desc": "Design patterns, microservices, advanced authentication, and best practices.",
-        // NUEVAS CLAVES PARA AI
         "skills.ai.title": "AI-Assisted Development",
         "skills.ai.desc": "Integration of AI assistants into the workflow to accelerate development, improve code quality, and automate repetitive tasks.",
         "skills.ai.chatgpt": "ChatGPT / Claude",
@@ -282,35 +280,51 @@ if (languageToggle) {
 }
 
 // ========================
-// MENÚ MÓVIL
+// MENÚ MÓVIL (CORRECCIÓN DEFINITIVA)
 // ========================
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 if (mobileMenuBtn && mobileMenu) {
+    // Estado inicial: oculto (hidden presente, sin open)
+    mobileMenu.classList.add('hidden');
     mobileMenu.classList.remove('open');
     mobileMenuBtn.setAttribute('aria-expanded', 'false');
 
     mobileMenuBtn.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('open');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        const isOpen = mobileMenu.classList.contains('open');
+        if (isOpen) {
+            // Cerrar
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        } else {
+            // Abrir
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        }
     });
 
     const closeMenu = () => {
+        mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('open');
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
     };
 
+    // Cerrar al hacer clic en un enlace del menú
     document.querySelectorAll('.nav-link-mobile, .nav-link, .side-link').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
 
+    // Cerrar al hacer clic fuera del menú
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
             closeMenu();
         }
     });
 
+    // Cerrar con tecla Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
             closeMenu();
