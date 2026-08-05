@@ -411,7 +411,7 @@ function updateActiveNavLink(activeId) {
     document.querySelectorAll('.nav-link, .side-link, .nav-link-mobile').forEach(link => {
         const href = link.getAttribute('href');
         link.classList.remove('text-primary', 'dark:text-primary-fixed', 'font-bold', 'border-b-2', 'border-primary', 'dark:border-primary-fixed', 'border-l-2', 'pl-4', 'pb-1');
-        link.classList.add('text-on-surface-variant', 'dark:text-surface-variant');
+        link.classList.add('text-on-surface-variant');
 
         if (href === activeId || href === `#${activeId}`) {
             link.classList.add('text-primary', 'dark:text-primary-fixed', 'font-bold');
